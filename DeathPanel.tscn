@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpyavyn6y4it5"]
+
+[ext_resource type="Script" path="res://DeathPanel.gd" id="1_6mt6f"]
+
+[node name="Control" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6mt6f")
+
+[node name="DeathPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 465.0
+offset_right = 1140.0
+offset_bottom = 644.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DeathPanel"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 30.0
+offset_right = 221.0
+offset_bottom = 95.0
+theme_override_font_sizes/normal_font_size = 40
+text = "Помер"
+
+[node name="Button" type="Button" parent="DeathPanel"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 112.0
+offset_right = 233.0
+offset_bottom = 146.0
+text = "Выйти с позором"
+
+[connection signal="pressed" from="DeathPanel/Button" to="." method="_on_button_pressed"]

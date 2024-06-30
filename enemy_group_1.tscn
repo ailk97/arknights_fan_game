@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbpj7q66qylte"]
+
+[ext_resource type="PackedScene" uid="uid://trtopn72q241" path="res://EnemyTest.tscn" id="1_y4eds"]
+
+[node name="EnemyGroup1" type="Node2D"]
+
+[node name="EnemyTest" parent="." instance=ExtResource("1_y4eds")]
+position = Vector2(62, 34)
+
+[node name="EnemyTest2" parent="." instance=ExtResource("1_y4eds")]
+position = Vector2(-12, -22)
+
+[node name="EnemyTest3" parent="." instance=ExtResource("1_y4eds")]
+position = Vector2(-44, 79)

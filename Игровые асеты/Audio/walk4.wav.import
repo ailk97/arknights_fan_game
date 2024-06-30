@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c80um3uglkq48"
+path="res://.godot/imported/walk4.wav-71c4bdc3cf013723dcf84aebadedc216.sample"
+
+[deps]
+
+source_file="res://Игровые асеты/Audio/walk4.wav"
+dest_files=["res://.godot/imported/walk4.wav-71c4bdc3cf013723dcf84aebadedc216.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

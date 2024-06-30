@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://byw1n1o01fofj"]
+
+[ext_resource type="Script" path="res://Inventory/ProtoItems/dropped_item.gd" id="1_07r6q"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="1_v0wvw"]
+[ext_resource type="Resource" uid="uid://csaafh2f5oyxx" path="res://Inventory/ProtoItems/Inventory_base.tres" id="2_1j75v"]
+[ext_resource type="Texture2D" uid="uid://cywcwqpqetqqb" path="res://Игровые асеты/Без имени-1.png" id="6_7hc8u"]
+[ext_resource type="FontFile" uid="uid://dopync14ovds2" path="res://Игровые асеты/Шрифты/NotoSansHans-DemiLight.otf" id="7_i7jjw"]
+[ext_resource type="Shader" path="res://Inventory/ProtoItems/selected_dropped_item.gdshader" id="7_puksg"]
+[ext_resource type="Texture2D" uid="uid://dttdpnqnb4kiu" path="res://icon.png" id="8_rxxlj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jajja"]
+shader = ExtResource("7_puksg")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esq6w"]
+radius = 20.025
+
+[node name="DroppedItem" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_07r6q")
+
+[node name="InventoryGrid" type="Node" parent="."]
+script = ExtResource("1_v0wvw")
+item_protoset = ExtResource("2_1j75v")
+
+[node name="БезИмени-1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.27451)
+position = Vector2(0, 3.8147e-06)
+rotation = 0.00864272
+scale = Vector2(0.498, 0.099)
+texture = ExtResource("6_7hc8u")
+
+[node name="item_shit" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -45.0
+offset_right = 20.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item" type="Sprite2D" parent="item_shit"]
+material = SubResource("ShaderMaterial_jajja")
+use_parent_material = true
+position = Vector2(20, 20)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_rxxlj")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_esq6w")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+z_index = 10
+z_as_relative = false
+offset_left = -25.0
+offset_top = -66.0
+offset_right = 25.0
+offset_bottom = -48.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.167
+anchor_right = 0.88
+anchor_bottom = 0.833
+offset_top = -0.00600028
+offset_bottom = 0.00599861
+theme_override_fonts/font = ExtResource("7_i7jjw")
+theme_override_font_sizes/font_size = 11
+text = "Press F"
+
+[connection signal="mouse_entered" from="item_shit" to="." method="_on_item_shit_mouse_entered"]
+[connection signal="mouse_exited" from="item_shit" to="." method="_on_item_shit_mouse_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

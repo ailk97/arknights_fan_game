@@ -1,0 +1,173 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_nrvc0"]
+
+[resource]
+script = ExtResource("1_nrvc0")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("Проходимец", "Игрок")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": "title"
+},
+"10": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "послан"
+}, {
+"type": "colon"
+}])
+},
+"id": "10",
+"next_conditional_id": "13",
+"next_id": "11",
+"next_id_after": "13",
+"type": "condition"
+},
+"11": {
+"character": "Проходимец",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "УЭЭЭ((",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "УЭЭЭ((",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "Проходимец",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "пошёл нахуй",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "пошёл нахуй",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "true"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "10",
+"next_id": "4",
+"next_id_after": "13",
+"type": "condition"
+},
+"4": {
+"character": "Игрок",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Знаешь что...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Знаешь что...",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "13",
+"parent_id": "3",
+"responses": PackedStringArray("5", "8"),
+"tags": PackedStringArray(),
+"text": "Иди нахуй",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Иди нахуй",
+"type": "response"
+},
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "послан"
+}])
+},
+"next_id": "7",
+"parent_id": "5",
+"type": "mutation"
+},
+"7": {
+"character": "Проходимец",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "13",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "УЭЭЭ((",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "УЭЭЭ((",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "13",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Обидно ващет",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Обидно ващет",
+"type": "response"
+},
+"9": {
+"character": "Проходимец",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "13",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Так всё и задумавалось, иди нахуй.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Так всё и задумавалось, иди нахуй.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.32.2"

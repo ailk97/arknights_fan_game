@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpxtp2clr18iy"]
+
+[ext_resource type="Texture2D" uid="uid://bfdvij6k1vgm2" path="res://Игровые асеты/enemy_1111_ucommd.png" id="1_f0cwt"]
+[ext_resource type="Script" path="res://damagetest.gd" id="1_uttnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6byk1"]
+size = Vector2(40, 246)
+
+[sub_resource type="Animation" id="Animation_cgn1s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.33333, -11.6667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5r1j4"]
+resource_name = "damagetest_animation"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.33333, -11.6667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 1.0472, 1.5708, 2.0944, 2.61799, 3.14159, 3.66519, 4.18879, 4.71239, 5.23599, 5.75959, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_54j2b"]
+_data = {
+"RESET": SubResource("Animation_cgn1s"),
+"damagetest_animation": SubResource("Animation_5r1j4")
+}
+
+[node name="damagetest" type="Node2D"]
+script = ExtResource("1_uttnm")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(3.33333, -11.6667)
+scale = Vector2(0.56, 0.440001)
+offset = Vector2(-25, -495)
+texture = ExtResource("1_f0cwt")
+polygon = PackedVector2Array(-1.1236, 379.775, 5.05618, 270.786, 29.2135, 261.236, 44.382, 303.933, 46.0674, 341.573, 46.6292, 405.618, 38.2022, 442.697, 37.0787, 524.157, 15.1685, 514.607)
+uv = PackedVector2Array(-1.1236, 379.775, 5.05618, 270.786, 29.2135, 261.236, 44.382, 303.933, 46.0674, 341.573, 46.6292, 405.618, 38.2022, 442.697, 37.0787, 524.157, 15.1685, 514.607)
+
+[node name="Hurtbox" type="Area2D" parent="Polygon2D"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Polygon2D/Hurtbox"]
+position = Vector2(-1.33333, -101.333)
+shape = SubResource("RectangleShape2D_6byk1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_54j2b")
+}
+autoplay = "damagetest_animation"
+speed_scale = 4.0
+
+[connection signal="area_entered" from="Polygon2D/Hurtbox" to="." method="_on_area_2d_area_entered"]

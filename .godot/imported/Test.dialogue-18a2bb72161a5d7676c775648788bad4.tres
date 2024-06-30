@@ -1,0 +1,188 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_k7gmv"]
+
+[resource]
+script = ExtResource("1_k7gmv")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Nathan", "Игрок")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "14",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "Так всё и задумавалось, иди нахуй.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Так всё и задумавалось, иди нахуй.",
+"type": "dialogue"
+},
+"11": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "DialogTest_Events"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "послан"
+}, {
+"type": "colon"
+}])
+},
+"id": "11",
+"next_conditional_id": "14",
+"next_id": "12",
+"next_id_after": "14",
+"type": "condition"
+},
+"12": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "14",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "УЭЭЭ((",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "УЭЭЭ((",
+"type": "dialogue"
+},
+"14": {
+"id": "14",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "пошёл нахуй",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "пошёл нахуй",
+"type": "dialogue"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "DialogTest_Events"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "true"
+}, {
+"type": "colon"
+}])
+},
+"id": "4",
+"next_conditional_id": "11",
+"next_id": "5",
+"next_id_after": "14",
+"type": "condition"
+},
+"5": {
+"character": "Игрок",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Знаешь что...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Знаешь что...",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"next_id_after": "14",
+"parent_id": "4",
+"responses": PackedStringArray("6", "9"),
+"tags": PackedStringArray(),
+"text": "Иди нахуй",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Иди нахуй",
+"type": "response"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "DialogTest_Events"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "shit_happen"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "послан"
+}])
+},
+"next_id": "8",
+"parent_id": "6",
+"type": "mutation"
+},
+"8": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "14",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "УЭЭЭ((",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "УЭЭЭ((",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "14",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Обидно ващет",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Обидно ващет",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.32.1"

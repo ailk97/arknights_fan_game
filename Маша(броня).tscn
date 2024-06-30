@@ -1,0 +1,2943 @@
+[gd_scene load_steps=15 format=3 uid="uid://gv1ywxoakb4m"]
+
+[ext_resource type="Script" path="res://Маша.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dttdpnqnb4kiu" path="res://icon.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://clyc0pn85oo62" path="res://Игровые асеты/Миша(Форма, Спрайт).png" id="3_xjcvn"]
+[ext_resource type="Texture2D" uid="uid://cn7vt45gic7hp" path="res://Маша.png" id="4_1msod"]
+[ext_resource type="Texture2D" uid="uid://dv25j7rg2trtp" path="res://Игровые асеты/body_armor/armor1_old.png" id="5_3flpo"]
+[ext_resource type="Texture2D" uid="uid://cywcwqpqetqqb" path="res://Игровые асеты/Без имени-1.png" id="7"]
+
+[sub_resource type="Animation" id="9"]
+resource_name = "Attack1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Локоть2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15.5402, -2.38846), Vector2(9.61241, 1.27822), Vector2(17.1078, -0.473282), Vector2(-7.10657, -2.34615), Vector2(9.61241, 1.27822), Vector2(15.5402, -2.38846)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Локоть2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [13.0302, -18.5495, -18.5495, -44.8422, -18.5495, 13.0302]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Правая нога2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18.1291, 38.8465), Vector2(13.6664, 41.0157), Vector2(26.6667, 36.6667), Vector2(13.6664, 41.0157), Vector2(18.1291, 38.8465)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Правая нога2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.62797, -2.65094, 34.7699, -2.65094, 3.62797]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Правая стопа:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30.568, 79.7155), Vector2(28.605, 80.9237), Vector2(20, 80), Vector2(28.605, 80.9237), Vector2(30.568, 79.7155)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Правая стопа:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.856143, -0.856143, -0.856143]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Кисть2(1):position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(28.0579, 9.83386), Vector2(26.6667, 5), Vector2(34.162, 3.24849), Vector2(9.11898, -6.95771), Vector2(26.6667, 5), Vector2(28.0579, 9.83386)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/Кисть2(1):rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [61.5803, 30.0006, 30.0006, 9.6233, 30.0006, 61.5803]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/Правая нога1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 19), Vector2(-1.39504, 24.257), Vector2(10, 23.3333), Vector2(-1.39504, 24.257), Vector2(6, 19)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/Правая нога1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-5.9677, -12.2466, -12.2466, -5.9677]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Плечо2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.37356, -20.4444), Vector2(-3.55423, -16.7777), Vector2(3.94114, -18.5292), Vector2(5.60781, -16.7777), Vector2(-3.55423, -16.7777), Vector2(2.37356, -20.4444)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Плечо2:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-69.254, -69.254, 9.68528, -69.254, -69.254]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Тело:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -15), Vector2(-6.92779, -11.3333), Vector2(2.23425, -11.3333), Vector2(-6.92779, -11.3333), Vector2(-1, -15)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Тело:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Волосы3:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(20, -76), Vector2(14.0722, -72.3333), Vector2(23.2342, -72.3333), Vector2(14.0722, -72.3333), Vector2(20, -76)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Body/Волосы3:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Body/Волосы1/Ухо1:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Body/Волосы1/Ухо1:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Body/Волосы1/Ухо1/Серьга1:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Body/Волосы1/Ухо1/Серьга1:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -18.8756, 32.1615, 0.0, 0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Body/Локоть1:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-21.1248, -5.58871), Vector2(-35, -6.66667), Vector2(-27.5046, -8.41817), Vector2(10.8287, -17.4342), Vector2(-35, -6.66667), Vector2(-21.1248, -5.58871)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Body/Локоть1:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [82.9438, -27.8656, -27.8656, -27.8656, 82.9438]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Body/Левая нога1:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 21), Vector2(-16.6667, 26.6667), Vector2(-6.15948, 26.6578), Vector2(-16.6667, 26.6667), Vector2(-7, 21)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Body/Левая нога1:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-14.7677, -49.1247, -17.2837, -49.1247, -14.7677]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Body/Левая стопа:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35, 77), Vector2(-35, 76.6667), Vector2(-36.1595, 76.6579), Vector2(-35, 76.6667), Vector2(-35, 77)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Body/Левая стопа:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.803001, -0.803001, -0.803001]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Body/Волосы3/Серьга2:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Body/Волосы3/Серьга2:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [4.9622, -10.5281, 30.3064, 4.9622, 4.9622]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Body/Волосы2:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-30, -64), Vector2(-35.9278, -60.3333), Vector2(-26.7658, -60.3333), Vector2(-35.9278, -60.3333), Vector2(-30, -64)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Body/Волосы2:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -1.71793, 7.58108, 0.0, 0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Body/Лицо:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -43), Vector2(3.07221, -39.3333), Vector2(12.2342, -39.3333), Vector2(3.07221, -39.3333), Vector2(9, -43)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Body/Лицо:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Body/Кисть1:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.8644, 8.49122), Vector2(-20, 10), Vector2(-18.3333, -3.33334), Vector2(-10.838, -5.08484), Vector2(27.4954, -14.1009), Vector2(-18.3333, -3.33334), Vector2(-16.6667, 6.66667), Vector2(-23.3333, 11.6667), Vector2(-29.8644, 8.49122)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Body/Кисть1:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-35.2213, -133.495, -133.495, -133.495, -35.2213]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Body/Волосы4:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -82), Vector2(3.07221, -78.3333), Vector2(12.2342, -78.3333), Vector2(3.07221, -78.3333), Vector2(9, -82)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Body/Волосы4:rotation_degrees")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -14.6333, 12.1653, 0.0, 0.0]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Body/Левая нога2:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.8266, 41.9214), Vector2(-6.66667, 46.6667), Vector2(-7.82614, 46.6578), Vector2(-6.66667, 46.6667), Vector2(-11.8266, 41.9214)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Body/Левая нога2:rotation_degrees")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [4.94302, 15.3623, 15.3623, 4.94302]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Body/Голова:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4, -33), Vector2(-9.92779, -29.3333), Vector2(-0.765747, -29.3333), Vector2(-9.92779, -29.3333), Vector2(-4, -33)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Body/Голова:rotation_degrees")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Body/Плечо1:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-12, -19), Vector2(-17.9278, -15.3333), Vector2(-10.4324, -17.0848), Vector2(-8.76574, -15.3333), Vector2(-17.9278, -15.3333), Vector2(-12, -19)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Body/Плечо1:rotation_degrees")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [5.69074, 35.4379, 35.4379, -123.357, -102.749, 35.4379, 5.69074]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Body/Волосы1:position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -83), Vector2(-12.9278, -79.3333), Vector2(-3.76575, -79.3333), Vector2(-12.9278, -79.3333), Vector2(-7, -83)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Body/Волосы1:rotation_degrees")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -2.23373, 7.93835, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="10"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Плечо2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.37356, -20.4444)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Плечо2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-69.254]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Кисть1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29.8644, 8.49122)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Кисть1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-35.2213]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Левая стопа:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-35, 77)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Левая стопа:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.803001]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Локоть2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.5402, -2.38846)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/Локоть2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [13.0302]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/Плечо1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-12, -19)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/Плечо1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.69074]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Локоть1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21.1248, -5.58871)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Локоть1:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [82.9438]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Кисть2(1):position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28.0579, 9.83386)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Кисть2(1):rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [61.5803]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Лицо:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, -43)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Body/Лицо:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Body/Волосы4:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, -82)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Body/Волосы4:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Body/Волосы3:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, -76)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Body/Волосы3:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Body/Голова:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, -33)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Body/Голова:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Body/Волосы2:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-30, -64)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Body/Волосы2:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Body/Волосы1:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, -83)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Body/Волосы1:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Body/Левая нога2:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11.8266, 41.9214)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Body/Левая нога2:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.94302]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Body/Тело:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -15)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Body/Тело:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Body/Правая стопа:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30.568, 79.7155)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Body/Правая стопа:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.856143]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Body/Левая нога1:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 21)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Body/Левая нога1:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-14.7677]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Body/Правая нога1:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 19)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Body/Правая нога1:rotation_degrees")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-5.9677]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Body/Правая нога2:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.1291, 38.8465)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Body/Правая нога2:rotation_degrees")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.62797]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Body/Волосы3/Серьга2:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 5)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Body/Волосы3/Серьга2:rotation_degrees")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.47868]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Body/Волосы1/Ухо1/Серьга1:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14, 2)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Body/Волосы1/Ухо1/Серьга1:rotation_degrees")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Body/Волосы1/Ухо1:position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 10)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Body/Волосы1/Ухо1:rotation_degrees")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="11"]
+resource_name = "Run1"
+length = 1.2
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Волосы1/Ухо1/Серьга1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Волосы1/Ухо1/Серьга1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 0.7, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 46.535, -42.7194, 36.0599, -40.1971, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Волосы2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-18.3333, -62), Vector2(-15, -52), Vector2(-20, -58.6666), Vector2(-20, -63.6667), Vector2(-21.6667, -72), Vector2(-21.6667, -70.3333), Vector2(-21.6667, -63.6667), Vector2(-16.6667, -50.3333), Vector2(-18.3333, -58.6666), Vector2(-16.6667, -65.3333), Vector2(-16.6667, -70.3333), Vector2(-18.3333, -67), Vector2(-18.3333, -62)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Волосы2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 12.4322, 2.21245, 8.23167, 10.1855, 5.65111, 1.15662, 11.3003, -1.53346, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Волосы3/Серьга2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Волосы3/Серьга2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 0.6, 0.7, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [4.9622, -37.7388, 21.4657, 17.3399, -30.2857, 29.8912, 4.9622]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Волосы1/Ухо1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/Волосы1/Ухо1:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/Волосы1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4.66666, -81), Vector2(8.00001, -71.0001), Vector2(2.99999, -77.6666), Vector2(3, -82.6666), Vector2(1.33334, -91), Vector2(1.33334, -89.3333), Vector2(1.33334, -82.6667), Vector2(6.33334, -69.3334), Vector2(4.66668, -77.6666), Vector2(6.33334, -84.3333), Vector2(6.33334, -89.3333), Vector2(4.66668, -86), Vector2(4.66666, -81)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/Волосы1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 7.01222, -0.543515, 5.41082, 8.46556, 5.33198, 0.894602, 11.8753, 1.11359, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Левая нога1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 21), Vector2(-7.92778, 31.3333), Vector2(-7.92778, 26.3333), Vector2(-7.92778, 21.3333), Vector2(-7.92778, 14.6667), Vector2(-7.92778, 16.3333), Vector2(-7.92778, 21.3333), Vector2(-7.92778, 31.3333), Vector2(-7.92778, 26.3333), Vector2(-7.92778, 21.3333), Vector2(-7.92778, 14.6667), Vector2(-7.92778, 16.3334), Vector2(-7, 21)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Левая нога1:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-14.7677, -46.2977, -87.9996, -97.8392, -69.8961, -91.8511, -66.9696, -43.3859, -7.45361, 1.23883, -14.7677]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Плечо2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(12.2685, -17.5783), Vector2(16.3208, -10.1111), Vector2(12.062, -15.1111), Vector2(9.04023, -20.1111), Vector2(10.7069, -26.7777), Vector2(10.7069, -25.1111), Vector2(10.7069, -20.1111), Vector2(12.3736, -10.1111), Vector2(12.3736, -15.111), Vector2(14.0402, -20.1111), Vector2(13.3992, -26.7777), Vector2(12.8403, -25.111), Vector2(12.2685, -17.5783)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Плечо2:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.5, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-69.254, -69.6185, -16.6789, -5.23378, 12.7474, 35.2629, -69.254]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Правая нога1:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 19), Vector2(5.07221, 29.3333), Vector2(5.07221, 24.3333), Vector2(5.07221, 19.3333), Vector2(5.07221, 12.6667), Vector2(5.07221, 14.3333), Vector2(5.07221, 19.3333), Vector2(5.07221, 29.3333), Vector2(5.07221, 24.3333), Vector2(5.07221, 19.3333), Vector2(5.07221, 12.6667), Vector2(5.07221, 14.3333), Vector2(6, 19)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Body/Правая нога1:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-5.9677, -22.0787, 1.09722, 50.1206, 58.6845, 71.7425, 50.5025, 27.5818, -14.8431, -31.5086, -14.3428, -5.9677]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Body/Левая стопа:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-46.6667, 36.6667), Vector2(-40.522, 46.2556), Vector2(-35, 60), Vector2(-13.3333, 60), Vector2(6.66667, 61.6667), Vector2(28.5138, 66.1064), Vector2(16.6667, 76.6667), Vector2(8.33334, 76.6667), Vector2(1.30865, 77.0192), Vector2(-15, 75), Vector2(-36.6667, 68.3333), Vector2(-58.3333, 35), Vector2(-46.6667, 36.6667)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Body/Левая стопа:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [117.391, 119.632, 54.7124, 41.8014, -2.0504, -28.5453, -1.27352, 23.0345, 49.6098, 90.1834, 117.391]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Body/Локоть2:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(25, -3.33333), Vector2(28.115, 3.06746), Vector2(17.2829, 1.66669), Vector2(5.09571, -3.85052), Vector2(5, -15), Vector2(-0.73888, -11.6667), Vector2(-4.07221, -13.3333), Vector2(0.927788, -1.52588e-05), Vector2(4.26112, -1.66664), Vector2(10.9435, -4.61523), Vector2(15.6855, -9.39096), Vector2(19.7279, -10), Vector2(25, -3.33333)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Body/Локоть2:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-23.4908, 8.0984, 56.588, 45.1481, -23.4908]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Body/Кисть2(1):position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(41.6667, -1.90735e-06), Vector2(46.5417, 8.33332), Vector2(32.2829, 15), Vector2(19.2611, 6.66665), Vector2(11.6667, 1.66667), Vector2(-0.73888, 6.66666), Vector2(-0.738888, 5.00002), Vector2(5.92778, 16.6666), Vector2(14.2611, 13.3334), Vector2(24.2611, 8.33331), Vector2(28.2032, 2.83136), Vector2(36.3945, -3.33334), Vector2(41.6667, -1.90735e-06)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Body/Кисть2(1):rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [16.9685, 57.8134, 96.1375, 16.9685]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Body/Правая нога2:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18.1291, 38.8465), Vector2(23.8336, 39.8829), Vector2(16.6667, 40), Vector2(-3.82781, 40.2005), Vector2(-8.33333, 33.3333), Vector2(-8.33334, 30), Vector2(-4.15611, 41.9424), Vector2(1.90735e-06, 53.3333), Vector2(11.0904, 48.9117), Vector2(25, 33.3333), Vector2(25, 20), Vector2(20, 30), Vector2(18.1291, 38.8465)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Body/Правая нога2:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.62797, 37.1777, 42.2296, 48.1084, 42.789, 109.726, 129.729, 109.603, 100.563, 66.7096, 31.5043, 13.337, 3.62797]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Body/Тело:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(8.33333, -15), Vector2(12.9472, -4.66669), Vector2(8.68848, -9.66665), Vector2(5.66666, -14.6667), Vector2(7.33333, -21.3333), Vector2(7.33333, -19.6667), Vector2(7.33333, -14.6667), Vector2(9, -4.66667), Vector2(9, -9.66663), Vector2(10.6667, -14.6667), Vector2(10.0257, -21.3333), Vector2(9.46673, -19.6667), Vector2(8.33333, -15)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Body/Тело:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [11.4564, 11.4564]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Body/Плечо1:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2.00002, -19.7865), Vector2(1.9472, -8.66667), Vector2(-2.31151, -13.6667), Vector2(-5.33333, -18.6667), Vector2(-3.66666, -25.3333), Vector2(-3.66666, -23.6666), Vector2(-3.66666, -18.6666), Vector2(-2, -8.66665), Vector2(-1.99998, -13.6666), Vector2(-0.333324, -18.6666), Vector2(-0.974308, -25.3333), Vector2(-1.53326, -23.6666), Vector2(-2.00002, -19.7865)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Body/Плечо1:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [39.931, 23.5666, 8.39106, -18.9089, -42.1541, -50.1296, -57.4737, 39.931]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Body/Локоть1:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-17.0526, -12.7842), Vector2(-10.5109, 3.00229), Vector2(-11.4363, -0.255371), Vector2(-7.40555, -1.66668), Vector2(0.927784, -10), Vector2(2.10282, -7.84499), Vector2(3.62112, -5.21078), Vector2(3.3054, 7.83499), Vector2(-2.40554, 3.33336), Vector2(-5.51872, -2.02237), Vector2(-10.0991, -11.922), Vector2(-15.2721, -11.6667), Vector2(-17.0526, -12.7842)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Body/Локоть1:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [82.9438, 79.6148, 69.2524, 21.9392, 0.624015, -18.1683, -29.5289, 82.9438]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Body/Кисть1:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25.7922, 1.29578), Vector2(-19.2505, 17.0822), Vector2(-14.3837, 16.6667), Vector2(2.59446, 11.6666), Vector2(14.2611, -1.66666), Vector2(19.2611, -3.33333), Vector2(20.9278, -4.99998), Vector2(19.2611, 15), Vector2(10.9278, 16.6667), Vector2(3.20052, 14.8997), Vector2(-4.71319, 6.66666), Vector2(-18.6055, 5), Vector2(-25.7922, 1.29578)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Body/Кисть1:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-35.2213, -37.1442, -77.5816, -94.0436, -111.905, -124.113, -35.2213]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Body/Голова:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7.66666, -31), Vector2(11, -21), Vector2(5.99999, -27.6667), Vector2(5.99998, -32.6667), Vector2(4.33333, -41), Vector2(4.33333, -39.3333), Vector2(4.33333, -32.6667), Vector2(9.33334, -19.3334), Vector2(7.66667, -27.6667), Vector2(9.33333, -34.3334), Vector2(9.33334, -39.3333), Vector2(7.66667, -36), Vector2(7.66666, -31)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Body/Голова:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Body/Левая нога2:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-10, 45), Vector2(-3.85535, 54.589), Vector2(1.66666, 48.3333), Vector2(15, 31.6667), Vector2(15, 20), Vector2(10.1805, 26.1064), Vector2(6.84716, 37.773), Vector2(13.3333, 38.3333), Vector2(6.30865, 38.6859), Vector2(0, 36.6667), Vector2(-15, 35), Vector2(-15, 36.6667), Vector2(-10, 45)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Body/Левая нога2:rotation_degrees")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [67.9741, 66.5799, 42.8905, 13.7934, -18.4229, -55.6062, -47.3529, -22.9905, -26.5823, -10.5311, -1.31925, 58.8699, 67.9741]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Body/Волосы3:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(31.6667, -74), Vector2(35, -64), Vector2(30, -70.6667), Vector2(30, -75.6667), Vector2(28.3333, -84), Vector2(28.3333, -82.3333), Vector2(28.3333, -75.6667), Vector2(33.3333, -62.3333), Vector2(31.6667, -70.6667), Vector2(33.3333, -77.3333), Vector2(33.3333, -82.3333), Vector2(31.6667, -79), Vector2(31.6667, -74)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Body/Волосы3:rotation_degrees")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Body/Правая стопа:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(33.3333, 78.3333), Vector2(15.6478, 79.0325), Vector2(5, 78.3333), Vector2(-18.8278, 76.8672), Vector2(-25, 70), Vector2(-50, 31.6667), Vector2(-44.1561, 26.9424), Vector2(-45, 55), Vector2(-28.3333, 56.6667), Vector2(-5, 61.6667), Vector2(21.6667, 61.6667), Vector2(30, 71.6667), Vector2(33.3333, 78.3333)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Body/Правая стопа:rotation_degrees")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-22.3001, 1.14491, 15.57, 42.0568, 92.8389, 123.333, 97.0171, 87.9777, 58.38, -0.0880685, -19.5001, -22.3001]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Body/Волосы4:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(20.6667, -80), Vector2(24, -70), Vector2(19, -76.6667), Vector2(19, -81.6666), Vector2(17.3333, -90), Vector2(17.3333, -88.3333), Vector2(17.3333, -81.6666), Vector2(22.3333, -68.3333), Vector2(20.6667, -76.6666), Vector2(22.3333, -83.3333), Vector2(22.3333, -88.3333), Vector2(20.6667, -85), Vector2(20.6667, -80)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Body/Волосы4:rotation_degrees")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 10.5963, -11.8146, 4.72864, 19.3385, 8.29125, -2.24034, 8.86907, -8.14188, -22.9454, 0.0]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Body/Лицо:position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(20.6667, -41), Vector2(24, -31), Vector2(19, -37.6666), Vector2(19, -42.6667), Vector2(17.3333, -51), Vector2(17.3333, -49.3333), Vector2(17.3333, -42.6666), Vector2(22.3333, -29.3333), Vector2(20.6667, -37.6666), Vector2(22.3333, -44.3333), Vector2(22.3333, -49.3333), Vector2(20.6667, -46), Vector2(20.6667, -41)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Body/Лицо:rotation_degrees")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="12"]
+resource_name = "Walk1"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Левая стопа:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.7, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35, 70), Vector2(-39, 63), Vector2(-39.1426, 48), Vector2(-23, 64), Vector2(1, 72), Vector2(24, 75), Vector2(14, 76), Vector2(-11, 76), Vector2(-34, 77), Vector2(-35, 70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Левая стопа:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [32.6452, 84.7016, 97.2731, 69.0096, -30.2898, -0.0886593, 32.6452]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Плечо1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-12, -19), Vector2(-11.9278, -13), Vector2(-11.0704, -19), Vector2(-10.9278, -24), Vector2(-11.9278, -19), Vector2(-11.9278, -14), Vector2(-11.9278, -19), Vector2(-11.9278, -23), Vector2(-12, -19)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Плечо1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [5.69074, 23.3029, -23.4252, -54.924, -61.5241, 5.69074]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Локоть1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-21.1248, -5.58871), Vector2(-25, -1.66667), Vector2(-11.6667, -3.33333), Vector2(-3.33334, -10), Vector2(-3.33334, -6.66667), Vector2(-6.66666, 0), Vector2(-11.6667, -5), Vector2(-16.6667, -8.33333), Vector2(-21.1248, -5.58871)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Локоть1:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [82.9438, 76.6927, 48.9402, 27.9495, 10.2779, 82.9438]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Правая нога1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.8, 1, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 19), Vector2(5, 27), Vector2(8.85736, 20), Vector2(7, 16), Vector2(-5, 22), Vector2(4.00001, 17), Vector2(6, 19)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/Правая нога1:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-5.9677, -23.6658, 29.529, 55.3644, 70.8767, 49.5827, 18.3982, 0.781502, -5.9677]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/Кисть1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.8644, 8.49122), Vector2(-31.6667, 13.3333), Vector2(-8.33334, 11.6667), Vector2(5, 3.33333), Vector2(10, 5), Vector2(-3.8147e-06, 16.6667), Vector2(-8.33334, 11.6667), Vector2(-21.6667, 8.33333), Vector2(-29.8644, 8.49122)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/Кисть1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-35.2213, -40.6478, -54.7793, -70.761, -101.151, -35.2213]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Волосы3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(20, -76), Vector2(20.3403, -69), Vector2(20.3404, -77.3333), Vector2(21.0722, -81), Vector2(20.0722, -76), Vector2(20.3403, -69), Vector2(20.3403, -77.3333), Vector2(20.0722, -80), Vector2(20, -76)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Волосы3:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Волосы3/Серьга2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5), Vector2(10, 5)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Волосы3/Серьга2:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 1, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [4.9622, -31.4702, 20.9444, -17.7751, 28.9607, 4.9622]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Волосы2:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-30, -64), Vector2(-29.9278, -58), Vector2(-29.0704, -64), Vector2(-28.9278, -69), Vector2(-29.9278, -64), Vector2(-29.9278, -59), Vector2(-29.9278, -64), Vector2(-29.9278, -68), Vector2(-30, -64)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Body/Волосы2:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 4.04494, -0.499425, -5.52059, 3.04463, 6.54597, -4.50303, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Body/Волосы1/Ухо1:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10), Vector2(-11, 10)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Body/Волосы1/Ухо1:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Body/Волосы1/Ухо1/Серьга1:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2), Vector2(-14, 2)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Body/Волосы1/Ухо1/Серьга1:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 1, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 27.2243, -22.4231, -2.23315, 27.8262, -15.0243, 0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Body/Волосы1:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -83), Vector2(-6.92779, -77), Vector2(-6.07043, -83), Vector2(-5.92779, -88), Vector2(-6.92779, -83), Vector2(-6.92779, -78), Vector2(-6.92779, -83), Vector2(-6.92779, -87), Vector2(-7, -83)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Body/Волосы1:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.31094, -0.903847, -4.58, 0.649279, 5.80276, -3.38725, 0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Body/Волосы4:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -82), Vector2(9.07221, -76), Vector2(9.92957, -82), Vector2(10.0722, -87), Vector2(9.07221, -82), Vector2(9.07221, -77), Vector2(9.07221, -82), Vector2(9.07221, -86), Vector2(9, -82)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Body/Волосы4:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -5.94311, 3.38941, -9.40068, -12.5155, 7.09515, -14.4892, 0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Body/Левая нога2:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, 39), Vector2(-4, 48), Vector2(-0.142647, 47), Vector2(13, 37), Vector2(6, 37), Vector2(15, 38), Vector2(-2, 37), Vector2(-14, 37), Vector2(-15, 39)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Body/Левая нога2:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.797083, 26.4764, 55.0341, 17.8758, -55.3722, -29.9102, -1.54222, -0.797083]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Body/Голова:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4, -33), Vector2(-3.65966, -26), Vector2(-3.65966, -34.3333), Vector2(-2.92779, -38), Vector2(-3.92779, -33), Vector2(-3.65966, -26), Vector2(-3.65966, -34.3333), Vector2(-3.92779, -37), Vector2(-4, -33)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Body/Голова:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Body/Лицо:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -43), Vector2(9.34033, -36), Vector2(9.34034, -44.3333), Vector2(10.0722, -48), Vector2(9.07221, -43), Vector2(9.34034, -36), Vector2(9.34034, -44.3333), Vector2(9.07221, -47), Vector2(9, -43)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Body/Лицо:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Body/Правая стопа:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.5, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 77), Vector2(30, 80), Vector2(1, 80), Vector2(-16, 80), Vector2(-34, 68), Vector2(-44, 65), Vector2(-42, 39), Vector2(-23, 65), Vector2(9, 76), Vector2(40, 77)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Body/Правая стопа:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-27.5215, 16.1264, 41.5148, 90.7704, 118.294, 63.0991, -27.5215]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Body/Левая нога1:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 21), Vector2(-8, 26), Vector2(-8.14264, 22), Vector2(-7, 19), Vector2(-2, 27), Vector2(-4, 18), Vector2(-8, 19), Vector2(-7, 21)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Body/Левая нога1:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-4.25202, -28.8447, -39.6643, -75.1827, -63.7055, -77.0432, -32.2597, -8.08829, -4.25202]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Body/Тело:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -15), Vector2(-0.927788, -9), Vector2(-0.0704269, -15), Vector2(0.0722122, -20), Vector2(-0.927788, -15), Vector2(-0.927788, -10), Vector2(-0.927788, -15), Vector2(-0.927788, -19), Vector2(-1, -15)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Body/Тело:rotation_degrees")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Body/Правая нога2:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18.1291, 38.8465), Vector2(22, 38), Vector2(5.85736, 37), Vector2(-1, 38), Vector2(-9, 33), Vector2(-12, 44), Vector2(4, 45), Vector2(19, 38), Vector2(18.1291, 38.8465)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Body/Правая нога2:rotation_degrees")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-6.78996, 12.8453, 47.4805, 58.805, 73.9471, 116.085, 80.4073, -6.78996]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Body/Локоть2:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15.5402, -2.38846), Vector2(18.3333, 1.19209e-07), Vector2(8.33333, -5), Vector2(-1.66667, -8.33333), Vector2(-10, -6.66667), Vector2(-5, 1.66667), Vector2(1.66667, -3.33333), Vector2(10, -6.66666), Vector2(15.5402, -2.38846)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Body/Локоть2:rotation_degrees")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [13.0302, 4.39214, 45.2871, 79.6568, 98.7178, 13.0302]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Body/Кисть2(1):position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(28.0579, 9.83386), Vector2(33.3333, 10), Vector2(11.6667, 13.3333), Vector2(-8.33333, 10), Vector2(-20, 8.33334), Vector2(-10, 21.6667), Vector2(3.33333, 15), Vector2(18.3333, 10), Vector2(28.0579, 9.83386)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Body/Кисть2(1):rotation_degrees")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [61.5803, 47.9802, 87.1564, 143.666, 149.894, 61.5803]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Body/Плечо2:position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.37356, -20.4444), Vector2(1.66667, -15), Vector2(3.30315, -20.4444), Vector2(3.44579, -25.4444), Vector2(2.44579, -20.4444), Vector2(2.44579, -15.4444), Vector2(2.44579, -20.4444), Vector2(2.44579, -24.4444), Vector2(2.37356, -20.4444)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Body/Плечо2:rotation_degrees")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-69.254, -80.0471, -44.5093, -13.8731, 13.4352, -69.254]
+}
+
+[sub_resource type="Animation" id="13"]
+resource_name = "idle1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Плечо2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.37356, -20.4444), Vector2(5.44576, -16.4444), Vector2(2.988, -19.6444), Vector2(2.37356, -20.4444)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Плечо2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-69.254, -77.6101, -70.9252, -69.254]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Кисть1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.8644, 8.49122), Vector2(-31, 11), Vector2(-30.0915, 8.99298), Vector2(-29.8644, 8.49122)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Кисть1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-35.2213, -23.3089, -32.8388, -35.2213]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/Левая стопа:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35, 77), Vector2(-34, 77), Vector2(-34.8, 77), Vector2(-35, 77)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/Левая стопа:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.803001, -0.803001, -0.803001]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/Локоть2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15.5402, -2.38846), Vector2(20, -2), Vector2(16.4322, -2.31077), Vector2(15.5402, -2.38846)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/Локоть2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [13.0302, 1.35871, 10.6959, 13.0302]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/Плечо1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-12, -19), Vector2(-8.9278, -15), Vector2(-11.3856, -18.2), Vector2(-12, -19)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/Плечо1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [5.69074, 18.257, 8.20399, 5.69074]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/Локоть1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-21.1248, -5.58871), Vector2(-20.5994, -2.31558), Vector2(-21.0197, -4.93409), Vector2(-21.1248, -5.58871)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/Локоть1:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [82.9438, 91.5335, 84.6617, 82.9438]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/Кисть2(1):position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(28.0579, 9.83386), Vector2(36, 6), Vector2(29.6463, 9.06709), Vector2(28.0579, 9.83386)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Кисть2(1):rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [61.5803, 52.5445, 59.7732, 61.5803]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Body/Лицо:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -43), Vector2(12.0722, -39), Vector2(9.61444, -42.2), Vector2(9, -43)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Body/Лицо:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Body/Волосы4:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -82), Vector2(12.0722, -78), Vector2(9.61444, -81.2), Vector2(9, -82)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Body/Волосы4:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -6.41241, -1.28248, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Body/Волосы3:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(20, -76), Vector2(23.0722, -72), Vector2(20.6144, -75.2), Vector2(20, -76)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Body/Волосы3:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Body/Голова:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4, -33), Vector2(-0.927803, -29), Vector2(-3.38556, -32.2), Vector2(-4, -33)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Body/Голова:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Body/Волосы2:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-30, -64), Vector2(-26.9278, -60), Vector2(-29.3856, -63.2), Vector2(-30, -64)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Body/Волосы2:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 5.11988, 1.02398, 0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Body/Волосы1:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -83), Vector2(-3.9278, -79), Vector2(-6.38556, -82.2), Vector2(-7, -83)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Body/Волосы1:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.703, 0.5406, 0.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Body/Левая нога2:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.8266, 41.9214), Vector2(-6, 49), Vector2(-10.6612, 43.3371), Vector2(-11.8266, 41.9214)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Body/Левая нога2:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [4.94302, 16.8379, 7.322, 4.94302]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Body/Тело:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -15), Vector2(2.0722, -11), Vector2(-0.385561, -14.2), Vector2(-1, -15)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Body/Тело:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Body/Правая стопа:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30.568, 79.7155), Vector2(30, 80), Vector2(30.4544, 79.7724), Vector2(30.568, 79.7155)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Body/Правая стопа:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.856143, -0.856143, -0.856143]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Body/Левая нога1:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 21), Vector2(-7, 26), Vector2(-7, 22), Vector2(-7, 21)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Body/Левая нога1:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-14.7677, -26.6223, -17.1386, -14.7677]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Body/Правая нога1:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 19), Vector2(8, 23), Vector2(6.4, 19.8), Vector2(6, 19)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Body/Правая нога1:rotation_degrees")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-5.9677, -18.8802, -8.55021, -5.9677]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Body/Правая нога2:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18.1291, 38.8465), Vector2(25, 37), Vector2(19.5033, 38.4772), Vector2(18.1291, 38.8465)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Body/Правая нога2:rotation_degrees")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [3.62797, 14.2757, 5.75751, 3.62797]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Body/Волосы3/Серьга2:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 5), Vector2(10, 5), Vector2(10, 5)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Body/Волосы3/Серьга2:rotation_degrees")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [4.9622, -17.8812, 0.393524, 4.9622]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Body/Волосы1/Ухо1/Серьга1:position")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14, 2)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Body/Волосы1/Ухо1/Серьга1:rotation_degrees")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 18.1254]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Body/Волосы1/Ухо1:position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0.9, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, 10), Vector2(-11, 10)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Body/Волосы1/Ухо1:rotation_degrees")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0.9, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2xrb3"]
+_data = {
+"Attack1": SubResource("9"),
+"RESET": SubResource("10"),
+"Run1": SubResource("11"),
+"Walk1": SubResource("12"),
+"idle1": SubResource("13")
+}
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 29.0
+height = 118.0
+
+[sub_resource type="CapsuleShape2D" id="8"]
+radius = 16.0
+height = 70.0
+
+[node name="Маша" type="CharacterBody2D"]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("2")
+
+[node name="БезИмени-1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.27451)
+position = Vector2(3.33334, 85)
+rotation = 0.00864272
+scale = Vector2(1.16295, 0.231659)
+texture = ExtResource("7")
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Плечо2" type="Polygon2D" parent="Body"]
+visible = false
+show_behind_parent = true
+position = Vector2(2.37356, -20.4444)
+rotation = -1.20871
+offset = Vector2(-128, -11)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(108.28, 21.3217, 115.257, 7.36821, 131.148, 0.00387573, 138.9, 6.59302, 134.249, 26.7481, 121.846, 36.0504, 108.28, 34.1124)
+uv = PackedVector2Array(108.28, 21.3217, 115.257, 7.36821, 131.148, 0.00387573, 138.9, 6.59302, 134.249, 26.7481, 121.846, 36.0504, 108.28, 34.1124)
+
+[node name="Локоть2" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(15.5402, -2.38846)
+rotation = 0.22742
+offset = Vector2(-48.4142, -47.1274)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(43.1636, 58.1434, 38.1248, 47.2907, 45.4892, 36.8256, 62.931, 39.9264, 77.2721, 49.2287, 59.8302, 73.2597)
+uv = PackedVector2Array(43.1636, 58.1434, 38.1248, 47.2907, 45.4892, 36.8256, 62.931, 39.9264, 77.2721, 49.2287, 59.8302, 73.2597)
+
+[node name="Кисть2(1)" type="Polygon2D" parent="Body"]
+visible = false
+show_behind_parent = true
+position = Vector2(28.0579, 9.83386)
+rotation = 1.07478
+offset = Vector2(-149.658, -19.3093)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(143.164, 25.9729, 141.226, 12.407, 160.605, 2.71705, 167.582, 7.75581, 165.644, 31.3992, 150.14, 35.2752)
+uv = PackedVector2Array(143.164, 25.9729, 141.226, 12.407, 160.605, 2.71705, 167.582, 7.75581, 165.644, 31.3992, 150.14, 35.2752)
+
+[node name="Кисть2(2)" type="Polygon2D" parent="Body/Кисть2(1)"]
+position = Vector2(0.93412, 0.356968)
+offset = Vector2(-170.972, -19.2337)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(168.357, 27.5233, 167.195, 5.43023, 193.164, 2.71705, 192.776, 32.1744, 178.047, 33.3372)
+uv = PackedVector2Array(168.357, 27.5233, 167.195, 5.43023, 193.164, 2.71705, 192.776, 32.1744, 178.047, 33.3372)
+
+[node name="Правая нога2" type="Polygon2D" parent="Body"]
+visible = false
+show_behind_parent = true
+position = Vector2(18.1291, 38.8465)
+rotation = 0.06332
+offset = Vector2(-52, -119)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(46.4676, 134.498, 45.0739, 120.909, 47.1645, 113.941, 53.7847, 113.941, 64.2376, 116.38, 68.4188, 125.091, 77.4781, 136.937, 82.3561, 151.223, 81.3108, 161.328, 71.5547, 165.857, 55.8753, 161.676, 48.9066, 148.784)
+uv = PackedVector2Array(46.4676, 134.498, 45.0739, 120.909, 47.1645, 113.941, 53.7847, 113.941, 64.2376, 116.38, 68.4188, 125.091, 77.4781, 136.937, 82.3561, 151.223, 81.3108, 161.328, 71.5547, 165.857, 55.8753, 161.676, 48.9066, 148.784)
+
+[node name="Правая нога1" type="Polygon2D" parent="Body"]
+visible = false
+show_behind_parent = true
+position = Vector2(6, 19)
+rotation = -0.104156
+offset = Vector2(-50, -87)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(43.6801, 101.397, 39.499, 90.2474, 43.6801, 79.7944, 52.3909, 79.0976, 64.5861, 89.5505, 72.9484, 106.275, 69.8125, 114.986, 62.8439, 116.031, 50.6488, 112.547)
+uv = PackedVector2Array(43.6801, 101.397, 39.499, 90.2474, 43.6801, 79.7944, 52.3909, 79.0976, 64.5861, 89.5505, 72.9484, 106.275, 69.8125, 114.986, 62.8439, 116.031, 50.6488, 112.547)
+
+[node name="Правая стопа" type="Polygon2D" parent="Body"]
+position = Vector2(30.568, 79.7155)
+rotation = -0.0149425
+offset = Vector2(-169, -86)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(154.928, 90.5555, 151.78, 80.5555, 151.78, 74.6296, 162.706, 69.4444, 175.484, 65.9259, 190.299, 70.1852, 188.447, 76.4815, 195.669, 86.2963, 194.928, 95.7407, 166.224, 97.2222, 155.854, 95.9259)
+uv = PackedVector2Array(154.928, 90.5555, 151.78, 80.5555, 151.78, 74.6296, 162.706, 69.4444, 175.484, 65.9259, 190.299, 70.1852, 188.447, 76.4815, 195.669, 86.2963, 194.928, 95.7407, 166.224, 97.2222, 155.854, 95.9259)
+
+[node name="Левая нога2" type="Polygon2D" parent="Body"]
+position = Vector2(-11.8266, 41.9214)
+rotation = 0.086272
+offset = Vector2(-38, -120)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(10.5791, 130.317, 25.2132, 117.077, 40.1958, 112.199, 46.1192, 116.031, 45.7707, 132.059, 36.0146, 157.843, 23.1227, 166.554, 5.00418, 164.115, 1.8683, 151.571)
+uv = PackedVector2Array(10.5791, 130.317, 25.2132, 117.077, 40.1958, 112.199, 46.1192, 116.031, 45.7707, 132.059, 36.0146, 157.843, 23.1227, 166.554, 5.00418, 164.115, 1.8683, 151.571)
+
+[node name="Левая нога1" type="Polygon2D" parent="Body"]
+position = Vector2(-7, 21)
+rotation = -0.257745
+offset = Vector2(-27, -87)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(3.62868, 102.717, 18.3574, 82.9496, 28.4349, 76.7481, 37.7372, 82.1744, 38.9, 97.2907, 23.0085, 118.221, 11.7682, 117.833, 3.24109, 111.244)
+uv = PackedVector2Array(3.62868, 102.717, 18.3574, 82.9496, 28.4349, 76.7481, 37.7372, 82.1744, 38.9, 97.2907, 23.0085, 118.221, 11.7682, 117.833, 3.24109, 111.244)
+
+[node name="Левая стопа" type="Polygon2D" parent="Body"]
+position = Vector2(-35, 77)
+rotation = -0.014015
+offset = Vector2(-128, -83)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(113.715, 81.5366, 114.76, 68.993, 122.426, 70.3868, 131.833, 70.0383, 140.544, 67.2509, 147.513, 73.5227, 152.739, 85.0209, 153.436, 94.4286, 142.286, 96.1707, 127.304, 98.6098, 117.548, 96.1707, 111.973, 90.5958)
+uv = PackedVector2Array(113.715, 81.5366, 114.76, 68.993, 122.426, 70.3868, 131.833, 70.0383, 140.544, 67.2509, 147.513, 73.5227, 152.739, 85.0209, 153.436, 94.4286, 142.286, 96.1707, 127.304, 98.6098, 117.548, 96.1707, 111.973, 90.5958)
+
+[node name="Тело" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-1, -15)
+offset = Vector2(-20, -23)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(0.438885, 47.2661, 2.38299, 33.2928, -0.776184, 13.2442, -0.168652, 2.43013, 11.253, 0.36452, 29.8435, 2.06561, 38.106, 10.9356, 39.4425, 18.8335, 37.0124, 26.367, 35.1898, 34.7509, 36.4049, 42.6488, 39.078, 45.322, 40.1716, 55.164, 41.5081, 60.1458, 41.1436, 66.9502, 21.7026, 73.147, 0.681896, 69.1373, -0.533169, 55.0425)
+uv = PackedVector2Array(0.438885, 47.2661, 2.38299, 33.2928, -0.776184, 13.2442, -0.168652, 2.43013, 11.253, 0.36452, 29.8435, 2.06561, 38.106, 10.9356, 39.4425, 18.8335, 37.0124, 26.367, 35.1898, 34.7509, 36.4049, 42.6488, 39.9286, 45.6865, 39.321, 55.2855, 41.5081, 60.1458, 41.1436, 66.9502, 21.7026, 73.147, 0.681896, 69.1373, -0.533169, 55.0425)
+
+[node name="Юбка2" type="Polygon2D" parent="Body/Тело"]
+visible = false
+show_behind_parent = true
+position = Vector2(-8.10466, 36.5605)
+rotation = -0.0163421
+offset = Vector2(-192.625, -215.781)
+texture = ExtResource("5_3flpo")
+polygon = PackedVector2Array(170.78, 232.171, 182.408, 212.791, 195.974, 211.24, 201.4, 221.705, 196.361, 251.55, 189.385, 261.628, 170.78, 251.938, 164.191, 246.124)
+uv = PackedVector2Array(170.78, 232.171, 182.408, 212.791, 195.974, 211.24, 201.4, 221.705, 196.361, 251.55, 189.385, 261.628, 170.78, 251.938, 164.191, 246.124)
+
+[node name="Юбка1" type="Polygon2D" parent="Body/Тело"]
+visible = false
+show_behind_parent = true
+position = Vector2(7.216, 33.6142)
+rotation = -0.119219
+offset = Vector2(-224.052, -209.807)
+texture = ExtResource("5_3flpo")
+polygon = PackedVector2Array(200.625, 224.419, 205.664, 208.14, 223.881, 201.163, 246.749, 207.752, 255.664, 228.682, 259.54, 246.512, 231.633, 259.302, 201.012, 262.016, 194.811, 252.713)
+uv = PackedVector2Array(200.625, 224.419, 205.664, 208.14, 223.881, 201.163, 246.749, 207.752, 255.664, 228.682, 259.54, 246.512, 231.633, 259.302, 201.012, 262.016, 194.811, 252.713)
+
+[node name="Кисть1" type="Polygon2D" parent="Body"]
+position = Vector2(-29.8644, 8.49122)
+rotation = -0.614728
+offset = Vector2(-92.4974, -27.6299)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(70.2953, 43.0271, 64.4814, 35.2752, 71.4581, 19.3837, 94.3264, 16.6705, 102.466, 27.5233, 99.3651, 43.8023, 81.9233, 53.1047)
+uv = PackedVector2Array(70.2953, 43.0271, 64.4814, 35.2752, 71.4581, 19.3837, 94.3264, 16.6705, 102.466, 27.5233, 99.3651, 43.8023, 81.9233, 53.1047)
+
+[node name="Локоть1" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-21.1248, -5.58871)
+rotation = 1.44764
+offset = Vector2(-47.3664, -47.0165)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(45.4892, 62.7946, 40.4504, 54.655, 37.3496, 41.4767, 44.714, 35.6628, 60.2178, 37.6008, 74.1713, 51.1667, 62.931, 72.0969)
+uv = PackedVector2Array(45.4892, 62.7946, 40.4504, 54.655, 37.3496, 41.4767, 44.714, 35.6628, 60.2178, 37.6008, 74.1713, 51.1667, 62.931, 72.0969)
+
+[node name="Плечо1" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-12, -19)
+rotation = 0.0993221
+offset = Vector2(-59, -12)
+texture = ExtResource("3_xjcvn")
+polygon = PackedVector2Array(38.7135, 39.0036, 34.7038, 35.723, 36.0403, 28.9186, 42.1157, 13.2442, 58.5191, 0.972053, 66.5385, 7.16889, 72.1278, 20.8991, 64.2299, 32.1993, 50.9857, 37.6671)
+uv = PackedVector2Array(38.7135, 39.0036, 34.7038, 35.723, 36.0403, 28.9186, 42.1157, 13.2442, 58.5191, 0.972053, 66.5385, 7.16889, 72.1278, 20.8991, 64.2299, 32.1993, 51.1072, 39.4897)
+
+[node name="Голова" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-4, -33)
+offset = Vector2(-44, -228)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(12.5434, 218.996, 10.993, 200.004, 16.4194, 183.725, 29.5977, 176.36, 45.4892, 172.484, 71.4581, 175.973, 76.1093, 185.663, 81.1481, 205.818, 78.4349, 216.671, 77.6597, 234.888, 65.2566, 239.926, 41.2256, 240.702, 21.0705, 231.012)
+uv = PackedVector2Array(12.5434, 218.996, 10.993, 200.004, 16.4194, 183.725, 29.5977, 176.36, 45.4892, 172.484, 71.4581, 175.973, 76.1093, 185.663, 81.1481, 205.818, 78.4349, 216.671, 77.6597, 234.888, 65.2566, 239.926, 41.2256, 240.702, 21.0705, 231.012)
+
+[node name="Волосы3" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(20, -76)
+offset = Vector2(-225.35, -127.205)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(212.156, 130.624, 211.768, 115.895, 223.009, 106.205, 243.164, 108.919, 251.303, 126.36, 243.551, 139.539, 238.9, 155.043, 229.598, 151.554, 220.295, 137.988)
+uv = PackedVector2Array(212.156, 130.624, 211.768, 115.895, 223.009, 106.205, 243.164, 108.919, 251.303, 126.36, 243.551, 139.539, 238.9, 155.043, 229.598, 151.554, 220.295, 137.988)
+
+[node name="Серьга2" type="Polygon2D" parent="Body/Волосы3"]
+position = Vector2(10, 5)
+rotation = 0.0781677
+offset = Vector2(-138.543, -216.264)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(161.381, 195.353, 167.195, 190.702, 173.784, 200.391, 165.257, 210.081, 158.667, 205.043)
+uv = PackedVector2Array(161.381, 195.353, 167.195, 190.702, 173.784, 200.391, 165.257, 210.081, 158.667, 205.043)
+
+[node name="Волосы2" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-30, -64)
+offset = Vector2(-97.3496, -132.205)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(93, 162, 88.9, 142.64, 87.3496, 124.035, 94.3264, 121.709, 103.629, 134.5, 114, 150, 116.032, 167.446, 119.908, 183.725, 108.28, 182.174)
+uv = PackedVector2Array(96.6519, 160.857, 88.9, 142.64, 87.3496, 124.035, 94.3264, 121.709, 103.629, 134.5, 109.443, 149.616, 116.032, 167.446, 119.908, 183.725, 108.28, 182.174)
+
+[node name="Волосы1" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(-7, -83)
+offset = Vector2(-130.699, -110.209)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(100.915, 128.298, 102.466, 116.671, 112.156, 104.655, 135.024, 100.004, 153.241, 102.717, 151.303, 115.12, 144.714, 124.81, 139.675, 144.578, 139.675, 160.469, 141.613, 178.686, 123.396, 174.422, 113.319, 158.531, 109.443, 148.453, 104.404, 139.926)
+uv = PackedVector2Array(100.915, 128.298, 102.466, 116.671, 112.156, 104.655, 135.024, 100.004, 153.241, 102.717, 151.303, 115.12, 144.714, 124.81, 139.675, 144.578, 139.675, 160.469, 141.613, 178.686, 123.396, 174.422, 113.319, 158.531, 109.443, 148.453, 104.404, 139.926)
+
+[node name="Ухо1" type="Polygon2D" parent="Body/Волосы1"]
+position = Vector2(-11, 10)
+offset = Vector2(-192, -130)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(166.807, 132.95, 167.97, 120.159, 176.109, 107.368, 197.815, 105.43, 201, 119, 200.14, 137.213, 186.574, 139.926, 171.846, 141.477)
+uv = PackedVector2Array(166.807, 132.95, 167.97, 120.159, 176.109, 107.368, 197.815, 105.43, 198.978, 118.996, 200.14, 137.213, 186.574, 139.926, 171.846, 141.477)
+
+[node name="Серьга1" type="Polygon2D" parent="Body/Волосы1/Ухо1"]
+position = Vector2(-14, 2)
+offset = Vector2(-105, -196)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(99.7527, 207.368, 93.1636, 199.616, 99.7527, 193.027, 110.605, 191.089, 116.419, 201.554, 106.342, 209.306)
+uv = PackedVector2Array(101.303, 205.818, 93.1636, 199.616, 99.7527, 193.027, 110.605, 191.089, 116.419, 201.554, 106.342, 209.306)
+
+[node name="Волосы4" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(9, -82)
+offset = Vector2(-161.35, -111.205)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(148.202, 127.523, 152.466, 116.283, 155.179, 103.88, 169.133, 104.267, 171.846, 111.632, 165.644, 125.973, 153.629, 139.539)
+uv = PackedVector2Array(148.202, 127.523, 152.466, 116.283, 155.179, 103.88, 169.133, 104.267, 171.846, 111.632, 165.644, 125.973, 153.629, 139.539)
+
+[node name="Лицо" type="Polygon2D" parent="Body"]
+visible = false
+position = Vector2(9, -43)
+offset = Vector2(-212.35, -167.205)
+texture = ExtResource("4_1msod")
+polygon = PackedVector2Array(186.962, 169.384, 179.21, 158.919, 186.574, 152.717, 197.427, 148.453, 212.156, 153.88, 223.784, 150.779, 228.822, 150.391, 235.799, 158.919, 232.311, 173.647, 221.071, 186.05, 206.729, 184.888, 198.59, 177.911, 190.838, 175.585)
+uv = PackedVector2Array(186.962, 169.384, 179.21, 158.919, 186.574, 152.717, 197.427, 148.453, 212.156, 153.88, 223.784, 150.779, 228.822, 150.391, 235.799, 158.919, 232.311, 173.647, 221.071, 186.05, 206.729, 184.888, 198.59, 177.911, 190.838, 175.585)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2xrb3")
+}
+autoplay = "idle1"
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 119)
+scale = Vector2(1.90625, 1)
+texture = ExtResource("3")
+
+[node name="CombatArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CombatArea"]
+modulate = Color(0, 0, 0.501961, 1)
+shape = SubResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.66667, 75)
+rotation = 1.5708
+shape = SubResource("8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0

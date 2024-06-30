@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo2xsdmwp3guo"]
+
+[ext_resource type="Texture2D" uid="uid://cjeyxhob43wmu" path="res://Игровые асеты/Способности/Icon_personalChest.png" id="1_8prur"]
+[ext_resource type="Script" path="res://Scripts/RandomChest_start.gd" id="1_lduya"]
+[ext_resource type="Script" path="res://Scripts/RandomChest.gd" id="2_sje47"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="3_1dna2"]
+[ext_resource type="Resource" uid="uid://csaafh2f5oyxx" path="res://Inventory/ProtoItems/Inventory_base.tres" id="4_bj43u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ig7so"]
+radius = 62.0
+height = 124.0
+
+[node name="RandomChest" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_lduya")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.7, 0.7, 1)
+texture = ExtResource("1_8prur")
+offset = Vector2(0, 42)
+
+[node name="Action" type="Area2D" parent="."]
+position = Vector2(0, 42)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_sje47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ig7so")
+
+[node name="InventoryGrid" type="Node" parent="."]
+script = ExtResource("3_1dna2")
+size = Vector2i(11, 6)
+item_protoset = ExtResource("4_bj43u")

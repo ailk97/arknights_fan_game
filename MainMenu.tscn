@@ -1,0 +1,219 @@
+[gd_scene load_steps=13 format=3 uid="uid://c35mafis4jp73"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_jnyh2"]
+[ext_resource type="Texture2D" uid="uid://266b6hni672q" path="res://Игровые асеты/Способности/skill_icon_skchr_amiya_3.png" id="2_jwlm7"]
+[ext_resource type="Texture2D" uid="uid://sh17vcwmn1qx" path="res://Игровые асеты/bg_barracks.png" id="2_nrom5"]
+[ext_resource type="Texture2D" uid="uid://c6qhb0kon2rpg" path="res://Игровые асеты/Способности/skill_icon_skchr_amiya_2.png" id="4_nbsd7"]
+[ext_resource type="Texture2D" uid="uid://cqpwunistny44" path="res://Игровые асеты/Способности/skill_icon_sktok_phatom_1.png" id="5_fwhsa"]
+[ext_resource type="Texture2D" uid="uid://csjmxdppv6asu" path="res://Игровые асеты/Способности/skill_icon_sktok_emp.png" id="5_x5q2u"]
+[ext_resource type="Texture2D" uid="uid://dd0xyp7ghchn2" path="res://Игровые асеты/Logo.png" id="6_0ao5e"]
+[ext_resource type="Texture2D" uid="uid://dpawjtwjya05y" path="res://Игровые асеты/Без имени-5.png" id="7_3nrb5"]
+[ext_resource type="AudioStream" uid="uid://do8l738xye4un" path="res://Игровые асеты/Audio/1.mp3" id="8_cpaqu"]
+[ext_resource type="AudioStream" uid="uid://caxlrddwqorsf" path="res://Игровые асеты/Audio/select.wav" id="9_gvkld"]
+[ext_resource type="AudioStream" uid="uid://b5f3govyk5e27" path="res://Игровые асеты/Audio/click.wav" id="10_jdjf3"]
+[ext_resource type="AudioStream" uid="uid://cyxv2lx7wjldi" path="res://Игровые асеты/Audio/typing.wav" id="11_4e50g"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_jnyh2")
+
+[node name="BgBarracks" type="Sprite2D" parent="."]
+position = Vector2(1126.67, 447)
+scale = Vector2(0.883333, 0.883333)
+texture = ExtResource("2_nrom5")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = 855.0
+offset_right = -1738.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Начать игру"
+icon = ExtResource("2_jwlm7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Continue" type="Button" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Продолжить"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 220.0
+offset_top = 855.0
+offset_right = -1564.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Загрузится"
+icon = ExtResource("4_nbsd7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 401.0
+offset_top = 855.0
+offset_right = -1383.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Настройки"
+icon = ExtResource("5_x5q2u")
+icon_alignment = 1
+vertical_icon_alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 574.0
+offset_top = 855.0
+offset_right = -1210.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Выйти из игры"
+icon = ExtResource("5_fwhsa")
+icon_alignment = 1
+vertical_icon_alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="NameSelector" type="Panel" parent="."]
+process_mode = 2
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 766.0
+offset_top = 438.0
+offset_right = -822.0
+offset_bottom = -454.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="NameSelector"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 15.0
+offset_right = 243.0
+offset_bottom = 38.0
+text = "Как тебя будут звать?"
+
+[node name="LineEdit" type="LineEdit" parent="NameSelector"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 45.0
+offset_right = 284.0
+offset_bottom = 76.0
+placeholder_text = "Имя"
+max_length = 20
+
+[node name="Next" type="Button" parent="NameSelector"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 133.0
+offset_right = 212.0
+offset_bottom = 164.0
+text = "Продолжить"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 1508.0
+offset_top = 978.0
+offset_right = 1888.0
+offset_bottom = 1062.0
+icon = ExtResource("4_nbsd7")
+alignment = 0
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button4"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 7.0
+offset_right = 371.0
+offset_bottom = 79.0
+text = "Версия 0.3:
+- Добавлен звук
+- Добавлены настройки
+- Добавлено больше снаряжения
+
+Версия 0.2:
+- Переработан спавн
+- Добавлено освещение
+- Визуальные улучшения
+- Что-то ещё
+
+Версия 0.1:
+- Играбельная (вроде) версия"
+
+[node name="Logo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(930, 178)
+texture = ExtResource("6_0ao5e")
+
+[node name="blackScreen" type="Sprite2D" parent="." groups=["jopa"]]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+texture = ExtResource("7_3nrb5")
+centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("8_cpaqu")
+autoplay = true
+bus = &"BackgroundMusic"
+
+[node name="Select" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("9_gvkld")
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("10_jdjf3")
+bus = &"UI"
+
+[node name="Typing" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("11_4e50g")
+volume_db = 5.553
+pitch_scale = 0.23
+bus = &"UI"
+
+[connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="focus_entered" from="Button/Continue" to="." method="_on_continue_focus_entered"]
+[connection signal="mouse_entered" from="Button/Continue" to="." method="_on_continue_mouse_entered"]
+[connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
+[connection signal="focus_entered" from="Button2" to="." method="_on_button_2_focus_entered"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="focus_entered" from="Button5" to="." method="_on_button_2_focus_entered"]
+[connection signal="mouse_entered" from="Button5" to="." method="_on_button_2_mouse_entered"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="focus_entered" from="Button3" to="." method="_on_button_3_focus_entered"]
+[connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="text_changed" from="NameSelector/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="NameSelector/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="focus_entered" from="NameSelector/Next" to="." method="_on_next_focus_entered"]
+[connection signal="mouse_entered" from="NameSelector/Next" to="." method="_on_next_mouse_entered"]
+[connection signal="pressed" from="NameSelector/Next" to="." method="_on_next_pressed"]

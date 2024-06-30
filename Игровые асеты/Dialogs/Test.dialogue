@@ -1,0 +1,14 @@
+~ start
+
+Nathan: пошёл нахуй
+if DialogTest_Events.shit_happen == "true":
+	Игрок: Знаешь что...
+	- Иди нахуй
+		set DialogTest_Events.shit_happen = "послан"
+		Nathan: УЭЭЭ((
+	- Обидно ващет
+		Nathan: Так всё и задумавалось, иди нахуй.
+elif DialogTest_Events.shit_happen == "послан":
+	Nathan: УЭЭЭ((
+
+=> END

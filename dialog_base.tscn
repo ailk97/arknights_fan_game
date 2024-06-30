@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxm8wajjog07y"]
+
+[ext_resource type="FontFile" uid="uid://btplpfy1q1uxl" path="res://Игровые асеты/Шрифты/JovannyLemonad-Bender.otf" id="1_ns55y"]
+[ext_resource type="FontFile" uid="uid://dto2b6vp01cy2" path="res://Игровые асеты/Шрифты/AEwide #242813.otf" id="2_yugxi"]
+[ext_resource type="FontFile" uid="uid://cl2uko60koglo" path="res://Игровые асеты/Шрифты/Novecentowide-Bold #242450.otf" id="3_ofb33"]
+
+[node name="dialog_base" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_top = 730.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Text" type="RichTextLabel" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = 79.0
+offset_right = -40.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_ns55y")
+theme_override_font_sizes/normal_font_size = 30
+text = "пастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапастапаста"
+
+[node name="NameCharacter" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 22.0
+offset_right = 289.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("2_yugxi")
+theme_override_font_sizes/font_size = 32
+text = "Имя Персонажа"
+
+[node name="Message" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 1542.0
+offset_top = 296.0
+offset_right = 1870.0
+offset_bottom = 322.0
+theme_override_fonts/font = ExtResource("3_ofb33")
+theme_override_font_sizes/font_size = 16
+text = "Нажмите *Буква*. чтобы продолжить"
+horizontal_alignment = 2
+vertical_alignment = 2

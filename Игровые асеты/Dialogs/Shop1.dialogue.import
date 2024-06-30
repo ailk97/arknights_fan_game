@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://xydy2j7agfvk"
+path="res://.godot/imported/Shop1.dialogue-07ad723631d70fe2e5317fa0050c9d70.tres"
+
+[deps]
+
+source_file="res://Игровые асеты/Dialogs/Shop1.dialogue"
+dest_files=["res://.godot/imported/Shop1.dialogue-07ad723631d70fe2e5317fa0050c9d70.tres"]
+
+[params]
+
+defaults=true

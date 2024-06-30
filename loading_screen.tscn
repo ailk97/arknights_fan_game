@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://bty37rujuo3cy"]
+
+[ext_resource type="Script" path="res://Scripts/loading_screen.gd" id="1_ub0cl"]
+[ext_resource type="Texture2D" uid="uid://073vc03548v1" path="res://Игровые асеты/24_g1_snowyforest.png" id="2_2fxxj"]
+[ext_resource type="Texture2D" uid="uid://cwbkhkbhmwnd" path="res://Игровые асеты/Без имени-4.png" id="3_f5voy"]
+
+[node name="loading_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ub0cl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2fxxj")
+
+[node name="БезИмени-2" type="Sprite2D" parent="TextureRect"]
+texture = ExtResource("3_f5voy")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 868.0
+offset_right = 446.0
+offset_bottom = 896.0
+theme_override_font_sizes/font_size = 20
+text = "Очень интеренсая информация"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 900.0
+offset_right = 649.0
+offset_bottom = 928.0
+theme_override_font_sizes/font_size = 14
+text = "- Если бить противников, то они умрут и выкинут вещи. Это очень важно!"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1581.0
+offset_top = 994.0
+offset_right = 1847.0
+offset_bottom = 1028.0
+step = 1.0

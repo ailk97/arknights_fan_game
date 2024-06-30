@@ -1,0 +1,55 @@
+[
+    {
+        "height": "3",
+        "id": "UrsusArmor1",
+        "image": "res://Игровые асеты/body_armor/Icon/armor1.png",
+        "mdef": "3",
+        "name": "Броня Экспецидионного Корпуса Урсуса",
+        "pdef": "3",
+        "skirt": "true",
+        "texture": "res://Игровые асеты/body_armor/armor1.png",
+        "type": "bodyarmor",
+        "width": "2"
+    },
+    {
+        "dmg": "20",
+        "height": "2",
+        "id": "Weapon1",
+        "image": "res://Игровые асеты/sword/Icon/weapon2.png",
+        "name": "Меч",
+        "pdef": "5",
+        "texture": "res://Игровые асеты/sword/weapon1.png",
+        "type": "weapon",
+        "width": "1"
+    },
+    {
+        "height": "3",
+        "id": "LightArmor1",
+        "image": "res://Игровые асеты/body_armor/Icon/armor3.png",
+        "int": "3",
+        "mdef": "2",
+        "skirt": "false",
+        "texture": "res://Игровые асеты/body_armor/armor2.png",
+        "type": "bodyarmor",
+        "width": "2"
+    },
+    {
+        "agi": "3",
+        "height": "3",
+        "id": "LightArmor2",
+        "image": "res://Игровые асеты/body_armor/Icon/armor2.png",
+        "pdef": "2",
+        "skirt": "false",
+        "texture": "res://Игровые асеты/body_armor/armor3.png",
+        "type": "bodyarmor",
+        "width": "2"
+    },
+    {
+        "height": "2",
+        "id": "UrsusHelmet1",
+        "image": "res://Игровые асеты/helmet/Icon/helmet1.png",
+        "texture": "res://Игровые асеты/helmet/helmet1.png",
+        "type": "helmet",
+        "width": "2"
+    }
+]
