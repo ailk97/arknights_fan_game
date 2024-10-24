@@ -1,20 +1,20 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1729535985
+::res://::1729798787
 1.tscn::PackedScene::2870030007833233569::1729233969::0::1::::<><>::res://Tests/1.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/Action.gd<>uid://b0aaoiqtgo6ju::::res://personal_chest.tscn<>uid://cw5etidpmlk2d::::res://ShopTest.tscn<>uid://bo2xsdmwp3guo::::res://random_chest.tscn<>uid://brvabsf7prjve::::res://Игровые асеты/Audio/background1.mp3<>uid://cpxtp2clr18iy::::res://damagetest.tscn<>uid://trtopn72q241::::res://EnemyTest.tscn
 Action.gd::GDScript::-1::1715334572::0::1::::<>Area2D<>::
-Body.gd::GDScript::-1::1729233793::0::1::::<>Node2D<>::
+Body.gd::GDScript::-1::1729536398::0::1::::<>Node2D<>::
 damagetest.gd::GDScript::-1::1712929515::0::1::::<>Node2D<>::
 damagetest.tscn::PackedScene::5874336541814829420::1729233972::0::1::::<><>::uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>res://damagetest.gd
 DeathPanel.gd::GDScript::-1::1712944475::0::1::::<>Control<>::
 DeathPanel.tscn::PackedScene::5875257871810706124::1729233972::0::1::::<><>::res://DeathPanel.gd
 default_bus_layout.tres::AudioBusLayout::4372924939485368452::1715278430::0::1::::<><>::
-default_env.tres::Environment::1308534265358033619::1729233972::0::1::::<><>::
+default_env.tres::Environment::1308534265358033619::1729536397::0::1::::<><>::
 DialogTest.gd::GDScript::-1::1706681414::0::1::::<>CharacterBody2D<>::
 DialogTest.tscn::PackedScene::2137187440260568970::1729233971::0::1::::<><>::res://DialogTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://Action.gd<>uid://b4rufhn67eibm::::res://test.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
-DialogTest_Events.gd::GDScript::-1::1729233793::0::1::::<>Node<>::
+DialogTest_Events.gd::GDScript::-1::1729536398::0::1::::<>Node<>::
 dialog_base.tscn::PackedScene::4027579582974897324::1705233335::0::1::::<><>::uid://btplpfy1q1uxl::::res://Игровые асеты/Шрифты/JovannyLemonad-Bender.otf<>uid://dto2b6vp01cy2::::res://Игровые асеты/Шрифты/AEwide #242813.otf<>uid://cl2uko60koglo::::res://Игровые асеты/Шрифты/Novecentowide-Bold #242450.otf
 EnemyTest.gd::GDScript::-1::1729193672::0::1::::<>CharacterBody2D<>::
-EnemyTest.tscn::PackedScene::1369861884342248144::1729233970::0::1::::<><>::res://EnemyTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>res://Shaders/dissolve.gdshader<>res://take_damage.gdshader<>uid://cuvj8ks2ijcog::::res://Игровые асеты/enemy_test.png<>uid://hbaryvuiktvr::::res://Игровые асеты/sword/weapon1.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://b7r70ku0qcm2a::::res://Без имени-1.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://addons/gloot/core/inventory_grid.gd<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
+EnemyTest.tscn::PackedScene::1369861884342248144::1729536398::0::1::::<><>::res://EnemyTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>res://Shaders/dissolve.gdshader<>res://take_damage.gdshader<>uid://cuvj8ks2ijcog::::res://Игровые асеты/enemy_test.png<>uid://hbaryvuiktvr::::res://Игровые асеты/sword/weapon1.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://b7r70ku0qcm2a::::res://Без имени-1.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://addons/gloot/core/inventory_grid.gd<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
 enemy_1064_snsbr.png::CompressedTexture2D::6832663665855728674::1663176680::1692099189::1::::<><>::
 enemy_group_1.tscn::PackedScene::7261021049061462422::1708795397::0::1::::<><>::uid://trtopn72q241::::res://EnemyTest.tscn
 Equipment.gd::GDScript::-1::1705152492::0::1::::<>Control<>::
@@ -36,7 +36,7 @@ settings.tscn::PackedScene::3840619197761082897::1729233971::0::1::::<><>::res:/
 Shop.gd::GDScript::-1::1712663889::0::1::::<>Panel<>::
 ShopTest.tscn::PackedScene::6379204483619193337::1729233971::0::1::::<><>::res://Scripts/ShopTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://b2k34g5mdgjgd::::res://Игровые асеты/Противники/enemy_1069_icebrk.png<>uid://dttdpnqnb4kiu::::res://icon.png<>res://Action.gd<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>uid://xydy2j7agfvk::::res://Игровые асеты/Dialogs/Shop1.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
 StaticBody2D.gd::GDScript::-1::1714118952::0::1::::<>CheckBox<>::
-take_damage.gdshader::Shader::-1::1729234101::0::1::::<><>::
+take_damage.gdshader::Shader::-1::1729536416::0::1::::<><>::
 test.dialogue::Resource::4458215229037245966::1712782264::1712782265::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 test.gd::GDScript::-1::1705229559::0::1::::<>Panel<>::
 trail_2d.tscn::PackedScene::3942761715104396447::1729191820::0::1::::<><>::res://Scripts/Trail2D.gd
@@ -290,11 +290,11 @@ ctrl_inventory_stacked.gd::GDScript::-1::1704863402::0::1::::CtrlInventoryStacke
 ctrl_item_slot.gd::GDScript::-1::1704863402::0::1::::CtrlItemSlot<>Control<>res://addons/gloot/images/icon_ctrl_item_slot.svg::
 ctrl_item_slot_ex.gd::GDScript::-1::1704863403::0::1::::CtrlItemSlotEx<>CtrlItemSlot<>res://addons/gloot/images/icon_ctrl_item_slot.svg::
 ::res://Inventory/::1706191754
-::res://Inventory/ProtoItems/::1729234101
+::res://Inventory/ProtoItems/::1729536416
 dropped_item.gd::GDScript::-1::1724957820::0::1::::<>Node2D<>::
 dropped_item.tscn::PackedScene::4117972487133093843::1729233972::0::1::::<><>::res://Inventory/ProtoItems/dropped_item.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://dopync14ovds2::::res://Игровые асеты/Шрифты/NotoSansHans-DemiLight.otf<>res://Inventory/ProtoItems/selected_dropped_item.gdshader<>uid://dttdpnqnb4kiu::::res://icon.png
 Inventory_base.tres::Resource/Resource::6036249891481325749::1728312346::0::1::::<><>::res://addons/gloot/core/item_protoset.gd
-selected_dropped_item.gdshader::Shader::-1::1729234101::0::1::::<><>::
+selected_dropped_item.gdshader::Shader::-1::1729536416::0::1::::<><>::
 ::res://lang/::1729192445
 languages.csv::Translation::3534689007380251997::1729192434::1729192445::1::::<><>::
 languages.en.translation::OptimizedTranslation::4883736233843563875::1729192445::0::1::::<><>::
@@ -303,8 +303,8 @@ ru_ru.ini::TextFile::-1::1728301628::0::1::::<><>::
 ::res://Quests/::1713590817
 QuestTest.gd::GDScript::-1::1712862737::0::1::::<>Panel<>::
 QuestTest.tscn::PackedScene::8451418560516556194::1713590817::0::1::::<><>::res://Quests/QuestTest.gd
-::res://Scripts/::1729234101
-Attack_effect.gdshader::Shader::-1::1729234101::0::1::::<><>::
+::res://Scripts/::1729536416
+Attack_effect.gdshader::Shader::-1::1729536416::0::1::::<><>::
 loading_screen.gd::GDScript::-1::1713721128::0::1::::<>Control<>::
 PersonalChest.gd::GDScript::-1::1714416778::0::1::::<>Area2D<>::
 RandomChest.gd::GDScript::-1::1714114772::0::1::::<>Area2D<>::
@@ -314,17 +314,17 @@ Save2.gd::GDScript::-1::1714057780::0::1::::<>Panel<>::
 Save3.gd::GDScript::-1::1714057780::0::1::::<>Panel<>::
 ShopTest.gd::GDScript::-1::1724957821::0::1::::<>CharacterBody2D<>::
 Trail2D.gd::GDScript::-1::1721720760::0::1::::<>Line2D<>::
-::res://Shaders/::1729234101
-dissolve.gdshader::Shader::-1::1729234101::0::1::::<><>::
-::res://Tests/::1729233971
+::res://Shaders/::1729536416
+dissolve.gdshader::Shader::-1::1729536416::0::1::::<><>::
+::res://Tests/::1729536398
 1.gd::GDScript::-1::1721652737::0::1::::<>Node2D<>::
 Action.gd::GDScript::-1::1714115333::0::1::::<>Area2D<>::
 DugneonExit1.gd::GDScript::-1::1714115374::0::1::::<>Area2D<>::
 DungeonTest.gd::GDScript::-1::1713590448::0::1::::<>Sprite2D<>::
 generateTest.gd::GDScript::-1::1721654169::0::1::::<>Node2D<>::
-generateTest.tres::TileSet::8834431962143155543::1729233793::0::1::::<><>::uid://djnldv48udblx::::res://Игровые асеты/Поверхность/test_block_yellowLines.png<>uid://cd8ewh7lopggl::::res://Игровые асеты/Поверхность/test_dungeon_block.png<>uid://tcu6t50vhxuv::::res://Игровые асеты/Поверхность/test_dungeon_wall.png<>uid://bduubctod6g2w::::res://Игровые асеты/Поверхность/test_block.png<>uid://dqodtteh0lins::::res://Игровые асеты/Поверхность/test_block_wall.png
+generateTest.tres::TileSet::8834431962143155543::1729536398::0::1::::<><>::uid://djnldv48udblx::::res://Игровые асеты/Поверхность/test_block_yellowLines.png<>uid://cd8ewh7lopggl::::res://Игровые асеты/Поверхность/test_dungeon_block.png<>uid://tcu6t50vhxuv::::res://Игровые асеты/Поверхность/test_dungeon_wall.png<>uid://bduubctod6g2w::::res://Игровые асеты/Поверхность/test_block.png<>uid://dqodtteh0lins::::res://Игровые асеты/Поверхность/test_block_wall.png
 generateTest.tscn::PackedScene::6225338332024435296::1729233971::0::1::::<><>::res://Tests/generateTest.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/DugneonExit1.gd<>res://addons/gaea/generators/2D/walker_generator/walker_generator.gd<>res://addons/gaea/generators/2D/walker_generator/walker_generator_settings.gd<>res://addons/gaea/tile_info/tilemap_tile_info.gd<>res://addons/gaea/renderers/2D/tilemap_gaea_renderer.gd
-::res://Игровые асеты/::1729536035
+::res://Игровые асеты/::1729536420
 24_g1_snowyforest.png::CompressedTexture2D::1822518901530457584::1713523385::1713590027::1::::<><>::
 123.png::CompressedTexture2D::1458790855617071694::1716403712::1716620994::1::::<><>::
 aaa1.png::CompressedTexture2D::6737028473767537957::1713601281::1713601282::1::::<><>::
@@ -354,12 +354,12 @@ unknown.png::CompressedTexture2D::5316743067811124477::1663267881::1692099190::1
 Миша(Форма, Спрайт).png::CompressedTexture2D::5594630601807884449::1663165049::1692099189::1::::<><>::
 Саша чибик(броня1).png::CompressedTexture2D::1781335608809867985::1664118831::1692099189::1::::<><>::
 ::res://Игровые асеты/arm_left/::1714046253
-::res://Игровые асеты/Audio/::1729233793
+::res://Игровые асеты/Audio/::1729536398
 1.mp3::AudioStreamMP3::8210756882930744937::1713852943::1715255589::1::::<><>::
 2.mp3::AudioStreamMP3::7579108208026474800::1713853236::1715255589::1::::<><>::
 attack1.wav::AudioStreamWAV::2818979036759952082::1715258192::1715258192::1::::<><>::
 attack2.wav::AudioStreamWAV::6645247519682338704::1715258192::1715258192::1::::<><>::
-audio_randomizer_attack1.tres::AudioStreamRandomizer::1689408045677588630::1729233793::0::1::::<><>::uid://bgfsf431mab3w::::res://Игровые асеты/Audio/attack1.wav<>uid://c1xaixwv11q7a::::res://Игровые асеты/Audio/attack2.wav
+audio_randomizer_attack1.tres::AudioStreamRandomizer::1689408045677588630::1729536398::0::1::::<><>::uid://bgfsf431mab3w::::res://Игровые асеты/Audio/attack1.wav<>uid://c1xaixwv11q7a::::res://Игровые асеты/Audio/attack2.wav
 audio_randomizer_walk.tres::AudioStreamRandomizer::9149105792707387648::1715258366::0::1::::<><>::uid://b3smmkeixxtmj::::res://Игровые асеты/Audio/walk1.wav<>uid://c1tp7f20ipthj::::res://Игровые асеты/Audio/walk2.wav<>uid://dafkeao0t73vn::::res://Игровые асеты/Audio/walk3.wav<>uid://c80um3uglkq48::::res://Игровые асеты/Audio/walk4.wav
 background1.mp3::AudioStreamMP3::3622985698787794346::1715282831::1715283061::1::::<><>::
 click.wav::AudioStreamWAV::4504119441038054806::1715268762::1715268818::1::::<><>::
