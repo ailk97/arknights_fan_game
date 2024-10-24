@@ -1,1 +1,2 @@
-"# arknights_fan_game" 
+ARKNIGHTS: EXPEDITION
+(Godot 4.2)
