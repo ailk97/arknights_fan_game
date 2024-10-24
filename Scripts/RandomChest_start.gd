@@ -1,9 +1,11 @@
 extends Node2D
 
 var items_generated = false
-var loot = ["Weapon2", "Weapon3", "Weapon4", "Weapon5", "Weapon6","Weapon7","Weapon8",
+var loot = ["Weapon1","Weapon2", "Weapon3", "Weapon4", "Weapon5", "Weapon6","Weapon7","Weapon8",
 "Weapon9","Weapon10","Weapon11","Weapon12","Weapon13","Weapon14","Weapon15","Weapon16","Weapon17",
-"Weapon18","Weapon19","Weapon20"]
+"Weapon18","Weapon19","Weapon20", "Helmet2", "Helmet3", "Helmet4", "Helmet5",
+"Helmet6", "Helmet7", "Helmet8", "Shield1", "UrsusArmor1", "LightArmor1", "LightArmor2",
+"UrsusHelmet1"]
 
 func _ready():
 	#if Events.new_save == true:
@@ -33,7 +35,7 @@ func drop_item():
 		$InventoryGrid.sort()
 		item_drop.apply_text()
 		item_drop.position.x = global_position.x + randi_range(-30, 30)
-		item_drop.position.y = global_position.y + randi_range(-30, 30) + 42
+		item_drop.position.y = global_position.y + randi_range(-30, 30)
 		print(item_drop.position.x, " ", item_drop.position.y)
 	#get_tree().get_first_node_in_group("player").dialog(_pisya)
 	queue_free()

@@ -1,21 +1,22 @@
 ~ start
 
 set Events.dialogImage = "res://Игровые асеты/shopper.png"
-Торговка: Интересует мой асортимент?.
-- Да
+NPC_NAME_1: NPC_001
+- PLAYER_ANSWER1
 	do Events.openShop()
-- Дай задание!
+- PLAYER_ANSWER3
 	if Events.quest_test_accepted == false:
-		Торговка: Задание? Ну смотри, мне нужно, чтобы ты убил 5 противников. Справишся?
-		- Да
+		NPC_NAME_1: NPC_002
+		- PLAYER_ANSWER1
 			do Events.QuestAccept("res://Quests/QuestTest.tscn")
 			set Events.quest_test_accepted = true
-		- Нет
-			Торговка: Ну смотри.
+		- PLAYER_ANSWER2
+			NPC_NAME_1: NPC_003
 			=> start
 	else:
-		Торговка: Сначала прошлое выполни, потом новое дам.
+		NPC_NAME_1: NPC_004
 		=> start
-- Нет  => END!
+- PLAYER_ANSWER2
+	do Events.dialogOver()
 
 => END

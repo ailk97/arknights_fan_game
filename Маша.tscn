@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://boanuaqxuvd4n"]
+[gd_scene load_steps=96 format=3 uid="uid://boanuaqxuvd4n"]
 
 [ext_resource type="Texture2D" uid="uid://dttdpnqnb4kiu" path="res://icon.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://b3smmkeixxtmj" path="res://Игровые асеты/Audio/walk1.wav" id="2_3wudb"]
@@ -6,9 +6,9 @@
 [ext_resource type="Shader" path="res://take_damage.gdshader" id="3_gm040"]
 [ext_resource type="Script" path="res://Body.gd" id="3_p8u58"]
 [ext_resource type="Texture2D" uid="uid://cywcwqpqetqqb" path="res://Игровые асеты/Без имени-1.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://cqb74n60hqf4d" path="res://Игровые асеты/Character_Base.png" id="5_bpjqm"]
 [ext_resource type="Texture2D" uid="uid://b7r70ku0qcm2a" path="res://Без имени-1.png" id="5_tslyu"]
-[ext_resource type="Texture2D" uid="uid://hbaryvuiktvr" path="res://Игровые асеты/sword/weapon1.png" id="6_uhfvr"]
+[ext_resource type="Texture2D" uid="uid://21ua7q05he1b" path="res://Игровые асеты/Character_Base_01.png" id="6_edwd4"]
+[ext_resource type="Texture2D" uid="uid://cn14x8yfl0g8y" path="res://Игровые асеты/sword/weapon2.png" id="7_pxfkh"]
 [ext_resource type="Texture2D" uid="uid://blcagdoswtsyl" path="res://Игровые асеты/body_armor/armor1.png" id="8_kwxbb"]
 [ext_resource type="Texture2D" uid="uid://bcp1n8ypan5p" path="res://Игровые асеты/Бары/bar_empty.png" id="8_osrlq"]
 [ext_resource type="Texture2D" uid="uid://b2ywcygp1gg1k" path="res://Игровые асеты/Бары/bar_health.png" id="9_lhp1f"]
@@ -56,8 +56,9 @@
 [ext_resource type="Texture2D" uid="uid://xmjl4bu2rcs6" path="res://Игровые асеты/Способности/skill_icon_skchr_breeze_2.png" id="34_xqhcm"]
 [ext_resource type="Texture2D" uid="uid://crucw8rr7a3dh" path="res://Игровые асеты/Способности/icon_helmet.png" id="40_g1gli"]
 [ext_resource type="Texture2D" uid="uid://bntpn7oivec5f" path="res://Игровые асеты/Способности/skill_empty.png" id="42_xfqbo"]
-[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="43_8sa7s"]
 [ext_resource type="Texture2D" uid="uid://dpobwlu4gekkw" path="res://Игровые асеты/Способности/icon_armor.png" id="43_dhmep"]
+[ext_resource type="Texture2D" uid="uid://6uutw8v7iff0" path="res://Игровые асеты/Поверхность/middle.png" id="48_3gegf"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="48_o52mg"]
 [ext_resource type="Texture2D" uid="uid://b4tpke42yiftg" path="res://Игровые асеты/Способности/icon_left.png" id="48_rb2dj"]
 [ext_resource type="Texture2D" uid="uid://btw1vujduclbx" path="res://Игровые асеты/Способности/icon_right.png" id="50_ig4iw"]
 [ext_resource type="Texture2D" uid="uid://3fv32q38fiwd" path="res://Игровые асеты/Способности/skill_icon_skcom_atk_up[2].png" id="51_j0f3n"]
@@ -73,9 +74,41 @@
 [ext_resource type="AudioStream" uid="uid://b5f3govyk5e27" path="res://Игровые асеты/Audio/click.wav" id="62_mcy46"]
 [ext_resource type="AudioStream" uid="uid://nosvw2p8nk36" path="res://Игровые асеты/Audio/damage4.wav" id="63_h8r8o"]
 [ext_resource type="AudioStream" uid="uid://bt5n53588rues" path="res://Игровые асеты/Audio/equip1.wav" id="66_c3pfu"]
+[ext_resource type="AudioStream" uid="uid://dhyeptpcmsl6l" path="res://Игровые асеты/Audio/lvl_up.mp3" id="74_mwrh4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0e35h"]
 shader = ExtResource("3_gm040")
+
+[sub_resource type="Curve" id="Curve_u8kn8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.150754, 0.2), 0.0, 0.0, 0, 0, Vector2(0.603015, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_obx2k"]
+curve = SubResource("Curve_u8kn8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fuvy6"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(7.025, 2.6, 4.02)
+emission_shape = 1
+emission_sphere_radius = 35.26
+angle_min = -80.9
+angle_max = 80.9
+inherit_velocity_ratio = 0.305
+spread = 41.62
+flatness = 0.08
+initial_velocity_max = 206.58
+gravity = Vector3(0, 98, 0)
+linear_accel_max = 1.0
+radial_accel_max = 1.0
+tangential_accel_max = 1.0
+damping_max = 1.0
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_obx2k")
+scale_over_velocity_max = 1000.0
+anim_speed_max = 4.06
+anim_offset_max = 0.2816
 
 [sub_resource type="Animation" id="10"]
 resource_name = "Attack1"
@@ -754,7 +787,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.8, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [1.07478, -0.124337, -1.10474, 1.27998, 1.97252, 1.07478]
+"values": [1.07478, -0.124337, -1.10474, 1.27998, 2.59822, 1.07478]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -1003,10 +1036,10 @@ tracks/28/path = NodePath("Body/Кисть1:position")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.7, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.6, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-29.8644, 8.49122), Vector2(-10, 15), Vector2(-7.10835, 15.7869), Vector2(-20.2656, 14.649), Vector2(-29.8644, 8.49122)]
+"values": [Vector2(-29.8644, 8.49122), Vector2(-11.5948, 14.0365), Vector2(-11.3637, 14.798), Vector2(-9.52332, 16.0425), Vector2(-20.2656, 14.649), Vector2(-29.8644, 8.49122)]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
@@ -1027,10 +1060,10 @@ tracks/30/path = NodePath("Body/Локоть1:position")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.7, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.6, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-21.1248, -5.58871), Vector2(-18.3333, -4.76837e-07), Vector2(-15.4416, 0.786973), Vector2(-15.2656, -3.68435), Vector2(-21.1248, -5.58871)]
+"values": [Vector2(-21.1248, -5.58871), Vector2(-19.9281, -0.963455), Vector2(-19.697, -0.201948), Vector2(-17.8566, 1.04259), Vector2(-15.2656, -3.68435), Vector2(-21.1248, -5.58871)]
 }
 tracks/31/type = "value"
 tracks/31/imported = false
@@ -1291,10 +1324,10 @@ tracks/52/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:v
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, false, true, false]
 }
 tracks/53/type = "value"
 tracks/53/imported = false
@@ -1319,6 +1352,52 @@ tracks/54/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/55/type = "bezier"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:scale:x")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1),
+"points": PackedFloat32Array(0.045, 0, 0, 0, 0, 0.995265, 0, 0, 0, 0, 0.005, 0, 0, 0, 0),
+"times": PackedFloat32Array(0.6, 0.8, 0.9)
+}
+tracks/56/type = "bezier"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:scale:y")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0.911, 0, 0, 0, 0, 0.910714, 0, 0, 0, 0),
+"times": PackedFloat32Array(0.6, 0.8)
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:rotation")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.574485, -0.0973235, 0.635808]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:position")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(41.6532, -33.6536), Vector2(23.9304, -44.7425), Vector2(39.9424, -29.9636)]
 }
 
 [sub_resource type="Animation" id="2"]
@@ -2247,6 +2326,52 @@ tracks/76/keys = {
 "update": 1,
 "values": [ExtResource("13_go0lj")]
 }
+tracks/77/type = "bezier"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:scale:x")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.995265, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/78/type = "bezier"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:scale:y")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.910714, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:rotation")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0795534]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:position")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24.1892, -46.5153)]
+}
 
 [sub_resource type="Animation" id="9"]
 resource_name = "Run1"
@@ -2596,10 +2721,10 @@ tracks/28/path = NodePath("Body/Локоть1:position")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.05, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-17.0526, -12.7842), Vector2(-10.5109, 3.00229), Vector2(-11.4363, -0.255371), Vector2(-7.40555, -1.66668), Vector2(0.927784, -10), Vector2(2.10282, -7.84499), Vector2(3.62112, -5.21078), Vector2(3.3054, 7.83499), Vector2(-2.40554, 3.33336), Vector2(-5.51872, -2.02237), Vector2(-10.0991, -11.922), Vector2(-15.2721, -11.6667), Vector2(-17.0526, -12.7842)]
+"values": [Vector2(-19.6202, -13.4032), Vector2(-13.3217, 3.37942), Vector2(-13.3333, 0.0461049), Vector2(-8.3448, -3.30448), Vector2(-0.0287904, -8.33324), Vector2(2.10282, -7.84499), Vector2(3.62112, -5.21078), Vector2(0.0230322, 6.66667), Vector2(-4.9827, 5.01728), Vector2(-6.67238, -1.64359), Vector2(-11.7069, -11.6263), Vector2(-13.3736, -11.6205), Vector2(-15.2721, -11.6667), Vector2(-20.0402, -11.5975)]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
@@ -2623,7 +2748,7 @@ tracks/30/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-25.7922, 1.29578), Vector2(-19.2505, 17.0822), Vector2(-14.3837, 16.6667), Vector2(2.59446, 11.6666), Vector2(14.2611, -1.66666), Vector2(19.2611, -3.33333), Vector2(20.9278, -4.99998), Vector2(19.2611, 15), Vector2(10.9278, 16.6667), Vector2(3.20052, 14.8997), Vector2(-4.71319, 6.66666), Vector2(-18.6055, 5), Vector2(-25.7922, 1.29578)]
+"values": [Vector2(-28.3598, 0.676761), Vector2(-16.6032, 18.3908), Vector2(-16.609, 16.7242), Vector2(-1.61483, 15.0057), Vector2(11.6781, 3.29305), Vector2(13.3505, 4.95395), Vector2(15.0287, 8.2815), Vector2(19.2611, 15), Vector2(3.39665, 18.3217), Vector2(-1.61483, 15.0057), Vector2(-13.3102, 6.71273), Vector2(-21.6493, 5.07486), Vector2(-28.3274, 1.76458)]
 }
 tracks/31/type = "value"
 tracks/31/imported = false
@@ -2852,6 +2977,78 @@ tracks/49/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("13_go0lj")]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Body/Локоть1:rotation")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.44764, 1.18009, 0.975036, 0.468117, 0.0573897, -0.0291573]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Body/Кисть1:rotation")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.614728, -0.803362, -1.16433, -1.75898, -2.06657, -2.48409]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Body/ПраваяНога2:rotation")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.110099, 0.730389, 0.808459, 0.758583, 1.95235, 2.29867, 1.90497, 1.77758, 1.18718, 0.581329, 0.26349]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Body/ЛеваяНога2:rotation")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.06684, 1.0447, 0.678904, 0.150618, -0.373012, -1.05511, -0.920355, -0.500758, -0.541218, -0.287643, -0.146086, 0.963243]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Body/Голова/Волосы3:rotation")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0558351, 0.014988, -0.0631117, -0.0109315, -0.00371352, 0.0277819, 0.0146433, -0.00734852, -0.0183524, -0.013906, 0.0033346]
 }
 
 [sub_resource type="Animation" id="7"]
@@ -3457,6 +3654,18 @@ tracks/49/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("13_go0lj")]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_dvjvk"]
@@ -4086,6 +4295,18 @@ tracks/51/keys = {
 "update": 0,
 "values": [0.0, 0.279692, -0.411409, 0.0950361, -0.517046, -0.832082, 0.0]
 }
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Body/Кисть21/Кисть22/Меч/effect_attack:visible")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="3"]
 resource_name = "idle1"
@@ -4220,7 +4441,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0, 0.5, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-21.1248, -5.58871), Vector2(-20.5994, -2.31558), Vector2(-21.0197, -4.93409), Vector2(-21.1248, -5.58871)]
+"values": [Vector2(-21.1248, -5.58871), Vector2(-20.0056, -1.59752), Vector2(-21.0197, -4.93409), Vector2(-21.1248, -5.58871)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -4484,7 +4705,7 @@ tracks/32/keys = {
 "times": PackedFloat32Array(0, 0.5, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-7, 21), Vector2(-7, 26), Vector2(-7, 22), Vector2(-7, 21)]
+"values": [Vector2(-7, 21), Vector2(-4.9136, 25.0172), Vector2(-7, 22), Vector2(-7, 21)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
@@ -4678,6 +4899,42 @@ tracks/48/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Body/ЛеваяНога1:rotation")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.193891, -0.364063]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Body/Локоть2:rotation")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0768785, -0.0318515, -0.194947]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Body/Плечо1:rotation")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.041257, 0.181252]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwssf"]
 _data = {
@@ -4706,7 +4963,7 @@ radius = 28.3333
 height = 126.667
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pr26"]
-size = Vector2(120, 33.3333)
+size = Vector2(135, 33.3333)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_grjuw"]
 radius = 236.326
@@ -4714,15 +4971,14 @@ radius = 236.326
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_15ijm"]
 streams_count = 3
 stream_0/stream = ExtResource("61_4dgm4")
-stream_0/weight = 1.0
+stream_0/weight = 1.4013e-43
 stream_1/stream = ExtResource("62_7bgbb")
-stream_1/weight = 1.0
+stream_1/weight = 1.62551e-43
 stream_2/stream = ExtResource("63_h8r8o")
-stream_2/weight = 1.0
+stream_2/weight = 1.52742e-43
 
 [node name="Маша" type="CharacterBody2D" groups=["player"]]
 z_index = 1
-y_sort_enabled = true
 scale = Vector2(0.6, 0.6)
 script = ExtResource("3")
 sfx_walk = ExtResource("2_3wudb")
@@ -4747,7 +5003,7 @@ use_parent_material = true
 position = Vector2(2.37356, -20.4444)
 rotation = -1.20871
 offset = Vector2(-454.44, -55.36)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(384, 0, 512, 0, 512, 128, 384, 128)
 uv = PackedVector2Array(384, 0, 512, 0, 512, 128, 384, 128)
 
@@ -4756,7 +5012,7 @@ use_parent_material = true
 position = Vector2(15.5402, -2.38846)
 rotation = 0.22742
 offset = Vector2(-441.154, -185.437)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(384, 128, 512, 128, 512, 256, 384, 256)
 uv = PackedVector2Array(384, 128, 512, 128, 512, 256, 384, 256)
 
@@ -4766,7 +5022,7 @@ use_parent_material = true
 position = Vector2(28.0579, 9.83386)
 rotation = 1.07478
 offset = Vector2(-569.63, -62.499)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(512, 0, 640, 0, 640, 128, 512, 128)
 uv = PackedVector2Array(512, 0, 640, 0, 640, 128, 512, 128)
 
@@ -4774,18 +5030,17 @@ uv = PackedVector2Array(512, 0, 640, 0, 640, 128, 512, 128)
 use_parent_material = true
 position = Vector2(0.93412, 0.356968)
 offset = Vector2(-696.082, -64.239)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(640, 0, 768, 0, 768, 128, 640, 128)
 uv = PackedVector2Array(640, 0, 768, 0, 768, 128, 640, 128)
 
 [node name="Меч" type="Polygon2D" parent="Body/Кисть21/Кисть22"]
-visible = false
 show_behind_parent = true
 use_parent_material = true
 position = Vector2(-0.93412, -0.356966)
 rotation = -1.04545
 offset = Vector2(-18.23, -230.85)
-texture = ExtResource("6_uhfvr")
+texture = ExtResource("7_pxfkh")
 polygon = PackedVector2Array(8.00001, 328, 48, 352, 112, 368, 200, 336, 320, 256, 248, 80, 184, 32, 64, 24, -48, 32, -104, 128, -96, 232, -64, 296, -24, 312)
 uv = PackedVector2Array(81.6855, 266.382, 121.685, 290.382, 185.685, 306.382, 273.685, 274.382, 393.685, 194.382, 321.685, 18.382, 257.685, -29.618, 137.685, -37.618, 25.6855, -29.618, -30.3145, 66.382, -22.3145, 170.382, 9.68548, 234.382, 49.6855, 250.382)
 
@@ -4793,8 +5048,8 @@ uv = PackedVector2Array(81.6855, 266.382, 121.685, 290.382, 185.685, 306.382, 27
 visible = false
 show_behind_parent = true
 use_parent_material = true
-position = Vector2(25.3797, -49.1224)
-rotation = -0.0327849
+position = Vector2(24.1892, -46.5153)
+rotation = -0.0795534
 scale = Vector2(0.995265, 0.910714)
 texture = ExtResource("5_tslyu")
 
@@ -4804,7 +5059,7 @@ use_parent_material = true
 position = Vector2(18.1291, 38.8465)
 rotation = 0.06332
 offset = Vector2(-180.93, -429.05)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(128, 384, 256, 384, 256, 512, 128, 512)
 uv = PackedVector2Array(128, 384, 256, 384, 256, 512, 128, 512)
 
@@ -4814,7 +5069,7 @@ use_parent_material = true
 position = Vector2(6, 19)
 rotation = -0.104156
 offset = Vector2(-186.01, -308.85)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(128, 256, 256, 256, 256, 384, 128, 384)
 uv = PackedVector2Array(128, 256, 256, 256, 256, 384, 128, 384)
 
@@ -4823,7 +5078,7 @@ use_parent_material = true
 position = Vector2(30.568, 79.7155)
 rotation = -0.0149425
 offset = Vector2(-183.175, -577.815)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(128, 512, 256, 512, 256, 640, 128, 640)
 uv = PackedVector2Array(128, 512, 256, 512, 256, 640, 128, 640)
 
@@ -4832,7 +5087,7 @@ use_parent_material = true
 position = Vector2(-11.8266, 41.9214)
 rotation = 0.086272
 offset = Vector2(-76.075, -429.07)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(0, 384, 128, 384, 128, 512, 0, 512)
 uv = PackedVector2Array(0, 384, 128, 384, 128, 512, 0, 512)
 
@@ -4841,7 +5096,7 @@ use_parent_material = true
 position = Vector2(-7, 21)
 rotation = -0.257745
 offset = Vector2(-67.985, -308.97)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(0, 256, 128, 256, 128, 384, 0, 384)
 uv = PackedVector2Array(0, 256, 128, 256, 128, 384, 0, 384)
 
@@ -4850,7 +5105,7 @@ use_parent_material = true
 position = Vector2(-35, 77)
 rotation = -0.014015
 offset = Vector2(-56.89, -575.515)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(0, 512, 128, 512, 128, 640, 0, 640)
 uv = PackedVector2Array(0, 512, 128, 512, 128, 640, 0, 640)
 
@@ -4858,7 +5113,7 @@ uv = PackedVector2Array(0, 512, 128, 512, 128, 640, 0, 640)
 use_parent_material = true
 position = Vector2(-1, -15)
 offset = Vector2(-63.82, -180)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(0, 128, 128, 128, 128, 256, 0, 256)
 uv = PackedVector2Array(0, 128, 128, 128, 128, 256, 0, 256)
 
@@ -4888,7 +5143,7 @@ uv = PackedVector2Array(640, 256, 768, 256, 768, 384, 640, 384)
 use_parent_material = true
 position = Vector2(-4, -33)
 offset = Vector2(-61.73, -84.96)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
 uv = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
 
@@ -4896,7 +5151,7 @@ uv = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
 use_parent_material = true
 position = Vector2(23.9577, -42.6892)
 offset = Vector2(-570.185, -317.26)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(512, 256, 640, 256, 640, 384, 512, 384)
 uv = PackedVector2Array(512, 256, 640, 256, 640, 384, 512, 384)
 
@@ -4905,15 +5160,23 @@ use_parent_material = true
 position = Vector2(10, 5)
 rotation = 0.0866067
 offset = Vector2(-447.237, -572.491)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(384, 512, 512, 512, 512, 640, 384, 640)
 uv = PackedVector2Array(384, 512, 512, 512, 512, 640, 384, 640)
+
+[node name="Голова2" type="Polygon2D" parent="Body/Голова"]
+use_parent_material = true
+position = Vector2(22.172, -13.7297)
+offset = Vector2(-61.73, -84.96)
+texture = ExtResource("6_edwd4")
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
+uv = PackedVector2Array(640, 256, 768, 256, 768, 384, 640, 384)
 
 [node name="Волосы2" type="Polygon2D" parent="Body/Голова"]
 use_parent_material = true
 position = Vector2(-26.0423, -30.6892)
 offset = Vector2(-311.68, -425.545)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(256, 384, 384, 384, 384, 512, 256, 512)
 uv = PackedVector2Array(256, 384, 384, 384, 384, 512, 256, 512)
 
@@ -4921,7 +5184,7 @@ uv = PackedVector2Array(256, 384, 384, 384, 384, 512, 256, 512)
 use_parent_material = true
 position = Vector2(-3.04228, -49.6892)
 offset = Vector2(-451.799, -418.214)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(384, 384, 512, 384, 512, 512, 384, 512)
 uv = PackedVector2Array(384, 384, 512, 384, 512, 512, 384, 512)
 
@@ -4929,7 +5192,7 @@ uv = PackedVector2Array(384, 384, 512, 384, 512, 512, 384, 512)
 use_parent_material = true
 position = Vector2(-11, 10)
 offset = Vector2(-456.11, -327.07)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(384, 256, 512, 256, 512, 384, 384, 384)
 uv = PackedVector2Array(384, 256, 512, 256, 512, 384, 384, 384)
 
@@ -4937,7 +5200,7 @@ uv = PackedVector2Array(384, 256, 512, 256, 512, 384, 384, 384)
 use_parent_material = true
 position = Vector2(-14, 2)
 offset = Vector2(-319.525, -572.06)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(256, 512, 384, 512, 384, 640, 256, 640)
 uv = PackedVector2Array(256, 512, 384, 512, 384, 640, 256, 640)
 
@@ -4945,7 +5208,7 @@ uv = PackedVector2Array(256, 512, 384, 512, 384, 640, 256, 640)
 use_parent_material = true
 position = Vector2(12.9577, -48.6892)
 offset = Vector2(-577.02, -438.24)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(512, 384, 640, 384, 640, 512, 512, 512)
 uv = PackedVector2Array(512, 384, 640, 384, 640, 512, 512, 512)
 
@@ -4953,7 +5216,7 @@ uv = PackedVector2Array(512, 384, 640, 384, 640, 512, 512, 512)
 use_parent_material = true
 position = Vector2(12.9577, -9.68922)
 offset = Vector2(-322.67, -320.425)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(256, 256, 384, 256, 384, 384, 256, 384)
 uv = PackedVector2Array(256, 256, 384, 256, 384, 384, 256, 384)
 
@@ -4971,7 +5234,7 @@ use_parent_material = true
 position = Vector2(-29.8644, 8.49122)
 rotation = -0.614728
 offset = Vector2(-327.507, -54.735)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(256, 0, 384, 0, 384, 128, 256, 128)
 uv = PackedVector2Array(256, 0, 384, 0, 384, 128, 256, 128)
 
@@ -4980,7 +5243,7 @@ use_parent_material = true
 position = Vector2(-21.1248, -5.58871)
 rotation = 1.44764
 offset = Vector2(-182.911, -185.496)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(128, 128, 256, 128, 256, 256, 128, 256)
 uv = PackedVector2Array(128, 128, 256, 128, 256, 256, 128, 256)
 
@@ -4999,9 +5262,19 @@ use_parent_material = true
 position = Vector2(-12, -19)
 rotation = 0.0993221
 offset = Vector2(-196.2, -55.835)
-texture = ExtResource("5_bpjqm")
+texture = ExtResource("6_edwd4")
 polygon = PackedVector2Array(128, 0, 256, 0, 256, 128, 128, 128)
 uv = PackedVector2Array(128, 0, 256, 0, 256, 128, 128, 128)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Body"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, 1.66669)
+rotation = 3.14159
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_fuvy6")
+texture = ExtResource("2")
+explosiveness = 1.0
+randomness = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -5035,7 +5308,7 @@ top_level = true
 texture = ExtResource("26_u05ai")
 centered = false
 
-[node name="Hud" type="Control" parent="ui"]
+[node name="Hud" type="Control" parent="ui" groups=["Hud"]]
 layout_mode = 3
 anchors_preset = 12
 anchor_top = 1.0
@@ -5489,14 +5762,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Name" type="Label" parent="ui/CharacterPanel/Panel/UpAttribute"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 2.55
-anchor_top = 0.275
-anchor_right = 12.903
-anchor_bottom = 1.45
-offset_left = -34.9849
-offset_right = -35.0038
+layout_mode = 0
+offset_left = 149.99
+offset_top = 8.0
+offset_right = 470.99
+offset_bottom = 55.0
 pivot_offset = Vector2(207, 0)
 theme_override_fonts/font = ExtResource("15_26n3h")
 theme_override_font_sizes/font_size = 35
@@ -5618,17 +5888,7 @@ offset_left = 44.0
 offset_top = 801.0
 offset_right = 285.0
 offset_bottom = 1058.0
-text = "Сила:
-Ловкость:
-Интелект:
-
-
-Здоровье:
-Урон:
-Физ.Защита:
-Маг.защита:
-Мана:"
-horizontal_alignment = 3
+text = "ATTRIBUTE_CHARACTER"
 justification_flags = 131
 
 [node name="button_str" type="TextureButton" parent="ui/CharacterPanel/Panel/DownAttribute"]
@@ -5672,58 +5932,58 @@ stretch_mode = 0
 
 [node name="str" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 801.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 824.0
 
 [node name="agi" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 827.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 850.0
 
 [node name="int" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 853.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 876.0
 
 [node name="hp" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 931.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 954.0
 
 [node name="atk" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 957.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 980.0
 
 [node name="pdef" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 983.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 1006.0
 
 [node name="mdef" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 1009.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 1032.0
 
 [node name="mana" type="Label" parent="ui/CharacterPanel/Panel/DownAttribute"]
 layout_mode = 0
-offset_left = 172.0
+offset_left = 202.99
 offset_top = 1035.0
-offset_right = 284.0
+offset_right = 314.99
 offset_bottom = 1058.0
 
 [node name="QuestPanel" type="Control" parent="ui"]
@@ -5771,6 +6031,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InventoryPanel" type="Control" parent="ui"]
+visible = false
 layout_mode = 3
 anchor_left = 0.688
 anchor_right = 1.0
@@ -5795,6 +6056,7 @@ offset_left = 215.988
 offset_top = 386.0
 offset_right = 379.988
 offset_bottom = 546.0
+mouse_filter = 2
 
 [node name="MainWeapon" type="Node" parent="ui/InventoryPanel/Panel/Equipment"]
 script = ExtResource("19_k8rna")
@@ -5821,6 +6083,7 @@ anchor_right = 0.805
 anchor_bottom = -0.2
 offset_left = 0.0201511
 offset_right = -0.02005
+mouse_filter = 2
 texture = ExtResource("40_g1gli")
 expand_mode = 1
 
@@ -5838,6 +6101,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("20_684tf")
 item_slot_path = NodePath("../../Helmet")
 default_item_icon = ExtResource("2")
@@ -5854,6 +6118,7 @@ offset_left = -0.00384521
 offset_top = 0.04
 offset_right = -0.0358467
 offset_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource("42_xfqbo")
 expand_mode = 1
 
@@ -5871,6 +6136,7 @@ offset_right = 40.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("20_684tf")
 item_slot_path = NodePath("../../MainWeapon")
 default_item_icon = ExtResource("2")
@@ -5884,6 +6150,7 @@ anchor_right = 1.598
 anchor_bottom = 1.0
 offset_left = -0.0400085
 offset_right = -0.0720215
+mouse_filter = 2
 texture = ExtResource("42_xfqbo")
 expand_mode = 1
 
@@ -5901,6 +6168,7 @@ offset_right = 40.0
 offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("20_684tf")
 item_slot_path = NodePath("../../Gear")
 default_item_icon = ExtResource("2")
@@ -5915,6 +6183,7 @@ anchor_right = 0.732
 anchor_bottom = 1.0
 offset_left = -0.0158501
 offset_right = -0.0478592
+mouse_filter = 2
 texture = ExtResource("43_dhmep")
 expand_mode = 1
 
@@ -5933,6 +6202,7 @@ offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(40, 60)
+mouse_filter = 2
 script = ExtResource("20_684tf")
 item_slot_path = NodePath("../../BodyArmor")
 default_item_icon = ExtResource("2")
@@ -5960,6 +6230,7 @@ custom_minimum_size = Vector2(320, 320)
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 320.0
+mouse_filter = 2
 script = ExtResource("24_8j30s")
 inventory_path = NodePath("../MainWeapon2")
 
@@ -5968,6 +6239,7 @@ process_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 1
 
 [node name="CtrlInventoryGridEx" type="Control" parent="ui/InventoryPanel/Panel/Inventory"]
 show_behind_parent = true
@@ -5988,58 +6260,10 @@ script = ExtResource("20_7yolm")
 size = Vector2i(11, 6)
 item_protoset = ExtResource("23_rgsja")
 
-[node name="_Node_25676" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
+[node name="_Node_32104" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
+script = ExtResource("48_o52mg")
 protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet2"
-
-[node name="_Node_25861" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet3"
-properties = {
-"grid_position": Vector2i(0, 2)
-}
-
-[node name="_Node_26068" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet4"
-properties = {
-"grid_position": Vector2i(0, 4)
-}
-
-[node name="_Node_26300" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet5"
-properties = {
-"grid_position": Vector2i(2, 0)
-}
-
-[node name="_Node_26564" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet6"
-properties = {
-"grid_position": Vector2i(2, 2)
-}
-
-[node name="_Node_26867" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet7"
-properties = {
-"grid_position": Vector2i(2, 4)
-}
-
-[node name="_Node_27216" type="Node" parent="ui/InventoryPanel/Panel/Inventory/InventoryGrid"]
-script = ExtResource("43_8sa7s")
-protoset = ExtResource("23_rgsja")
-prototype_id = "Helmet8"
-properties = {
-"grid_position": Vector2i(4, 0)
-}
+prototype_id = "Weapon1"
 
 [node name="Item_Per" type="Panel" parent="ui/InventoryPanel/Panel/Inventory"]
 top_level = true
@@ -6049,12 +6273,14 @@ offset_left = 40.0
 offset_top = 600.0
 offset_right = 568.0
 offset_bottom = 750.0
+mouse_filter = 1
 
 [node name="ItemName" type="RichTextLabel" parent="ui/InventoryPanel/Panel/Inventory/Item_Per"]
 layout_mode = 0
 offset_left = 5.0
 offset_right = 525.0
 offset_bottom = 40.0
+mouse_filter = 1
 fit_content = true
 autowrap_mode = 2
 
@@ -6102,18 +6328,29 @@ offset_left = 523.988
 offset_top = 550.0
 offset_right = 563.988
 offset_bottom = 590.0
+mouse_filter = 1
 text_direction = 2
 
-[node name="DropZone" type="Panel" parent="ui/InventoryPanel"]
+[node name="help" type="Control" parent="ui/InventoryPanel/Panel/Inventory"]
 visible = false
-show_behind_parent = true
-clip_children = 1
-light_mask = 0
-visibility_layer = 0
-layout_mode = 0
-offset_left = 599.0
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Middle" type="Sprite2D" parent="ui/InventoryPanel/Panel/Inventory/help"]
+position = Vector2(20.9882, 1031)
+rotation = -1.5708
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("48_3gegf")
+
+[node name="Label" type="Label" parent="ui/InventoryPanel/Panel/Inventory/help/Middle"]
+offset_left = 39.2857
+offset_top = -32.1429
+offset_right = 222.286
+offset_bottom = 22.8571
+theme_override_font_sizes/font_size = 40
+text = "For DROP"
 
 [node name="AbilityPanel" type="Control" parent="ui"]
 visible = false
@@ -6385,11 +6622,11 @@ layout_mode = 2
 
 [node name="Text1" type="RichTextLabel" parent="ui/Shop/PlayerInventory"]
 layout_mode = 0
-offset_left = 471.0
+offset_left = 339.0
 offset_top = 528.0
-offset_right = 567.785
-offset_bottom = 553.035
-text = ":Стоимость"
+offset_right = 568.0
+offset_bottom = 553.0
+text = "PLAYER_SELL"
 text_direction = 2
 
 [node name="Money" type="RichTextLabel" parent="ui/Shop/PlayerInventory"]
@@ -6402,11 +6639,11 @@ text_direction = 2
 
 [node name="Text2" type="RichTextLabel" parent="ui/Shop/PlayerInventory"]
 layout_mode = 0
-offset_left = 224.0
+offset_left = 101.0
 offset_top = 528.0
-offset_right = 320.785
-offset_bottom = 553.035
-text = ":Денег"
+offset_right = 321.0
+offset_bottom = 553.0
+text = "PLAYER_MONEY"
 text_direction = 2
 
 [node name="PlayerMoney" type="RichTextLabel" parent="ui/Shop/PlayerInventory"]
@@ -6509,11 +6746,11 @@ text_direction = 2
 
 [node name="Money2" type="RichTextLabel" parent="ui/Shop/SellerInventory"]
 layout_mode = 0
-offset_left = 467.0
+offset_left = 368.0
 offset_top = 528.0
-offset_right = 563.785
-offset_bottom = 553.035
-text = ":Стоимость"
+offset_right = 564.0
+offset_bottom = 553.0
+text = "SHOP_SELL"
 text_direction = 2
 
 [node name="ShopButton" type="TextureButton" parent="ui/Shop"]
@@ -6735,7 +6972,7 @@ offset_left = 196.0
 offset_top = 54.0
 offset_right = 307.0
 offset_bottom = 85.0
-text = "Продолжить"
+text = "COUNTINUE_GAME"
 
 [node name="Save" type="Button" parent="ui/Menu"]
 layout_mode = 0
@@ -6743,7 +6980,7 @@ offset_left = 196.0
 offset_top = 92.0
 offset_right = 307.0
 offset_bottom = 123.0
-text = "Сохранить"
+text = "SAVE_GAME"
 
 [node name="Load" type="Button" parent="ui/Menu"]
 layout_mode = 0
@@ -6752,7 +6989,7 @@ offset_top = 132.0
 offset_right = 307.0
 offset_bottom = 163.0
 disabled = true
-text = "Загрузить"
+text = "LOAD_GAME"
 
 [node name="Exit" type="Button" parent="ui/Menu"]
 layout_mode = 0
@@ -6760,7 +6997,7 @@ offset_left = 196.0
 offset_top = 220.0
 offset_right = 307.0
 offset_bottom = 251.0
-text = "Выйти"
+text = "EXIT_GAME"
 
 [node name="Save1" type="Button" parent="ui/Menu"]
 visible = false
@@ -6820,7 +7057,7 @@ collision_mask = 12
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(-60, 0)
+position = Vector2(-67.5, -1.90139e-05)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_6pr26")
 
@@ -6864,6 +7101,16 @@ one_shot = true
 [node name="Take_Damage" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="lvl_up2" type="Label" parent="."]
+visible = false
+offset_left = -40.0
+offset_top = -240.0
+offset_right = 36.0
+offset_bottom = -191.0
+text = "LEVEL UP!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ActionLabel" type="Panel" parent="."]
 visible = false
@@ -6943,6 +7190,11 @@ process_mode = 3
 stream = ExtResource("66_c3pfu")
 bus = &"UI"
 
+[node name="lvl_up" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("74_mwrh4")
+bus = &"UI"
+
 [connection signal="pressed" from="ui/Hud/Character" to="." method="_on_character_pressed"]
 [connection signal="pressed" from="ui/Hud/Ability" to="." method="_on_ability_pressed"]
 [connection signal="pressed" from="ui/Hud/Quest" to="." method="_on_quest_pressed"]
@@ -6972,11 +7224,9 @@ bus = &"UI"
 [connection signal="item_added" from="ui/InventoryPanel/Panel/Equipment/Helmet2" to="." method="_on_helmet_2_item_added"]
 [connection signal="item_added" from="ui/InventoryPanel/Panel/Equipment/BodyArmor2" to="." method="_on_body_armor_2_item_added"]
 [connection signal="item_added" from="ui/InventoryPanel/Panel/Equipment/Gear2" to="." method="_on_gear_2_item_added"]
-[connection signal="item_mouse_entered" from="ui/InventoryPanel/Panel/Inventory/CtrlInventoryGridEx" to="." method="_on_ctrl_inventory_grid_ex_item_mouse_entered"]
-[connection signal="item_mouse_exited" from="ui/InventoryPanel/Panel/Inventory/CtrlInventoryGridEx" to="." method="_on_ctrl_inventory_grid_ex_item_mouse_exited"]
 [connection signal="selection_changed" from="ui/InventoryPanel/Panel/Inventory/CtrlInventoryGridEx" to="." method="_on_ctrl_inventory_grid_ex_selection_changed"]
-[connection signal="mouse_entered" from="ui/InventoryPanel/DropZone" to="." method="_on_drop_zone_mouse_entered"]
-[connection signal="mouse_exited" from="ui/InventoryPanel/DropZone" to="." method="_on_drop_zone_mouse_exited"]
+[connection signal="mouse_entered" from="ui/InventoryPanel/Panel/Inventory/Item_Per" to="." method="_on_item_per_mouse_entered"]
+[connection signal="mouse_exited" from="ui/InventoryPanel/Panel/Inventory/Item_Per" to="." method="_on_item_per_mouse_exited"]
 [connection signal="mouse_entered" from="ui/AbilityPanel/Panel" to="." method="_on_panel_mouse_entered"]
 [connection signal="mouse_exited" from="ui/AbilityPanel/Panel" to="." method="_on_panel_mouse_exited"]
 [connection signal="mouse_entered" from="ui/AbilityPanel/Panel/Str/Attack1" to="ui/AbilityPanel" method="_on_attack_1_mouse_entered"]

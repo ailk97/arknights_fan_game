@@ -60,7 +60,7 @@ layout_mode = 0
 offset_top = -21.0
 offset_right = 168.335
 offset_bottom = 2.0
-text = "Общая громкость:"
+text = "VOLUME_MASTER"
 horizontal_alignment = 1
 
 [node name="UI" type="HSlider" parent="Panel"]
@@ -85,7 +85,7 @@ layout_mode = 0
 offset_top = -21.0
 offset_right = 168.335
 offset_bottom = 2.0
-text = "Громкость UI:"
+text = "VOLUME_UI"
 horizontal_alignment = 1
 
 [node name="Music" type="HSlider" parent="Panel"]
@@ -110,7 +110,7 @@ layout_mode = 0
 offset_top = -21.0
 offset_right = 168.335
 offset_bottom = 2.0
-text = "Громкость Music:"
+text = "VOLUME_MUSIC"
 horizontal_alignment = 1
 
 [node name="SFX" type="HSlider" parent="Panel"]
@@ -135,7 +135,7 @@ layout_mode = 0
 offset_top = -21.0
 offset_right = 168.335
 offset_bottom = 2.0
-text = "Громкость SFX:"
+text = "VOLUME_SFX"
 horizontal_alignment = 1
 
 [node name="Save" type="Button" parent="Panel"]
@@ -144,7 +144,7 @@ offset_left = 81.0
 offset_top = 15.0
 offset_right = 176.0
 offset_bottom = 46.0
-text = "Сохранить"
+text = "SETTINGS_SAVE"
 
 [node name="Reset" type="Button" parent="Panel"]
 layout_mode = 0
@@ -152,9 +152,25 @@ offset_left = 192.0
 offset_top = 15.0
 offset_right = 287.0
 offset_bottom = 46.0
-text = "Сбросить"
+text = "SETTINGS_RESET"
+
+[node name="lang" type="MenuBar" parent="Panel"]
+layout_mode = 0
+offset_left = 604.0
+offset_top = 84.0
+offset_right = 707.0
+offset_bottom = 115.0
+
+[node name="CURRENT_LANG" type="PopupMenu" parent="Panel/lang"]
+allow_search = false
+item_count = 2
+item_0/text = "Русский"
+item_0/id = 0
+item_1/text = "English"
+item_1/id = 1
 
 [node name="blackScreen" type="Sprite2D" parent="." groups=["jopa"]]
+visible = false
 modulate = Color(1, 1, 1, 0)
 top_level = true
 texture = ExtResource("7_h55a7")
@@ -179,3 +195,4 @@ unresizable = true
 [connection signal="value_changed" from="Panel/SFX" to="." method="_on_sfx_value_changed"]
 [connection signal="pressed" from="Panel/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Panel/Reset" to="." method="_on_reset_pressed"]
+[connection signal="id_pressed" from="Panel/lang/CURRENT_LANG" to="." method="_on_current_lang_id_pressed"]

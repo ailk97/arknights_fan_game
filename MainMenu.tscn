@@ -31,7 +31,7 @@ offset_right = -1738.0
 offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Начать игру"
+text = "START_MENU"
 icon = ExtResource("2_jwlm7")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -46,7 +46,7 @@ offset_top = -40.0
 offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Продолжить"
+text = "COUNTINUE_MENU"
 
 [node name="Button2" type="Button" parent="."]
 anchors_preset = 15
@@ -58,7 +58,7 @@ offset_right = -1564.0
 offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Загрузится"
+text = "LOADING_MENU"
 icon = ExtResource("4_nbsd7")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -74,7 +74,7 @@ offset_right = -1383.0
 offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Настройки"
+text = "SETTINGS_MENU"
 icon = ExtResource("5_x5q2u")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -90,7 +90,7 @@ offset_right = -1210.0
 offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Выйти из игры"
+text = "EXIT_MENU"
 icon = ExtResource("5_fwhsa")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -115,7 +115,7 @@ offset_left = 68.0
 offset_top = 15.0
 offset_right = 243.0
 offset_bottom = 38.0
-text = "Как тебя будут звать?"
+text = "NAME_SELECTOR1"
 
 [node name="LineEdit" type="LineEdit" parent="NameSelector"]
 layout_mode = 0
@@ -123,7 +123,7 @@ offset_left = 35.0
 offset_top = 45.0
 offset_right = 284.0
 offset_bottom = 76.0
-placeholder_text = "Имя"
+placeholder_text = "NAME_SELECTOR2"
 max_length = 20
 
 [node name="Next" type="Button" parent="NameSelector"]
@@ -132,7 +132,7 @@ offset_left = 101.0
 offset_top = 133.0
 offset_right = 212.0
 offset_bottom = 164.0
-text = "Продолжить"
+text = "NAME_SELECTOR3"
 
 [node name="Button4" type="Button" parent="."]
 offset_left = 1508.0

@@ -165,11 +165,13 @@ func _process(_delta):
 	health_regen()
 func characteristics(_delta):
 	if level == 20:
+		experience = 0
 		can_experienced = false
 	
 	## УВАГА! УБРАТЬ ПОТОМ! УВАГА! №
 	if Input.is_action_just_pressed("test_experience") and can_experienced == true:
 		experience += 40
+		_update()
 	## УВАГА! УБРАТЬ ПОТОМ! УВАГА! №
 	
 	if experience == 100 and can_experienced == true:
@@ -177,11 +179,13 @@ func characteristics(_delta):
 		points += 3
 		experience = 0
 		_update()
+		lvl_up()
 	if experience >= 101 and can_experienced == true:
 		level += 1
 		points += 3
 		experience -= 100
 		_update()
+		lvl_up()
 	
 	if points >= 1:
 		$ui/CharacterPanel/Panel/DownAttribute/button_str.disabled = false
@@ -192,6 +196,11 @@ func characteristics(_delta):
 		$ui/CharacterPanel/Panel/DownAttribute/button_agi.disabled = true
 		$ui/CharacterPanel/Panel/DownAttribute/button_int.disabled = true
 
+func lvl_up():
+	$lvl_up.play()
+	$lvl_up2.visible = true
+	await player.create_timer(3).timeout
+	$lvl_up2.visible = false
 func _update():
 	damage = 0+(strength*2)+damage_weapon+damage_armor+damage_helmet
 	max_health = 100+(strength*10)+max_health_weapon+max_health_armor+max_health_helmet
@@ -306,8 +315,11 @@ func health_update(enemy_damage):
 		else:
 			#print(health)
 			#----------- ВРЕМЕННО! УБЕРИ ПОТОМ! -----------#
+			$Body/GPUParticles2D.restart()
 			$Body.use_parent_material = false
-			await player.create_timer(0.2).timeout
+			$Body/GPUParticles2D.emitting = true
+			await player.create_timer(0.1).timeout
+			$Body/GPUParticles2D.emitting = false
 			$Body.use_parent_material = true
 			#----------- ВРЕМЕННО! УБЕРИ ПОТОМ! -----------#
 			HP_regen_Timer.start()
@@ -486,6 +498,7 @@ func Death():
 	player.paused = true
 	var nigger = load("res://DeathPanel.tscn").instantiate()
 	$ui.add_child(nigger)
+	print("For big guys...")
 
 
 
@@ -831,6 +844,7 @@ func _on_gear_item_cleared():
 func _on_ctrl_inventory_grid_ex_selection_changed():
 	if has_node("ui/InventoryPanel/Panel/Inventory/CtrlInventoryGridEx"):
 		var item2 = $ui/InventoryPanel/Panel/Inventory/CtrlInventoryGridEx.get_selected_inventory_item()
+		$ui/InventoryPanel/Panel/Inventory/help/Middle.visible = true
 		var _hz1
 		var _hz2
 		var _hz3
@@ -840,30 +854,30 @@ func _on_ctrl_inventory_grid_ex_selection_changed():
 			$ui/InventoryPanel/Panel/Inventory/Item_Per/ItemName.text = item2.get_property("name")
 			# Первый слот #
 			if item2.get_property("dmg"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = "Урон: " + str(item2.get_property("dmg"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_DAMAGE") + str(item2.get_property("dmg"))
 				_hz1 = "dmg"
 			elif item2.get_property("pdef"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = "Физ.Защита: " + str(item2.get_property("pdef"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
 				_hz1 = "pdef"
 			elif item2.get_property("mdef"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = "Маг.Защита: " + str(item2.get_property("mdef"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
 				_hz1 = "mdef"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = ""
 				_hz1 = null
 			# Второй слот #
 			if item2.get_property("pdef") and not _hz1 == "pdef":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = "Физ.Защита: " + str(item2.get_property("pdef"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
 				_hz2 = "pdef"
 			elif item2.get_property("mdef") and not _hz1 == "mdef":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = "Маг.Защита: " + str(item2.get_property("mdef"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
 				_hz2 = "mdef"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = ""
 				_hz2 = null
 			# Третий слот #
 			if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per3.text = "Маг.Защита: " + str(item2.get_property("mdef"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per3.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
 				_hz3 = "mdef"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per3.text = ""
@@ -872,33 +886,34 @@ func _on_ctrl_inventory_grid_ex_selection_changed():
 			#
 			#
 			if item2.get_property("str"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = "Сила: " + str(item2.get_property("str"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_STR") + str(item2.get_property("str"))
 				_hz4 = "str"
 			elif item2.get_property("agi"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = "Ловкость: " + str(item2.get_property("agi"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
 				_hz4 = "agi"
 			elif item2.get_property("int"):
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
 				_hz4 = "int"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per1.text = ""
 				_hz4 = null
 			if item2.get_property("agi") and not _hz4 == "agi":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per2.text = "Ловкость: " + str(item2.get_property("agi"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
 				_hz5 = "agi"
 			elif item2.get_property("int") and not _hz4 == "int":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per2.text = "Интеллект: " + str(item2.get_property("int"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
 				_hz5 = "int"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per2.text = ""
 				_hz5 = null
 			if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
-				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per3.text = "Интеллект: " + str(item2.get_property("int"))
+				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per3.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
 				_hz6 = "int"
 			else:
 				$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers2/Per3.text = ""
 				_hz6 = null
 		else:
+			$ui/InventoryPanel/Panel/Inventory/help/Middle.visible = false
 			$ui/InventoryPanel/Panel/Inventory/Item_Per/ItemName.text = ""
 			$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per1.text = ""
 			$ui/InventoryPanel/Panel/Inventory/Item_Per/Pers1/Per2.text = ""
@@ -931,7 +946,13 @@ func _on_drop_zone_mouse_entered():
 	in_drop_zone = true
 func _on_drop_zone_mouse_exited():
 	in_drop_zone = false
-
+func _on_drop_1_item_added(item):
+	var item_drop1 = preload("res://Inventory/ProtoItems/dropped_item.tscn")
+	var item_drop = item_drop1.instantiate()
+	get_parent().add_child(item_drop)
+	$ui/InventoryPanel/Drop1.transfer_to(item, item_drop.get_node("InventoryGrid"), Vector2i(0,0))
+	item_drop.apply_text()
+	item_drop.position = global_position
 
 
 func _on_ability_pressed():
@@ -943,180 +964,194 @@ func _on_ability_pressed():
 		$ui/AbilityPanel.visible = false
 
 func _on_panel_mouse_entered():
-	print("1")
+	mouseEnter()
+func _on_panel_mouse_exited():
+	mouseExit()
+func _on_item_per_mouse_entered():
+	mouseEnter()
+func _on_item_per_mouse_exited():
+	mouseExit()
+
+func mouseEnter():
 	in_gui = true
 	if not $ui/AbilityPanel.AbilityActive1 == null:
 		$ui/AbilityPanel.AbilityActive1.can_activate = false
 	if not $ui/AbilityPanel.AbilityActive2 == null:
 		$ui/AbilityPanel.AbilityActive2.can_activate = false
-func _on_panel_mouse_exited():
-	print("2")
+func mouseExit():
 	in_gui = false
 	if not $ui/AbilityPanel.AbilityActive1 == null:
 		$ui/AbilityPanel.AbilityActive1.can_activate = true
 	if not $ui/AbilityPanel.AbilityActive2 == null:
 		$ui/AbilityPanel.AbilityActive2.can_activate = true
 
-
 func _on_player_inventory_shop_selection_changed():
-	var item2 = $ui/Shop/PlayerInventory/PlayerInventoryShop.get_selected_inventory_item()
-	var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
-	if not item2 == null:
-		$Select.play()
-		$ui/Shop/PlayerInventory/Item_Per/ItemName.text = item2.get_property("name")
-		$ui/Shop/PlayerInventory/Money.text = str(item2.get_property("sell"))
-		# Первый слот #
-		if item2.get_property("dmg"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = "Урон: " + str(item2.get_property("dmg"))
-			_hz1 = "dmg"
-		elif item2.get_property("pdef"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz1 = "pdef"
-		elif item2.get_property("mdef"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz1 = "mdef"
+	if has_node("ui/Shop/PlayerInventory/PlayerInventoryShop"):
+		var item2 = $ui/Shop/PlayerInventory/PlayerInventoryShop.get_selected_inventory_item()
+		var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
+		if not item2 == null:
+			$Select.play()
+			$ui/Shop/PlayerInventory/Item_Per/ItemName.text = item2.get_property("name")
+			$ui/Shop/PlayerInventory/Money.text = str(item2.get_property("sell"))
+			# Первый слот #
+			if item2.get_property("dmg"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_DAMAGE") + str(item2.get_property("dmg"))
+				_hz1 = "dmg"
+			elif item2.get_property("pdef"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz1 = "pdef"
+			elif item2.get_property("mdef"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz1 = "mdef"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = ""
+				_hz1 = null
+			# Второй слот #
+			if item2.get_property("pdef") and not _hz1 == "pdef":
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz2 = "pdef"
+			elif item2.get_property("mdef") and not _hz1 == "mdef":
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz2 = "mdef"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = ""
+				_hz2 = null
+			# Третий слот #
+			if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per3.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz3 = "mdef"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers1/Per3.text = ""
+				_hz3 = null
+			#
+			#
+			#
+			if item2.get_property("str"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_STR") + str(item2.get_property("str"))
+				_hz4 = "str"
+			elif item2.get_property("agi"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz4 = "agi"
+			elif item2.get_property("int"):
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz4 = "int"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = ""
+				_hz4 = null
+			if item2.get_property("agi") and not _hz4 == "agi":
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz5 = "agi"
+			elif item2.get_property("int") and not _hz4 == "int":
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz5 = "int"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = ""
+				_hz5 = null
+			if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per3.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz6 = "int"
+			else:
+				$ui/Shop/PlayerInventory/Item_Per/Pers2/Per3.text = ""
+				_hz6 = null
 		else:
+			$ui/Shop/PlayerInventory/Item_Per/ItemName.text = ""
+			$ui/Shop/PlayerInventory/Money.text = ""
 			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = ""
-			_hz1 = null
-		# Второй слот #
-		if item2.get_property("pdef") and not _hz1 == "pdef":
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz2 = "pdef"
-		elif item2.get_property("mdef") and not _hz1 == "mdef":
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz2 = "mdef"
-		else:
 			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = ""
-			_hz2 = null
-		# Третий слот #
-		if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
-			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per3.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz3 = "mdef"
-		else:
 			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per3.text = ""
-			_hz3 = null
-		#
-		#
-		#
-		if item2.get_property("str"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = "Сила: " + str(item2.get_property("str"))
-			_hz4 = "str"
-		elif item2.get_property("agi"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz4 = "agi"
-		elif item2.get_property("int"):
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz4 = "int"
-		else:
+			$ui/Shop/PlayerInventory/Item_Per/Pers1/Per4.text = ""
 			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = ""
-			_hz4 = null
-		if item2.get_property("agi") and not _hz4 == "agi":
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz5 = "agi"
-		elif item2.get_property("int") and not _hz4 == "int":
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz5 = "int"
-		else:
 			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = ""
-			_hz5 = null
-		if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
-			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per3.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz6 = "int"
-		else:
 			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per3.text = ""
-			_hz6 = null
+			$ui/Shop/PlayerInventory/Item_Per/Pers2/Per4.text = ""
 	else:
-		$ui/Shop/PlayerInventory/Item_Per/ItemName.text = ""
-		$ui/Shop/PlayerInventory/Money.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers1/Per1.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers1/Per2.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers1/Per3.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers1/Per4.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers2/Per1.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers2/Per2.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers2/Per3.text = ""
-		$ui/Shop/PlayerInventory/Item_Per/Pers2/Per4.text = ""
+		print("	_on_player_inventory_shop_selection_changed() пошло по жопе!")
 func _on_seller_inventory_shop_selection_changed():
-	var item2 = $ui/Shop/SellerInventory/SellerInventoryShop.get_selected_inventory_item()
-	var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
-	if not item2 == null:
-		$Select.play()
-		$ui/Shop/SellerInventory/Item_Per/ItemName.text = item2.get_property("name")
-		$ui/Shop/SellerInventory/Money.text = str(item2.get_property("buy"))
-		# Первый слот #
-		if item2.get_property("dmg"):
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = "Урон: " + str(item2.get_property("dmg"))
-			_hz1 = "dmg"
-		elif item2.get_property("pdef"):
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz1 = "pdef"
-		elif item2.get_property("mdef"):
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz1 = "mdef"
+	if has_node("ui/Shop/SellerInventory/SellerInventoryShop"):
+		var item2 = $ui/Shop/SellerInventory/SellerInventoryShop.get_selected_inventory_item()
+		var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
+		if not item2 == null:
+			$Select.play()
+			$ui/Shop/SellerInventory/Item_Per/ItemName.text = item2.get_property("name")
+			$ui/Shop/SellerInventory/Money.text = str(item2.get_property("buy"))
+			# Первый слот #
+			if item2.get_property("dmg"):
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_DAMAGE") + str(item2.get_property("dmg"))
+				_hz1 = "dmg"
+			elif item2.get_property("pdef"):
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz1 = "pdef"
+			elif item2.get_property("mdef"):
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz1 = "mdef"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = ""
+				_hz1 = null
+			# Второй слот #
+			if item2.get_property("pdef") and not _hz1 == "pdef":
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz2 = "pdef"
+			elif item2.get_property("mdef") and not _hz1 == "mdef":
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz2 = "mdef"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = ""
+				_hz2 = null
+			# Третий слот #
+			if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per3.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz3 = "mdef"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers1/Per3.text = ""
+				_hz3 = null
+			#
+			#
+			#
+			if item2.get_property("str"):
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_STR") + str(item2.get_property("str"))
+				_hz4 = "str"
+			elif item2.get_property("agi"):
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz4 = "agi"
+			elif item2.get_property("int"):
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz4 = "int"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = ""
+				_hz4 = null
+			if item2.get_property("agi") and not _hz4 == "agi":
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz5 = "agi"
+			elif item2.get_property("int") and not _hz4 == "int":
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz5 = "int"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = ""
+				_hz5 = null
+			if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per3.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz6 = "int"
+			else:
+				$ui/Shop/SellerInventory/Item_Per/Pers2/Per3.text = ""
+				_hz6 = null
 		else:
+			$ui/Shop/SellerInventory/Item_Per/ItemName.text = ""
+			$ui/Shop/SellerInventory/Money.text = ""
 			$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = ""
-			_hz1 = null
-		# Второй слот #
-		if item2.get_property("pdef") and not _hz1 == "pdef":
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz2 = "pdef"
-		elif item2.get_property("mdef") and not _hz1 == "mdef":
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz2 = "mdef"
-		else:
 			$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = ""
-			_hz2 = null
-		# Третий слот #
-		if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
-			$ui/Shop/SellerInventory/Item_Per/Pers1/Per3.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz3 = "mdef"
-		else:
 			$ui/Shop/SellerInventory/Item_Per/Pers1/Per3.text = ""
-			_hz3 = null
-		#
-		#
-		#
-		if item2.get_property("str"):
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = "Сила: " + str(item2.get_property("str"))
-			_hz4 = "str"
-		elif item2.get_property("agi"):
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz4 = "agi"
-		elif item2.get_property("int"):
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz4 = "int"
-		else:
+			$ui/Shop/SellerInventory/Item_Per/Pers1/Per4.text = ""
 			$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = ""
-			_hz4 = null
-		if item2.get_property("agi") and not _hz4 == "agi":
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz5 = "agi"
-		elif item2.get_property("int") and not _hz4 == "int":
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz5 = "int"
-		else:
 			$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = ""
-			_hz5 = null
-		if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
-			$ui/Shop/SellerInventory/Item_Per/Pers2/Per3.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz6 = "int"
-		else:
 			$ui/Shop/SellerInventory/Item_Per/Pers2/Per3.text = ""
-			_hz6 = null
+			$ui/Shop/SellerInventory/Item_Per/Pers2/Per4.text = ""
 	else:
-		$ui/Shop/SellerInventory/Item_Per/ItemName.text = ""
-		$ui/Shop/SellerInventory/Money.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers1/Per1.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers1/Per2.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers1/Per3.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers1/Per4.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers2/Per1.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers2/Per2.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers2/Per3.text = ""
-		$ui/Shop/SellerInventory/Item_Per/Pers2/Per4.text = ""
+		print("	_on_seller_inventory_shop_selection_changed() пошло по жопе!")
 
 func _on_shop_button_pressed():
 	ShopFunc()
+func dialogOver():
+	$ui/Hud.visible = true
 
 func ShopFunc():
 	var PlayerInv1 = $ui/InventoryPanel/Panel/Inventory/InventoryGrid
@@ -1303,161 +1338,167 @@ func ChestFunc():
 		_update()
 		$ui/Hud.visible = true
 func _on_player_inventory_selection_changed():
-	$Select.play()
-	var item2 = $ui/Chest/PlayerInventory/PlayerInventory.get_selected_inventory_item()
-	var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
-	if not item2 == null:
-		$ui/Chest/PlayerInventory/Item_Per/ItemName.text = item2.get_property("name")
-		#$ui/Chest/PlayerInventory/Money.text = str(item2.get_property("sell"))
-		# Первый слот #
-		if item2.get_property("dmg"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = "Урон: " + str(item2.get_property("dmg"))
-			_hz1 = "dmg"
-		elif item2.get_property("pdef"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz1 = "pdef"
-		elif item2.get_property("mdef"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz1 = "mdef"
+	if has_node("ui/Chest/PlayerInventory/PlayerInventory"):
+		$Select.play()
+		var item2 = $ui/Chest/PlayerInventory/PlayerInventory.get_selected_inventory_item()
+		var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
+		if not item2 == null:
+			$ui/Chest/PlayerInventory/Item_Per/ItemName.text = item2.get_property("name")
+			#$ui/Chest/PlayerInventory/Money.text = str(item2.get_property("sell"))
+			# Первый слот #
+			if item2.get_property("dmg"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_DAMAGE") + str(item2.get_property("dmg"))
+				_hz1 = "dmg"
+			elif item2.get_property("pdef"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz1 = "pdef"
+			elif item2.get_property("mdef"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz1 = "mdef"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = ""
+				_hz1 = null
+			# Второй слот #
+			if item2.get_property("pdef") and not _hz1 == "pdef":
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz2 = "pdef"
+			elif item2.get_property("mdef") and not _hz1 == "mdef":
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz2 = "mdef"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = ""
+				_hz2 = null
+			# Третий слот #
+			if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per3.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz3 = "mdef"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers1/Per3.text = ""
+				_hz3 = null
+			#
+			#
+			#
+			if item2.get_property("str"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_STR") + str(item2.get_property("str"))
+				_hz4 = "str"
+			elif item2.get_property("agi"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz4 = "agi"
+			elif item2.get_property("int"):
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz4 = "int"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = ""
+				_hz4 = null
+			if item2.get_property("agi") and not _hz4 == "agi":
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz5 = "agi"
+			elif item2.get_property("int") and not _hz4 == "int":
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz5 = "int"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = ""
+				_hz5 = null
+			if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per3.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz6 = "int"
+			else:
+				$ui/Chest/PlayerInventory/Item_Per/Pers2/Per3.text = ""
+				_hz6 = null
 		else:
+			$ui/Chest/PlayerInventory/Item_Per/ItemName.text = ""
+			#$ui/Chest/PlayerInventory/Money.text = ""
 			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = ""
-			_hz1 = null
-		# Второй слот #
-		if item2.get_property("pdef") and not _hz1 == "pdef":
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz2 = "pdef"
-		elif item2.get_property("mdef") and not _hz1 == "mdef":
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz2 = "mdef"
-		else:
 			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = ""
-			_hz2 = null
-		# Третий слот #
-		if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
-			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per3.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz3 = "mdef"
-		else:
 			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per3.text = ""
-			_hz3 = null
-		#
-		#
-		#
-		if item2.get_property("str"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = "Сила: " + str(item2.get_property("str"))
-			_hz4 = "str"
-		elif item2.get_property("agi"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz4 = "agi"
-		elif item2.get_property("int"):
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz4 = "int"
-		else:
+			$ui/Chest/PlayerInventory/Item_Per/Pers1/Per4.text = ""
 			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = ""
-			_hz4 = null
-		if item2.get_property("agi") and not _hz4 == "agi":
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz5 = "agi"
-		elif item2.get_property("int") and not _hz4 == "int":
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz5 = "int"
-		else:
 			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = ""
-			_hz5 = null
-		if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
-			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per3.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz6 = "int"
-		else:
 			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per3.text = ""
-			_hz6 = null
+			$ui/Chest/PlayerInventory/Item_Per/Pers2/Per4.text = ""
 	else:
-		$ui/Chest/PlayerInventory/Item_Per/ItemName.text = ""
-		#$ui/Chest/PlayerInventory/Money.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers1/Per1.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers1/Per2.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers1/Per3.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers1/Per4.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers2/Per1.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers2/Per2.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers2/Per3.text = ""
-		$ui/Chest/PlayerInventory/Item_Per/Pers2/Per4.text = ""
+		print("	_on_player_inventory_selection_changed() пошло по жопе!")
 func _on_chest_inventory_selection_changed():
-	$Select.play()
-	var item2 = $ui/Chest/ChestInventory/ChestInventory.get_selected_inventory_item()
-	var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
-	if not item2 == null:
-		$ui/Chest/ChestInventory/Item_Per/ItemName.text = item2.get_property("name")
-		#$ui/Shop/SellerInventory/Money.text = str(item2.get_property("buy"))
-		# Первый слот #
-		if item2.get_property("dmg"):
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = "Урон: " + str(item2.get_property("dmg"))
-			_hz1 = "dmg"
-		elif item2.get_property("pdef"):
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz1 = "pdef"
-		elif item2.get_property("mdef"):
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz1 = "mdef"
+	if has_node("ui/Chest/ChestInventory/ChestInventory"):
+		$Select.play()
+		var item2 = $ui/Chest/ChestInventory/ChestInventory.get_selected_inventory_item()
+		var _hz1; var _hz2; var _hz3; var _hz4; var _hz5; var _hz6
+		if not item2 == null:
+			$ui/Chest/ChestInventory/Item_Per/ItemName.text = item2.get_property("name")
+			#$ui/Shop/SellerInventory/Money.text = str(item2.get_property("buy"))
+			# Первый слот #
+			if item2.get_property("dmg"):
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_DAMAGE") + str(item2.get_property("dmg"))
+				_hz1 = "dmg"
+			elif item2.get_property("pdef"):
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz1 = "pdef"
+			elif item2.get_property("mdef"):
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz1 = "mdef"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = ""
+				_hz1 = null
+			# Второй слот #
+			if item2.get_property("pdef") and not _hz1 == "pdef":
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_PDEF") + str(item2.get_property("pdef"))
+				_hz2 = "pdef"
+			elif item2.get_property("mdef") and not _hz1 == "mdef":
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz2 = "mdef"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = ""
+				_hz2 = null
+			# Третий слот #
+			if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per3.text = tr("ATTRIBUTE_MDEF") + str(item2.get_property("mdef"))
+				_hz3 = "mdef"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers1/Per3.text = ""
+				_hz3 = null
+			#
+			#
+			#
+			if item2.get_property("str"):
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_STR") + str(item2.get_property("str"))
+				_hz4 = "str"
+			elif item2.get_property("agi"):
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz4 = "agi"
+			elif item2.get_property("int"):
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
+				_hz4 = "int"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = ""
+				_hz4 = null
+			if item2.get_property("agi") and not _hz4 == "agi":
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_AGI") + str(item2.get_property("agi"))
+				_hz5 = "agi"
+			elif item2.get_property("int") and not _hz4 == "int":
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz5 = "int"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = ""
+				_hz5 = null
+			if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per3.text = tr("ATTRIBUTE_INT") + str(item2.get_property("int"))
+				_hz6 = "int"
+			else:
+				$ui/Chest/ChestInventory/Item_Per/Pers2/Per3.text = ""
+				_hz6 = null
 		else:
+			$ui/Chest/ChestInventory/Item_Per/ItemName.text = ""
+			#$ui/Chest/ChestInventory/Money.text = ""
 			$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = ""
-			_hz1 = null
-		# Второй слот #
-		if item2.get_property("pdef") and not _hz1 == "pdef":
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = "Физ.Защита: " + str(item2.get_property("pdef"))
-			_hz2 = "pdef"
-		elif item2.get_property("mdef") and not _hz1 == "mdef":
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz2 = "mdef"
-		else:
 			$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = ""
-			_hz2 = null
-		# Третий слот #
-		if item2.get_property("mdef") and not _hz2 == "mdef" and not _hz1 == "mdef":
-			$ui/Chest/ChestInventory/Item_Per/Pers1/Per3.text = "Маг.Защита: " + str(item2.get_property("mdef"))
-			_hz3 = "mdef"
-		else:
 			$ui/Chest/ChestInventory/Item_Per/Pers1/Per3.text = ""
-			_hz3 = null
-		#
-		#
-		#
-		if item2.get_property("str"):
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = "Сила: " + str(item2.get_property("str"))
-			_hz4 = "str"
-		elif item2.get_property("agi"):
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz4 = "agi"
-		elif item2.get_property("int"):
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz4 = "int"
-		else:
+			$ui/Chest/ChestInventory/Item_Per/Pers1/Per4.text = ""
 			$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = ""
-			_hz4 = null
-		if item2.get_property("agi") and not _hz4 == "agi":
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = "Ловкость: " + str(item2.get_property("agi"))
-			_hz5 = "agi"
-		elif item2.get_property("int") and not _hz4 == "int":
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz5 = "int"
-		else:
 			$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = ""
-			_hz5 = null
-		if item2.get_property("int") and not _hz4 == "int" and not _hz5 == "int":
-			$ui/Chest/ChestInventory/Item_Per/Pers2/Per3.text = "Интеллект: " + str(item2.get_property("int"))
-			_hz6 = "int"
-		else:
 			$ui/Chest/ChestInventory/Item_Per/Pers2/Per3.text = ""
-			_hz6 = null
+			$ui/Chest/ChestInventory/Item_Per/Pers2/Per4.text = ""
 	else:
-		$ui/Chest/ChestInventory/Item_Per/ItemName.text = ""
-		#$ui/Chest/ChestInventory/Money.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers1/Per1.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers1/Per2.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers1/Per3.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers1/Per4.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers2/Per1.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers2/Per2.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers2/Per3.text = ""
-		$ui/Chest/ChestInventory/Item_Per/Pers2/Per4.text = ""
+		print("	_on_chest_inventory_selection_changed() пошло по жопе!")
 
 func _on_chest_button_pressed():
 	ChestFunc()

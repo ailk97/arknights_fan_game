@@ -1,20 +1,20 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1718000700
-1.tscn::PackedScene::2870030007833233569::1717998930::0::1::::<><>::res://Tests/1.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/Action.gd<>uid://b0aaoiqtgo6ju::::res://personal_chest.tscn<>uid://cw5etidpmlk2d::::res://ShopTest.tscn<>uid://bo2xsdmwp3guo::::res://random_chest.tscn<>uid://brvabsf7prjve::::res://Игровые асеты/Audio/background1.mp3<>uid://cpxtp2clr18iy::::res://damagetest.tscn<>uid://trtopn72q241::::res://EnemyTest.tscn
+::res://::1729535985
+1.tscn::PackedScene::2870030007833233569::1729233969::0::1::::<><>::res://Tests/1.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/Action.gd<>uid://b0aaoiqtgo6ju::::res://personal_chest.tscn<>uid://cw5etidpmlk2d::::res://ShopTest.tscn<>uid://bo2xsdmwp3guo::::res://random_chest.tscn<>uid://brvabsf7prjve::::res://Игровые асеты/Audio/background1.mp3<>uid://cpxtp2clr18iy::::res://damagetest.tscn<>uid://trtopn72q241::::res://EnemyTest.tscn
 Action.gd::GDScript::-1::1715334572::0::1::::<>Area2D<>::
-Body.gd::GDScript::-1::1717998839::0::1::::<>Node2D<>::
+Body.gd::GDScript::-1::1729233793::0::1::::<>Node2D<>::
 damagetest.gd::GDScript::-1::1712929515::0::1::::<>Node2D<>::
-damagetest.tscn::PackedScene::5874336541814829420::1713594075::0::1::::<><>::uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>res://damagetest.gd
+damagetest.tscn::PackedScene::5874336541814829420::1729233972::0::1::::<><>::uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>res://damagetest.gd
 DeathPanel.gd::GDScript::-1::1712944475::0::1::::<>Control<>::
-DeathPanel.tscn::PackedScene::5875257871810706124::1713590818::0::1::::<><>::res://DeathPanel.gd
+DeathPanel.tscn::PackedScene::5875257871810706124::1729233972::0::1::::<><>::res://DeathPanel.gd
 default_bus_layout.tres::AudioBusLayout::4372924939485368452::1715278430::0::1::::<><>::
-default_env.tres::Environment::1308534265358033619::1718000700::0::1::::<><>::
+default_env.tres::Environment::1308534265358033619::1729233972::0::1::::<><>::
 DialogTest.gd::GDScript::-1::1706681414::0::1::::<>CharacterBody2D<>::
-DialogTest.tscn::PackedScene::2137187440260568970::1717998932::0::1::::<><>::res://DialogTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://Action.gd<>uid://b4rufhn67eibm::::res://test.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
-DialogTest_Events.gd::GDScript::-1::1717998839::0::1::::<>Node<>::
+DialogTest.tscn::PackedScene::2137187440260568970::1729233971::0::1::::<><>::res://DialogTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://Action.gd<>uid://b4rufhn67eibm::::res://test.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
+DialogTest_Events.gd::GDScript::-1::1729233793::0::1::::<>Node<>::
 dialog_base.tscn::PackedScene::4027579582974897324::1705233335::0::1::::<><>::uid://btplpfy1q1uxl::::res://Игровые асеты/Шрифты/JovannyLemonad-Bender.otf<>uid://dto2b6vp01cy2::::res://Игровые асеты/Шрифты/AEwide #242813.otf<>uid://cl2uko60koglo::::res://Игровые асеты/Шрифты/Novecentowide-Bold #242450.otf
-EnemyTest.gd::GDScript::-1::1713706938::0::1::::<>CharacterBody2D<>::
-EnemyTest.tscn::PackedScene::1369861884342248144::1717998930::0::1::::<><>::res://EnemyTest.gd<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://addons/gloot/core/inventory_grid.gd<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
+EnemyTest.gd::GDScript::-1::1729193672::0::1::::<>CharacterBody2D<>::
+EnemyTest.tscn::PackedScene::1369861884342248144::1729233970::0::1::::<><>::res://EnemyTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>res://Shaders/dissolve.gdshader<>res://take_damage.gdshader<>uid://cuvj8ks2ijcog::::res://Игровые асеты/enemy_test.png<>uid://hbaryvuiktvr::::res://Игровые асеты/sword/weapon1.png<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://b7r70ku0qcm2a::::res://Без имени-1.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>res://addons/gloot/core/inventory_grid.gd<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
 enemy_1064_snsbr.png::CompressedTexture2D::6832663665855728674::1663176680::1692099189::1::::<><>::
 enemy_group_1.tscn::PackedScene::7261021049061462422::1708795397::0::1::::<><>::uid://trtopn72q241::::res://EnemyTest.tscn
 Equipment.gd::GDScript::-1::1705152492::0::1::::<>Control<>::
@@ -23,35 +23,37 @@ Hitbox.gd::GDScript::-1::1704631339::0::1::::<>Area2D<>::
 icon.png::CompressedTexture2D::8532282903529498084::1662910148::1692099189::1::::<><>::
 loading.gd::GDScript::-1::1715276807::0::1::::<>CanvasLayer<>::
 loading.tscn::PackedScene::4163283290676323625::1715276591::0::1::::<><>::res://loading.gd<>uid://sh17vcwmn1qx::::res://Игровые асеты/bg_barracks.png<>uid://cvm8me5gpuyq4::::res://Игровые асеты/Способности/skill_icon_skchr_headbr_2.png<>res://Scripts/Save1.gd<>res://Scripts/Save2.gd<>res://Scripts/Save3.gd<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png
-loading_screen.tscn::PackedScene::3771311924344837660::1717998932::0::1::::<><>::res://Scripts/loading_screen.gd<>uid://073vc03548v1::::res://Игровые асеты/24_g1_snowyforest.png<>uid://cwbkhkbhmwnd::::res://Игровые асеты/Без имени-4.png
-MainMenu.gd::GDScript::-1::1715280404::0::1::::<>CanvasLayer<>::
-MainMenu.tscn::PackedScene::6800789201618249328::1717998931::0::1::::<><>::res://MainMenu.gd<>uid://266b6hni672q::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_3.png<>uid://sh17vcwmn1qx::::res://Игровые асеты/bg_barracks.png<>uid://c6qhb0kon2rpg::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_2.png<>uid://cqpwunistny44::::res://Игровые асеты/Способности/skill_icon_sktok_phatom_1.png<>uid://csjmxdppv6asu::::res://Игровые асеты/Способности/skill_icon_sktok_emp.png<>uid://dd0xyp7ghchn2::::res://Игровые асеты/Logo.png<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>uid://do8l738xye4un::::res://Игровые асеты/Audio/1.mp3<>uid://caxlrddwqorsf::::res://Игровые асеты/Audio/select.wav<>uid://b5f3govyk5e27::::res://Игровые асеты/Audio/click.wav<>uid://cyxv2lx7wjldi::::res://Игровые асеты/Audio/typing.wav
+loading_screen.tscn::PackedScene::3771311924344837660::1729233971::0::1::::<><>::res://Scripts/loading_screen.gd<>uid://073vc03548v1::::res://Игровые асеты/24_g1_snowyforest.png<>uid://cwbkhkbhmwnd::::res://Игровые асеты/Без имени-4.png
+MainMenu.gd::GDScript::-1::1728119729::0::1::::<>CanvasLayer<>::
+MainMenu.tscn::PackedScene::6800789201618249328::1729233970::0::1::::<><>::res://MainMenu.gd<>uid://266b6hni672q::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_3.png<>uid://sh17vcwmn1qx::::res://Игровые асеты/bg_barracks.png<>uid://c6qhb0kon2rpg::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_2.png<>uid://cqpwunistny44::::res://Игровые асеты/Способности/skill_icon_sktok_phatom_1.png<>uid://csjmxdppv6asu::::res://Игровые асеты/Способности/skill_icon_sktok_emp.png<>uid://dd0xyp7ghchn2::::res://Игровые асеты/Logo.png<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>uid://do8l738xye4un::::res://Игровые асеты/Audio/1.mp3<>uid://caxlrddwqorsf::::res://Игровые асеты/Audio/select.wav<>uid://b5f3govyk5e27::::res://Игровые асеты/Audio/click.wav<>uid://cyxv2lx7wjldi::::res://Игровые асеты/Audio/typing.wav
 Original_colors.txt::TextFile::-1::1713599923::0::1::::<><>::
-personal_chest.tscn::PackedScene::4141167221534128498::1717998933::0::1::::<><>::uid://cjeyxhob43wmu::::res://Игровые асеты/Способности/Icon_personalChest.png<>res://Scripts/PersonalChest.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
+personal_chest.tscn::PackedScene::4141167221534128498::1729233972::0::1::::<><>::uid://cjeyxhob43wmu::::res://Игровые асеты/Способности/Icon_personalChest.png<>res://Scripts/PersonalChest.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
 Protoitems.json::JSON::-1::1706191842::0::1::::<><>::
-random_chest.tscn::PackedScene::3426231506237521118::1717998933::0::1::::<><>::uid://cjeyxhob43wmu::::res://Игровые асеты/Способности/Icon_personalChest.png<>res://Scripts/RandomChest_start.gd<>res://Scripts/RandomChest.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
-settings.gd::GDScript::-1::1715280230::0::1::::<>CanvasLayer<>::
-settings.tscn::PackedScene::3840619197761082897::1717998931::0::1::::<><>::res://settings.gd<>uid://sh17vcwmn1qx::::res://Игровые асеты/bg_barracks.png<>uid://cvm8me5gpuyq4::::res://Игровые асеты/Способности/skill_icon_skchr_headbr_2.png<>uid://do8l738xye4un::::res://Игровые асеты/Audio/1.mp3<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png
+random_chest.tscn::PackedScene::3426231506237521118::1729233972::0::1::::<><>::uid://cjeyxhob43wmu::::res://Игровые асеты/Способности/Icon_personalChest.png<>res://Scripts/RandomChest_start.gd<>res://Scripts/RandomChest.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres
+README.md::TextFile::-1::1719706427::0::1::::<><>::
+settings.gd::GDScript::-1::1728305317::0::1::::<>CanvasLayer<>::
+settings.tscn::PackedScene::3840619197761082897::1729233971::0::1::::<><>::res://settings.gd<>uid://sh17vcwmn1qx::::res://Игровые асеты/bg_barracks.png<>uid://cvm8me5gpuyq4::::res://Игровые асеты/Способности/skill_icon_skchr_headbr_2.png<>uid://do8l738xye4un::::res://Игровые асеты/Audio/1.mp3<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png
 Shop.gd::GDScript::-1::1712663889::0::1::::<>Panel<>::
-ShopTest.tscn::PackedScene::6379204483619193337::1717998931::0::1::::<><>::res://Scripts/ShopTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://b2k34g5mdgjgd::::res://Игровые асеты/Противники/enemy_1069_icebrk.png<>uid://dttdpnqnb4kiu::::res://icon.png<>res://Action.gd<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>uid://xydy2j7agfvk::::res://Игровые асеты/Dialogs/Shop1.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
+ShopTest.tscn::PackedScene::6379204483619193337::1729233971::0::1::::<><>::res://Scripts/ShopTest.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://c4l18b80rqkte::::res://enemy_1064_snsbr.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://1k4ft6mekssg::::res://Игровые асеты/Противники/enemy_1064_snsbr.png<>uid://b2k34g5mdgjgd::::res://Игровые асеты/Противники/enemy_1069_icebrk.png<>uid://dttdpnqnb4kiu::::res://icon.png<>res://Action.gd<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>uid://xydy2j7agfvk::::res://Игровые асеты/Dialogs/Shop1.dialogue<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png
 StaticBody2D.gd::GDScript::-1::1714118952::0::1::::<>CheckBox<>::
-take_damage.gdshader::Shader::-1::1718000700::0::1::::<><>::
+take_damage.gdshader::Shader::-1::1729234101::0::1::::<><>::
 test.dialogue::Resource::4458215229037245966::1712782264::1712782265::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 test.gd::GDScript::-1::1705229559::0::1::::<>Panel<>::
-Без имени-1.png::CompressedTexture2D::4669546247832252918::1704531687::1704531688::1::::<><>::
-Маша(броня).tscn::PackedScene::466107687209791034::1717998933::0::1::::<><>::res://Маша.gd<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://clyc0pn85oo62::::res://Игровые асеты/Миша(Форма, Спрайт).png<>uid://cn7vt45gic7hp::::res://Маша.png<>uid://dv25j7rg2trtp::::res://Игровые асеты/body_armor/armor1_old.png<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png
-Маша.gd::GDScript::-1::1716627904::0::1::::<>CharacterBody2D<>::
-Маша.png::CompressedTexture2D::5752666979547530445::1663341441::1692101063::1::::<><>::
-Маша.tscn::PackedScene::3369889557199058363::1718000700::0::1::::<><>::uid://dttdpnqnb4kiu::::res://icon.png<>uid://b3smmkeixxtmj::::res://Игровые асеты/Audio/walk1.wav<>res://Маша.gd<>res://take_damage.gdshader<>res://Body.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://cqb74n60hqf4d::::res://Игровые асеты/Character_Base.png<>uid://b7r70ku0qcm2a::::res://Без имени-1.png<>uid://hbaryvuiktvr::::res://Игровые асеты/sword/weapon1.png<>uid://blcagdoswtsyl::::res://Игровые асеты/body_armor/armor1.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://c2xyxjvy67o7h::::res://Игровые асеты/helmet/helmet1.png<>uid://dvarhyarlx3n1::::res://Игровые асеты/Бары/bar_orig.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://ycmklcdqhtfi::::res://Игровые асеты/Audio/audio_randomizer_attack1.tres<>uid://cqn4hryofa212::::res://Игровые асеты/Способности/Blocked.png<>uid://d3l5o2w7atw13::::res://Игровые асеты/Audio/audio_randomizer_walk.tres<>uid://5rfoprnljj5v::::res://Игровые асеты/Способности/_skillReload.png<>uid://1iskwtk3d0w::::res://Игровые асеты/Шрифты/Novecentowide-Bold.otf<>uid://c2n2sb0t0i08l::::res://Игровые асеты/ui.png<>uid://cup3nvalt4cg7::::res://Игровые асеты/Способности/skillReload.png<>uid://ccepeyt8s8klt::::res://Игровые асеты/Шрифты/NotoSansHans-Medium.otf<>uid://bla6qp3ul750q::::res://Игровые асеты/Шрифты/JovannyLemonad-Bender-Light.otf<>uid://dto2b6vp01cy2::::res://Игровые асеты/Шрифты/AEwide #242813.otf<>uid://c3npqnnh187vv::::res://Игровые асеты/Шрифты/Novecentowide-Medium.otf<>res://addons/gloot/core/item_slot.gd<>res://addons/gloot/ui/ctrl_inventory_grid_ex.gd<>uid://w1lcxhxh16o6::::res://Игровые асеты/Способности/skill_icon_skcom_blowrange_up[1].png<>res://addons/gloot/core/inventory_grid.gd<>res://addons/gloot/ui/ctrl_item_slot.gd<>uid://d34j5lahabuw5::::res://Игровые асеты/Бары/round1.png<>uid://dplrqql1mf8jo::::res://Игровые асеты/Бары/round2.png<>uid://tofmbkirhrci::::res://Игровые асеты/Способности/skill_icon_skcom_withdraw.png<>uid://cmxbx3vv7x3sv::::res://Игровые асеты/Способности/icon_character.png<>uid://cv8oecubq27af::::res://Игровые асеты/Способности/icon_character_pressed.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres<>res://addons/gloot/ui/ctrl_inventory_grid.gd<>uid://lfumv42uspbi::::res://Игровые асеты/Способности/icon_ability.png<>uid://cwq4nj72au6h8::::res://Игровые асеты/Способности/icon_ability_pressed.png<>uid://cdlfrnc8p6shu::::res://Игровые асеты/Способности/icon_quests.png<>res://Abilitys/AbilityPanel.gd<>uid://cyunkwtb3komj::::res://Игровые асеты/Способности/skill_icon_skcom_quickattack[1].png<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>uid://f0mpk8crfl40::::res://Игровые асеты/Способности/icon_quests_pressed.png<>uid://cqpwunistny44::::res://Игровые асеты/Способности/skill_icon_sktok_phatom_1.png<>res://Abilitys/Attack1.gd<>uid://c6qhb0kon2rpg::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_2.png<>uid://c7oc0fvjf5fy7::::res://Игровые асеты/Способности/skill_empty_128.png<>uid://bf5tbvk3qjm27::::res://Игровые асеты/Способности/icon_inventory.png<>res://Abilitys/Dash1.gd<>uid://0p0lwu2d4t6a::::res://Игровые асеты/Способности/icon_inventory_pressed.png<>uid://r2yihxcdywev::::res://Игровые асеты/Способности/skill_icon_skchr_breeze_1.png<>uid://xmjl4bu2rcs6::::res://Игровые асеты/Способности/skill_icon_skchr_breeze_2.png<>uid://bntpn7oivec5f::::res://Игровые асеты/Способности/skill_empty.png<>res://addons/gloot/core/inventory_item.gd<>uid://b4tpke42yiftg::::res://Игровые асеты/Способности/icon_left.png<>uid://btw1vujduclbx::::res://Игровые асеты/Способности/icon_right.png<>uid://3fv32q38fiwd::::res://Игровые асеты/Способности/skill_icon_skcom_atk_up[2].png<>res://Abilitys/Attack2.gd<>uid://b6q4w1k831ct3::::res://Игровые асеты/Способности/skill_icon_skcom_atk_up[3].png<>res://Abilitys/LevelLock.gd<>res://Abilitys/Attack3.gd<>uid://co0jqsuab455c::::res://Игровые асеты/aaa.png<>uid://c28p40ecbosmf::::res://Игровые асеты/aaa1.png<>uid://dv3hr0uv1yg6e::::res://Игровые асеты/Audio/damage1.wav<>uid://caxlrddwqorsf::::res://Игровые асеты/Audio/select.wav<>uid://qncvh8isd514::::res://Игровые асеты/Audio/damage2.wav<>uid://b5f3govyk5e27::::res://Игровые асеты/Audio/click.wav<>uid://nosvw2p8nk36::::res://Игровые асеты/Audio/damage4.wav<>uid://bt5n53588rues::::res://Игровые асеты/Audio/equip1.wav
+trail_2d.tscn::PackedScene::3942761715104396447::1729191820::0::1::::<><>::res://Scripts/Trail2D.gd
+Без имени-1.png::CompressedTexture2D::4669546247832252918::1721722653::1721722656::1::::<><>::
+Маша(броня).tscn::PackedScene::466107687209791034::1721706547::0::1::::<><>::res://Маша.gd<>uid://dttdpnqnb4kiu::::res://icon.png<>uid://clyc0pn85oo62::::res://Игровые асеты/Миша(Форма, Спрайт).png<>uid://cn7vt45gic7hp::::res://Маша.png<>uid://dv25j7rg2trtp::::res://Игровые асеты/body_armor/armor1_old.png<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png
+Маша.gd::GDScript::-1::1729193672::0::1::::<>CharacterBody2D<>::
+Маша.png::CompressedTexture2D::5752666979547530445::1663341441::1721553587::1::::<><>::
+Маша.tscn::PackedScene::3369889557199058363::1729233969::0::1::::<><>::uid://dttdpnqnb4kiu::::res://icon.png<>uid://b3smmkeixxtmj::::res://Игровые асеты/Audio/walk1.wav<>res://Маша.gd<>res://take_damage.gdshader<>res://Body.gd<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://b7r70ku0qcm2a::::res://Без имени-1.png<>uid://21ua7q05he1b::::res://Игровые асеты/Character_Base_01.png<>uid://cn14x8yfl0g8y::::res://Игровые асеты/sword/weapon2.png<>uid://blcagdoswtsyl::::res://Игровые асеты/body_armor/armor1.png<>uid://bcp1n8ypan5p::::res://Игровые асеты/Бары/bar_empty.png<>uid://b2ywcygp1gg1k::::res://Игровые асеты/Бары/bar_health.png<>uid://c2xyxjvy67o7h::::res://Игровые асеты/helmet/helmet1.png<>uid://dvarhyarlx3n1::::res://Игровые асеты/Бары/bar_orig.png<>uid://bfdvij6k1vgm2::::res://Игровые асеты/enemy_1111_ucommd.png<>uid://ycmklcdqhtfi::::res://Игровые асеты/Audio/audio_randomizer_attack1.tres<>uid://cqn4hryofa212::::res://Игровые асеты/Способности/Blocked.png<>uid://d3l5o2w7atw13::::res://Игровые асеты/Audio/audio_randomizer_walk.tres<>uid://5rfoprnljj5v::::res://Игровые асеты/Способности/_skillReload.png<>uid://1iskwtk3d0w::::res://Игровые асеты/Шрифты/Novecentowide-Bold.otf<>uid://c2n2sb0t0i08l::::res://Игровые асеты/ui.png<>uid://cup3nvalt4cg7::::res://Игровые асеты/Способности/skillReload.png<>uid://ccepeyt8s8klt::::res://Игровые асеты/Шрифты/NotoSansHans-Medium.otf<>uid://bla6qp3ul750q::::res://Игровые асеты/Шрифты/JovannyLemonad-Bender-Light.otf<>uid://dto2b6vp01cy2::::res://Игровые асеты/Шрифты/AEwide #242813.otf<>uid://c3npqnnh187vv::::res://Игровые асеты/Шрифты/Novecentowide-Medium.otf<>res://addons/gloot/core/item_slot.gd<>res://addons/gloot/ui/ctrl_inventory_grid_ex.gd<>uid://w1lcxhxh16o6::::res://Игровые асеты/Способности/skill_icon_skcom_blowrange_up[1].png<>res://addons/gloot/core/inventory_grid.gd<>res://addons/gloot/ui/ctrl_item_slot.gd<>uid://d34j5lahabuw5::::res://Игровые асеты/Бары/round1.png<>uid://dplrqql1mf8jo::::res://Игровые асеты/Бары/round2.png<>uid://tofmbkirhrci::::res://Игровые асеты/Способности/skill_icon_skcom_withdraw.png<>uid://cmxbx3vv7x3sv::::res://Игровые асеты/Способности/icon_character.png<>uid://cv8oecubq27af::::res://Игровые асеты/Способности/icon_character_pressed.png<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres<>res://addons/gloot/ui/ctrl_inventory_grid.gd<>uid://lfumv42uspbi::::res://Игровые асеты/Способности/icon_ability.png<>uid://cwq4nj72au6h8::::res://Игровые асеты/Способности/icon_ability_pressed.png<>uid://cdlfrnc8p6shu::::res://Игровые асеты/Способности/icon_quests.png<>res://Abilitys/AbilityPanel.gd<>uid://cyunkwtb3komj::::res://Игровые асеты/Способности/skill_icon_skcom_quickattack[1].png<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>uid://f0mpk8crfl40::::res://Игровые асеты/Способности/icon_quests_pressed.png<>uid://cqpwunistny44::::res://Игровые асеты/Способности/skill_icon_sktok_phatom_1.png<>res://Abilitys/Attack1.gd<>uid://c6qhb0kon2rpg::::res://Игровые асеты/Способности/skill_icon_skchr_amiya_2.png<>uid://c7oc0fvjf5fy7::::res://Игровые асеты/Способности/skill_empty_128.png<>uid://bf5tbvk3qjm27::::res://Игровые асеты/Способности/icon_inventory.png<>res://Abilitys/Dash1.gd<>uid://0p0lwu2d4t6a::::res://Игровые асеты/Способности/icon_inventory_pressed.png<>uid://r2yihxcdywev::::res://Игровые асеты/Способности/skill_icon_skchr_breeze_1.png<>uid://xmjl4bu2rcs6::::res://Игровые асеты/Способности/skill_icon_skchr_breeze_2.png<>uid://crucw8rr7a3dh::::res://Игровые асеты/Способности/icon_helmet.png<>uid://bntpn7oivec5f::::res://Игровые асеты/Способности/skill_empty.png<>uid://dpobwlu4gekkw::::res://Игровые асеты/Способности/icon_armor.png<>uid://6uutw8v7iff0::::res://Игровые асеты/Поверхность/middle.png<>res://addons/gloot/core/inventory_item.gd<>uid://b4tpke42yiftg::::res://Игровые асеты/Способности/icon_left.png<>uid://btw1vujduclbx::::res://Игровые асеты/Способности/icon_right.png<>uid://3fv32q38fiwd::::res://Игровые асеты/Способности/skill_icon_skcom_atk_up[2].png<>res://Abilitys/Attack2.gd<>uid://b6q4w1k831ct3::::res://Игровые асеты/Способности/skill_icon_skcom_atk_up[3].png<>res://Abilitys/LevelLock.gd<>res://Abilitys/Attack3.gd<>uid://co0jqsuab455c::::res://Игровые асеты/aaa.png<>uid://c28p40ecbosmf::::res://Игровые асеты/aaa1.png<>uid://dv3hr0uv1yg6e::::res://Игровые асеты/Audio/damage1.wav<>uid://caxlrddwqorsf::::res://Игровые асеты/Audio/select.wav<>uid://qncvh8isd514::::res://Игровые асеты/Audio/damage2.wav<>uid://b5f3govyk5e27::::res://Игровые асеты/Audio/click.wav<>uid://nosvw2p8nk36::::res://Игровые асеты/Audio/damage4.wav<>uid://bt5n53588rues::::res://Игровые асеты/Audio/equip1.wav<>uid://dhyeptpcmsl6l::::res://Игровые асеты/Audio/lvl_up.mp3
 МашаБроня.png::CompressedTexture2D::2429066264220781919::1664118233::1692101063::1::::<><>::
-::res://Abilitys/::1716627800
-AbilityPanel.gd::GDScript::-1::1716625648::0::1::::<>Control<>::
-Attack1.gd::GDScript::-1::1716625969::0::1::::<>TextureButton<>::
+::res://Abilitys/::1724958376
+AbilityPanel.gd::GDScript::-1::1724957820::0::1::::<>Control<>::
+Attack1.gd::GDScript::-1::1724958376::0::1::::<>TextureButton<>::
 Attack2.gd::GDScript::-1::1716625945::0::1::::<>TextureButton<>::
 Attack3.gd::GDScript::-1::1716625958::0::1::::<>TextureButton<>::
 Dash1.gd::GDScript::-1::1713706063::0::1::::<>TextureButton<>::
 LevelLock.gd::GDScript::-1::1716627800::0::1::::<>TextureButton<>::
-::res://addons/::1713969225
+::res://addons/::1721553964
 ::res://addons/dialogue_manager/::1705323628
 constants.gd::GDScript::-1::1705323627::0::1::::<>Node<>::
 dialogue_label.gd::GDScript::-1::1705323627::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
@@ -93,9 +95,9 @@ title_list.gd::GDScript::-1::1705323627::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1705323627::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1705323627::0::1::::<>Button<>::
 update_button.tscn::PackedScene::5825087957514786930::1705323627::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk::::res://addons/dialogue_manager/components/download_update_panel.tscn
-::res://addons/dialogue_manager/example_balloon/::1717998932
+::res://addons/dialogue_manager/example_balloon/::1729233971
 example_balloon.gd::GDScript::-1::1713768458::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1717998932::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>res://addons/dialogue_manager/dialogue_reponses_menu.gd<>uid://bux77ad6qv0nc::::res://Игровые асеты/shopper.png
+example_balloon.tscn::PackedScene::2304415056852043862::1729233971::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://dpawjtwjya05y::::res://Игровые асеты/Без имени-5.png<>res://addons/dialogue_manager/dialogue_reponses_menu.gd<>uid://bux77ad6qv0nc::::res://Игровые асеты/shopper.png
 small_example_balloon.tscn::PackedScene::1883859960814163368::1705323628::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
 ::res://addons/dialogue_manager/l10n/::1705323628
 en.mo::Translation::-1::1705323628::0::1::::<><>::
@@ -107,113 +109,117 @@ main_view.gd::GDScript::-1::1705323628::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1705323629::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn
 settings_view.gd::GDScript::-1::1705323629::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1705323629::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://addons/gaea/::1713969188
-grid.gd::GDScript::-1::1713969186::0::1::::GaeaGrid<>Resource<>::
-plugin.cfg::TextFile::-1::1713969188::0::1::::<><>::
-plugin.gd::GDScript::-1::1713969188::0::1::::<>EditorPlugin<>::
-::res://addons/gaea/editor/::1713969226
-clear.svg::CompressedTexture2D::5078786316858368456::1713969184::1713969226::1::::<><>::
-download_update_panel.gd::GDScript::-1::1713969184::0::1::::<>Control<>::
-download_update_panel.tscn::PackedScene::2207553941160856703::1713969226::0::1::::<><>::uid://b4nwpbrra72fj::::res://addons/gaea/editor/logo.png<>res://addons/gaea/editor/download_update_panel.gd
-generator_buttons.gd::GDScript::-1::1713969184::0::1::::<>EditorProperty<>::
-inspector_plugin.gd::GDScript::-1::1713969184::0::1::::<>EditorInspectorPlugin<>::
-logo.png::CompressedTexture2D::4450096700306969471::1713969184::1713969226::1::::<><>::
-reload.svg::CompressedTexture2D::7636415239406091336::1713969184::1713969226::1::::<><>::
-threshold_visualizer.gd::GDScript::-1::1713969184::0::1::::<>TextureRect<>::
-update_button.gd::GDScript::-1::1713969185::0::1::::<>Button<>::
-update_button.tscn::PackedScene::1924680899962474071::1713969226::0::1::::<><>::res://addons/gaea/editor/update_button.gd<>uid://6pmddcctde0v::::res://addons/gaea/editor/download_update_panel.tscn
-::res://addons/gaea/generators/::1713969226
-chunk_aware_generator.svg::CompressedTexture2D::4399251370745892222::1713969186::1713969226::1::::<><>::
-generator.gd::GDScript::-1::1713969186::0::1::::GaeaGenerator<>Node<>res://addons/gaea/generators/generator.svg::
-generator.svg::CompressedTexture2D::7556607453030425742::1713969186::1713969226::1::::<><>::
-generator_settings.svg::CompressedTexture2D::5890473717961004425::1713969186::1713969226::1::::<><>::
-::res://addons/gaea/generators/2D/::1713969185
-chunk_aware_generator_2d.gd::GDScript::-1::1713969185::0::1::::ChunkAwareGenerator2D<>GaeaGenerator2D<>res://addons/gaea/generators/chunk_aware_generator.svg::
-generator_2d.gd::GDScript::-1::1713969185::0::1::::GaeaGenerator2D<>GaeaGenerator<>::
-generator_settings_2d.gd::GDScript::-1::1713969185::0::1::::GeneratorSettings2D<>Resource<>res://addons/gaea/generators/generator_settings.svg::
-grid_2d.gd::GDScript::-1::1713969185::0::1::::GaeaGrid2D<>GaeaGrid<>::
-::res://addons/gaea/generators/2D/cellular_generator/::1713969226
-cellular_generator.gd::GDScript::-1::1713969185::0::1::::CellularGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/cellular_generator/cellular_generator.svg::
-cellular_generator.svg::CompressedTexture2D::2489972738627251148::1713969185::1713969226::1::::<><>::
-cellular_generator_settings.gd::GDScript::-1::1713969185::0::1::::CellularGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/heightmap_generator/::1713969226
-heightmap_generator_2d.gd::GDScript::-1::1713969185::0::1::::HeightmapGenerator2D<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/heightmap_generator/heightmap_generator_2d.svg::
-heightmap_generator_2d.svg::CompressedTexture2D::7804342115597507298::1713969185::1713969226::1::::<><>::
-heightmap_generator_2d_settings.gd::GDScript::-1::1713969185::0::1::::HeightmapGenerator2DSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/noise_generator/::1713969226
-noise_generator.gd::GDScript::-1::1713969185::0::1::::NoiseGenerator<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/noise_generator/noise_generator.svg::
-noise_generator.svg::CompressedTexture2D::1200808923553916311::1713969185::1713969226::1::::<><>::
-noise_generator_data.gd::GDScript::-1::1713969185::0::1::::NoiseGeneratorData<>Resource<>::
-noise_generator_settings.gd::GDScript::-1::1713969185::0::1::::NoiseGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/walker_generator/::1713969226
-walker_generator.gd::GDScript::-1::1713969185::0::1::::WalkerGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/walker_generator/walker_generator.svg::
-walker_generator.svg::CompressedTexture2D::4794092832639402112::1713969185::1713969226::1::::<><>::
-walker_generator_settings.gd::GDScript::-1::1713969185::0::1::::WalkerGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/wave_function_generator/::1713969226
-wave_function_2d_entry.gd::GDScript::-1::1713969185::0::1::::WaveFunction2DEntry<>Resource<>::
-wave_function_generator.svg::CompressedTexture2D::5086903406018483302::1713969185::1713969226::1::::<><>::
-wave_function_generator_2d.gd::GDScript::-1::1713969186::0::1::::WaveFunctionGenerator2D<>GaeaGenerator2D<>res://addons/gaea/generators/2D/wave_function_generator/wave_function_generator.svg::
-wave_function_generator_2d_settings.gd::GDScript::-1::1713969186::0::1::::WaveFunctionGenerator2DSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/3D/::1713969186
-chunk_aware_generator_3d.gd::GDScript::-1::1713969186::0::1::::ChunkAwareGenerator3D<>GaeaGenerator3D<>res://addons/gaea/generators/chunk_aware_generator.svg::
-generator_3d.gd::GDScript::-1::1713969186::0::1::::GaeaGenerator3D<>GaeaGenerator<>::
-generator_settings_3d.gd::GDScript::-1::1713969186::0::1::::GeneratorSettings3D<>Resource<>res://addons/gaea/generators/generator_settings.svg::
-grid_3d.gd::GDScript::-1::1713969186::0::1::::GaeaGrid3D<>GaeaGrid<>::
-::res://addons/gaea/generators/3D/heightmap_generator_3d/::1713969186
-heightmap_generator_3d.gd::GDScript::-1::1713969186::0::1::::HeightmapGenerator3D<>ChunkAwareGenerator3D<>::
-heightmap_generator_3d_settings.gd::GDScript::-1::1713969186::0::1::::HeightmapGenerator3DSettings<>GeneratorSettings3D<>::
-::res://addons/gaea/modifiers/::1713969187
-modifier.gd::GDScript::-1::1713969187::0::1::::Modifier<>Resource<>::
-::res://addons/gaea/modifiers/2D/::1713969226
-carver.gd::GDScript::-1::1713969186::0::1::::Carver<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/carver.svg::
-carver.svg::CompressedTexture2D::4945928142008460813::1713969186::1713969226::1::::<><>::
-chunk_aware_modifier_2d.gd::GDScript::-1::1713969186::0::1::::ChunkAwareModifier2D<>Modifier2D<>::
-fill.gd::GDScript::-1::1713969186::0::1::::Fill<>Modifier2D<>res://addons/gaea/modifiers/2D/fill.svg::
-fill.svg::CompressedTexture2D::7671019854211040928::1713969186::1713969226::1::::<><>::
-generate_borders.gd::GDScript::-1::1713969186::0::1::::GenerateBorder<>Modifier2D<>res://addons/gaea/modifiers/2D/generate_borders.svg::
-generate_borders.svg::CompressedTexture2D::3001633644813359387::1713969186::1713969226::1::::<><>::
-heightmap_painter.gd::GDScript::-1::1713969187::0::1::::HeightmapPainter<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/heightmap_painter.svg::
-heightmap_painter.svg::CompressedTexture2D::5862644644777660778::1713969187::1713969226::1::::<><>::
-modifier_2d.gd::GDScript::-1::1713969187::0::1::::Modifier2D<>Modifier<>::
-noise_painter.gd::GDScript::-1::1713969187::0::1::::NoisePainter<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/noise_painter.svg::
-noise_painter.svg::CompressedTexture2D::4747628266027079917::1713969187::1713969226::1::::<><>::
-remove_disconnected.gd::GDScript::-1::1713969187::0::1::::RemoveDisconnected<>Modifier2D<>res://addons/gaea/modifiers/2D/remove_disconnected.svg::
-remove_disconnected.svg::CompressedTexture2D::5791280309195908563::1713969187::1713969226::1::::<><>::
-smooth.gd::GDScript::-1::1713969187::0::1::::Smooth<>Modifier2D<>res://addons/gaea/modifiers/2D/smooth.svg::
-smooth.svg::CompressedTexture2D::2288248261623337922::1713969187::1713969226::1::::<><>::
-walls.gd::GDScript::-1::1713969187::0::1::::Walls<>Modifier2D<>res://addons/gaea/modifiers/2D/walls.svg::
-walls.svg::CompressedTexture2D::591478033430735677::1713969187::1713969226::1::::<><>::
-::res://addons/gaea/modifiers/3D/::1713969187
-carver_3d.gd::GDScript::-1::1713969187::0::1::::Carver3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/2D/carver.svg::
-chunk_aware_modifier_3d.gd::GDScript::-1::1713969187::0::1::::ChunkAwareModifier3D<>Modifier3D<>::
-heightmap_painter_3d.gd::GDScript::-1::1713969187::0::1::::HeightmapPainter3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/2D/heightmap_painter.svg::
-modifier_3d.gd::GDScript::-1::1713969187::0::1::::Modifier3D<>Modifier<>::
-noise_painter_3d.gd::GDScript::-1::1713969187::0::1::::NoisePainter3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/3D/noise_painter.svg::
-::res://addons/gaea/others/::1713969226
-chunk_loader.svg::CompressedTexture2D::286339547622317856::1713969188::1713969226::1::::<><>::
-chunk_loader_2d.gd::GDScript::-1::1713969188::0::1::::ChunkLoader2D<>Node2D<>res://addons/gaea/others/chunk_loader.svg::
-chunk_loader_3d.gd::GDScript::-1::1713969188::0::1::::ChunkLoader3D<>Node3D<>res://addons/gaea/others/chunk_loader.svg::
-falloff_map.gd::GDScript::-1::1713969188::0::1::::FalloffMap<>Resource<>::
-::res://addons/gaea/renderers/::1713969226
-gaea_renderer.gd::GDScript::-1::1713969188::0::1::::GaeaRenderer<>Node<>res://addons/gaea/renderers/gaea_renderer.svg::
-gaea_renderer.svg::CompressedTexture2D::7750084002812481298::1713969188::1713969226::1::::<><>::
-::res://addons/gaea/renderers/2D/::1713969188
-gaea_renderer_2d.gd::GDScript::-1::1713969188::0::1::::GaeaRenderer2D<>GaeaRenderer<>::
-tilemap_gaea_renderer.gd::GDScript::-1::1713969188::0::1::::TilemapGaeaRenderer<>GaeaRenderer2D<>::
-::res://addons/gaea/renderers/3D/::1713969188
-gaea_renderer_3d.gd::GDScript::-1::1713969188::0::1::::GaeaRenderer3D<>GaeaRenderer<>::
-gridmap_gaea_renderer.gd::GDScript::-1::1713969188::0::1::::GridmapGaeaRenderer<>GaeaRenderer3D<>::
-::res://addons/gaea/tile_info/::1713969226
-gridmap_tile_info.gd::GDScript::-1::1713969188::0::1::::GridmapTileInfo<>TileInfo<>::
-random_tile_info.gd::GDScript::-1::1713969188::0::1::::RandomTileInfo<>TileInfo<>::
-tilemap_tile_info.gd::GDScript::-1::1713969188::0::1::::TilemapTileInfo<>TileInfo<>::
-tile_info.gd::GDScript::-1::1713969188::0::1::::TileInfo<>Resource<>res://addons/gaea/tile_info/tile_info.svg::
-tile_info.svg::CompressedTexture2D::2363771520064696099::1713969188::1713969226::1::::<><>::
+::res://addons/gaea/::1721553964
+grid.gd::GDScript::-1::1721553964::0::1::::GaeaGrid<>Resource<>::
+plugin.cfg::TextFile::-1::1721553964::0::1::::<><>::
+plugin.gd::GDScript::-1::1721553964::0::1::::<>EditorPlugin<>::
+::res://addons/gaea/editor/::1721553964
+clear.svg::CompressedTexture2D::5078786316858368456::1721553964::1721553964::1::::<><>::
+download_update_panel.gd::GDScript::-1::1721553964::0::1::::<>Control<>::
+download_update_panel.tscn::PackedScene::2207553941160856703::1721553964::0::1::::<><>::uid://b4nwpbrra72fj::::res://addons/gaea/editor/logo.png<>res://addons/gaea/editor/download_update_panel.gd
+generator_buttons.gd::GDScript::-1::1721553964::0::1::::<>EditorProperty<>::
+inspector_plugin.gd::GDScript::-1::1721553964::0::1::::<>EditorInspectorPlugin<>::
+logo.png::CompressedTexture2D::4450096700306969471::1721553964::1721553964::1::::<><>::
+reload.svg::CompressedTexture2D::7636415239406091336::1721553964::1721553964::1::::<><>::
+threshold_visualizer.gd::GDScript::-1::1721553964::0::1::::<>TextureRect<>::
+update_button.gd::GDScript::-1::1721553964::0::1::::<>Button<>::
+update_button.tscn::PackedScene::1924680899962474071::1721553964::0::1::::<><>::res://addons/gaea/editor/update_button.gd<>uid://6pmddcctde0v::::res://addons/gaea/editor/download_update_panel.tscn
+::res://addons/gaea/generators/::1721553964
+chunk_aware_generator.svg::CompressedTexture2D::4399251370745892222::1721553964::1721553964::1::::<><>::
+generator.gd::GDScript::-1::1721553964::0::1::::GaeaGenerator<>Node<>res://addons/gaea/generators/generator.svg::
+generator.svg::CompressedTexture2D::7556607453030425742::1721553964::1721553964::1::::<><>::
+generator_settings.svg::CompressedTexture2D::5890473717961004425::1721553964::1721553964::1::::<><>::
+::res://addons/gaea/generators/2D/::1721553964
+chunk_aware_generator_2d.gd::GDScript::-1::1721553964::0::1::::ChunkAwareGenerator2D<>GaeaGenerator2D<>res://addons/gaea/generators/chunk_aware_generator.svg::
+generator_2d.gd::GDScript::-1::1721553964::0::1::::GaeaGenerator2D<>GaeaGenerator<>::
+generator_settings_2d.gd::GDScript::-1::1721553964::0::1::::GeneratorSettings2D<>Resource<>res://addons/gaea/generators/generator_settings.svg::
+grid_2d.gd::GDScript::-1::1721553964::0::1::::GaeaGrid2D<>GaeaGrid<>::
+::res://addons/gaea/generators/2D/cellular_generator/::1721553964
+cellular_generator.gd::GDScript::-1::1721553964::0::1::::CellularGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/cellular_generator/cellular_generator.svg::
+cellular_generator.svg::CompressedTexture2D::2489972738627251148::1721553964::1721553964::1::::<><>::
+cellular_generator_settings.gd::GDScript::-1::1721553964::0::1::::CellularGeneratorSettings<>GeneratorSettings2D<>::
+::res://addons/gaea/generators/2D/heightmap_generator/::1721553964
+heightmap_generator_2d.gd::GDScript::-1::1721553964::0::1::::HeightmapGenerator2D<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/heightmap_generator/heightmap_generator_2d.svg::
+heightmap_generator_2d.svg::CompressedTexture2D::7804342115597507298::1721553964::1721553964::1::::<><>::
+heightmap_generator_2d_settings.gd::GDScript::-1::1721553964::0::1::::HeightmapGenerator2DSettings<>GeneratorSettings2D<>::
+::res://addons/gaea/generators/2D/noise_generator/::1721553964
+noise_generator.gd::GDScript::-1::1721553964::0::1::::NoiseGenerator<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/noise_generator/noise_generator.svg::
+noise_generator.svg::CompressedTexture2D::1200808923553916311::1721553964::1721553964::1::::<><>::
+noise_generator_data.gd::GDScript::-1::1721553964::0::1::::NoiseGeneratorData<>Resource<>::
+noise_generator_settings.gd::GDScript::-1::1721553964::0::1::::NoiseGeneratorSettings<>GeneratorSettings2D<>::
+::res://addons/gaea/generators/2D/walker_generator/::1721553964
+walker_generator.gd::GDScript::-1::1721553964::0::1::::WalkerGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/walker_generator/walker_generator.svg::
+walker_generator.svg::CompressedTexture2D::4794092832639402112::1721553964::1721553964::1::::<><>::
+walker_generator_settings.gd::GDScript::-1::1721553964::0::1::::WalkerGeneratorSettings<>GeneratorSettings2D<>::
+::res://addons/gaea/generators/2D/wave_function_generator/::1721553964
+wave_function_2d_entry.gd::GDScript::-1::1721553964::0::1::::WaveFunction2DEntry<>Resource<>::
+wave_function_generator.svg::CompressedTexture2D::5086903406018483302::1721553964::1721553964::1::::<><>::
+wave_function_generator_2d.gd::GDScript::-1::1721553964::0::1::::WaveFunctionGenerator2D<>GaeaGenerator2D<>res://addons/gaea/generators/2D/wave_function_generator/wave_function_generator.svg::
+wave_function_generator_2d_settings.gd::GDScript::-1::1721553964::0::1::::WaveFunctionGenerator2DSettings<>GeneratorSettings2D<>::
+::res://addons/gaea/generators/3D/::1721553964
+chunk_aware_generator_3d.gd::GDScript::-1::1721553964::0::1::::ChunkAwareGenerator3D<>GaeaGenerator3D<>res://addons/gaea/generators/chunk_aware_generator.svg::
+generator_3d.gd::GDScript::-1::1721553964::0::1::::GaeaGenerator3D<>GaeaGenerator<>::
+generator_settings_3d.gd::GDScript::-1::1721553964::0::1::::GeneratorSettings3D<>Resource<>res://addons/gaea/generators/generator_settings.svg::
+grid_3d.gd::GDScript::-1::1721553964::0::1::::GaeaGrid3D<>GaeaGrid<>::
+::res://addons/gaea/generators/3D/heightmap_generator_3d/::1721553964
+heightmap_generator_3d.gd::GDScript::-1::1721553964::0::1::::HeightmapGenerator3D<>ChunkAwareGenerator3D<>::
+heightmap_generator_3d_settings.gd::GDScript::-1::1721553964::0::1::::HeightmapGenerator3DSettings<>GeneratorSettings3D<>::
+::res://addons/gaea/modifiers/::1721553964
+modifier.gd::GDScript::-1::1721553964::0::1::::Modifier<>Resource<>::
+::res://addons/gaea/modifiers/2D/::1721553964
+carver.gd::GDScript::-1::1721553964::0::1::::Carver<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/carver.svg::
+carver.svg::CompressedTexture2D::4945928142008460813::1721553964::1721553964::1::::<><>::
+chunk_aware_modifier_2d.gd::GDScript::-1::1721553964::0::1::::ChunkAwareModifier2D<>Modifier2D<>::
+fill.gd::GDScript::-1::1721553964::0::1::::Fill<>Modifier2D<>res://addons/gaea/modifiers/2D/fill.svg::
+fill.svg::CompressedTexture2D::7671019854211040928::1721553964::1721553964::1::::<><>::
+generate_borders.gd::GDScript::-1::1721553964::0::1::::GenerateBorder<>Modifier2D<>res://addons/gaea/modifiers/2D/generate_borders.svg::
+generate_borders.svg::CompressedTexture2D::3001633644813359387::1721553964::1721553964::1::::<><>::
+heightmap_painter.gd::GDScript::-1::1721553964::0::1::::HeightmapPainter<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/heightmap_painter.svg::
+heightmap_painter.svg::CompressedTexture2D::5862644644777660778::1721553964::1721553964::1::::<><>::
+modifier_2d.gd::GDScript::-1::1721553964::0::1::::Modifier2D<>Modifier<>::
+noise_painter.gd::GDScript::-1::1721553964::0::1::::NoisePainter<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/noise_painter.svg::
+noise_painter.svg::CompressedTexture2D::4747628266027079917::1721553964::1721553964::1::::<><>::
+remove_disconnected.gd::GDScript::-1::1721553964::0::1::::RemoveDisconnected<>Modifier2D<>res://addons/gaea/modifiers/2D/remove_disconnected.svg::
+remove_disconnected.svg::CompressedTexture2D::5791280309195908563::1721553964::1721553964::1::::<><>::
+smooth.gd::GDScript::-1::1721553964::0::1::::Smooth<>Modifier2D<>res://addons/gaea/modifiers/2D/smooth.svg::
+smooth.svg::CompressedTexture2D::2288248261623337922::1721553964::1721553964::1::::<><>::
+walls.gd::GDScript::-1::1721553964::0::1::::Walls<>Modifier2D<>res://addons/gaea/modifiers/2D/walls.svg::
+walls.svg::CompressedTexture2D::591478033430735677::1721553964::1721553964::1::::<><>::
+::res://addons/gaea/modifiers/3D/::1721553964
+carver_3d.gd::GDScript::-1::1721553964::0::1::::Carver3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/2D/carver.svg::
+chunk_aware_modifier_3d.gd::GDScript::-1::1721553964::0::1::::ChunkAwareModifier3D<>Modifier3D<>::
+heightmap_painter_3d.gd::GDScript::-1::1721553964::0::1::::HeightmapPainter3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/2D/heightmap_painter.svg::
+modifier_3d.gd::GDScript::-1::1721553964::0::1::::Modifier3D<>Modifier<>::
+noise_painter_3d.gd::GDScript::-1::1721553964::0::1::::NoisePainter3D<>ChunkAwareModifier3D<>res://addons/gaea/modifiers/3D/noise_painter.svg::
+::res://addons/gaea/others/::1721553964
+chunk_loader.svg::CompressedTexture2D::286339547622317856::1721553964::1721553964::1::::<><>::
+chunk_loader_2d.gd::GDScript::-1::1721553964::0::1::::ChunkLoader2D<>Node2D<>res://addons/gaea/others/chunk_loader.svg::
+chunk_loader_3d.gd::GDScript::-1::1721553964::0::1::::ChunkLoader3D<>Node3D<>res://addons/gaea/others/chunk_loader.svg::
+falloff_map.gd::GDScript::-1::1721553964::0::1::::FalloffMap<>Resource<>::
+threaded_chunk_loader_2d.gd::GDScript::-1::1721553964::0::1::::ThreadedChunkLoader2D<>ChunkLoader2D<>::
+threaded_chunk_loader_3d.gd::GDScript::-1::1721553964::0::1::::ThreadedChunkLoader3D<>ChunkLoader3D<>::
+::res://addons/gaea/renderers/::1721553964
+gaea_renderer.gd::GDScript::-1::1721553964::0::1::::GaeaRenderer<>Node<>res://addons/gaea/renderers/gaea_renderer.svg::
+gaea_renderer.svg::CompressedTexture2D::7750084002812481298::1721553964::1721553964::1::::<><>::
+::res://addons/gaea/renderers/2D/::1721553964
+gaea_renderer_2d.gd::GDScript::-1::1721553964::0::1::::GaeaRenderer2D<>GaeaRenderer<>::
+threaded_tilemap_gaea_renderer.gd::GDScript::-1::1721553964::0::1::::ThreadedTilemapGaeaRenderer<>TilemapGaeaRenderer<>::
+tilemap_gaea_renderer.gd::GDScript::-1::1721553964::0::1::::TilemapGaeaRenderer<>GaeaRenderer2D<>::
+::res://addons/gaea/renderers/3D/::1721553964
+gaea_renderer_3d.gd::GDScript::-1::1721553964::0::1::::GaeaRenderer3D<>GaeaRenderer<>::
+gridmap_gaea_renderer.gd::GDScript::-1::1721553964::0::1::::GridmapGaeaRenderer<>GaeaRenderer3D<>::
+threaded_gridmap_gaea_renderer.gd::GDScript::-1::1721553964::0::1::::ThreadedGridmapGaeaRenderer<>GridmapGaeaRenderer<>::
+::res://addons/gaea/tile_info/::1721553964
+gridmap_tile_info.gd::GDScript::-1::1721553964::0::1::::GridmapTileInfo<>TileInfo<>::
+random_tile_info.gd::GDScript::-1::1721553964::0::1::::RandomTileInfo<>TileInfo<>::
+tilemap_tile_info.gd::GDScript::-1::1721553964::0::1::::TilemapTileInfo<>TileInfo<>::
+tile_info.gd::GDScript::-1::1721553964::0::1::::TileInfo<>Resource<>res://addons/gaea/tile_info/tile_info.svg::
+tile_info.svg::CompressedTexture2D::2363771520064696099::1721553964::1721553964::1::::<><>::
 ::res://addons/gloot/::1704952920
 gloot.gd::GDScript::-1::1704863314::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1704863315::0::1::::<><>::
-::res://addons/gloot/core/::1705230425
-inventory.gd::GDScript::-1::1705230425::0::1::::Inventory<>Node<>res://addons/gloot/images/icon_inventory.svg::
+::res://addons/gloot/core/::1724957821
+inventory.gd::GDScript::-1::1724957821::0::1::::Inventory<>Node<>res://addons/gloot/images/icon_inventory.svg::
 inventory_grid.gd::GDScript::-1::1704863669::0::1::::InventoryGrid<>Inventory<>res://addons/gloot/images/icon_inventory_grid.svg::
 inventory_grid_stacked.gd::GDScript::-1::1704863313::0::1::::InventoryGridStacked<>InventoryGrid<>res://addons/gloot/images/icon_inventory_grid_stacked.svg::
 inventory_item.gd::GDScript::-1::1704876663::0::1::::InventoryItem<>Node<>res://addons/gloot/images/icon_item.svg::
@@ -229,8 +235,8 @@ inventory_constraint.gd::GDScript::-1::1704973995::0::1::::<>Object<>::
 item_map.gd::GDScript::-1::1705145293::0::1::::<>RefCounted<>::
 stacks_constraint.gd::GDScript::-1::1704863312::0::1::::<>Object<>::
 weight_constraint.gd::GDScript::-1::1704973996::0::1::::<>Object<>::
-::res://addons/gloot/editor/::1714563857
-gloot_undo_redo.gd::GDScript::-1::1714563857::0::1::::<>Object<>::
+::res://addons/gloot/editor/::1728312346
+gloot_undo_redo.gd::GDScript::-1::1728312346::0::1::::<>Object<>::
 inventory_inspector_plugin.gd::GDScript::-1::1704863313::0::1::::<>EditorInspectorPlugin<>::
 ::res://addons/gloot/editor/common/::1705172054
 choice_filter.gd::GDScript::-1::1705172054::0::1::::<>Control<>::
@@ -254,8 +260,8 @@ properties_editor.gd::GDScript::-1::1704863314::0::1::::<>Window<>::
 properties_editor.tscn::PackedScene::7495929731415007114::1704863314::0::1::::<><>::res://addons/gloot/editor/item_editor/properties_editor.gd<>uid://digtudobrw3xb::::res://addons/gloot/editor/common/dict_editor.tscn
 prototype_id_editor.gd::GDScript::-1::1704863314::0::1::::<>Window<>::
 prototype_id_editor.tscn::PackedScene::2516219392460464606::1704863314::0::1::::<><>::res://addons/gloot/editor/item_editor/prototype_id_editor.gd<>uid://dj577duf8yjeb::::res://addons/gloot/editor/common/choice_filter.tscn
-::res://addons/gloot/editor/item_slot_editor/::1705170200
-edit_equipped_item_button.gd::GDScript::-1::1705170200::0::1::::<>EditorProperty<>::
+::res://addons/gloot/editor/item_slot_editor/::1724957820
+edit_equipped_item_button.gd::GDScript::-1::1724957820::0::1::::<>EditorProperty<>::
 ::res://addons/gloot/editor/protoset_editor/::1704952920
 edit_protoset_button.gd::GDScript::-1::1704863314::0::1::::<>Button<>::
 edit_protoset_button.tscn::PackedScene::3043193274934973525::1704863314::0::1::::<><>::uid://cyj0avrwjowl::::res://addons/gloot/editor/protoset_editor/protoset_editor.tscn<>res://addons/gloot/editor/protoset_editor/edit_protoset_button.gd
@@ -273,8 +279,8 @@ icon_inventory_stacked.svg::CompressedTexture2D::5318195602800605156::1704863315
 icon_item.svg::CompressedTexture2D::1146928391406240771::1704863315::1704863320::1::::<><>::
 icon_item_protoset.svg::CompressedTexture2D::7238659847283508006::1704863315::1704863320::1::::<><>::
 icon_item_slot.svg::CompressedTexture2D::7202957951616897209::1704863315::1704863320::1::::<><>::
-::res://addons/gloot/ui/::1714563857
-ctrl_dragable.gd::GDScript::-1::1714563857::0::1::::<>Control<>::
+::res://addons/gloot/ui/::1728312346
+ctrl_dragable.gd::GDScript::-1::1728312346::0::1::::<>Control<>::
 ctrl_drop_zone.gd::GDScript::-1::1704863315::0::1::::<>Control<>::
 ctrl_inventory.gd::GDScript::-1::1704863364::0::1::::CtrlInventory<>Control<>res://addons/gloot/images/icon_ctrl_inventory.svg::
 ctrl_inventory_grid.gd::GDScript::-1::1704863402::0::1::::CtrlInventoryGrid<>Control<>res://addons/gloot/images/icon_ctrl_inventory_grid.svg::
@@ -284,48 +290,59 @@ ctrl_inventory_stacked.gd::GDScript::-1::1704863402::0::1::::CtrlInventoryStacke
 ctrl_item_slot.gd::GDScript::-1::1704863402::0::1::::CtrlItemSlot<>Control<>res://addons/gloot/images/icon_ctrl_item_slot.svg::
 ctrl_item_slot_ex.gd::GDScript::-1::1704863403::0::1::::CtrlItemSlotEx<>CtrlItemSlot<>res://addons/gloot/images/icon_ctrl_item_slot.svg::
 ::res://Inventory/::1706191754
-::res://Inventory/ProtoItems/::1718000700
-dropped_item.gd::GDScript::-1::1714115994::0::1::::<>Node2D<>::
-dropped_item.tscn::PackedScene::4117972487133093843::1717998933::0::1::::<><>::res://Inventory/ProtoItems/dropped_item.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://dopync14ovds2::::res://Игровые асеты/Шрифты/NotoSansHans-DemiLight.otf<>res://Inventory/ProtoItems/selected_dropped_item.gdshader<>uid://dttdpnqnb4kiu::::res://icon.png
-Inventory_base.tres::Resource/Resource::6036249891481325749::1714205297::0::1::::<><>::res://addons/gloot/core/item_protoset.gd
-selected_dropped_item.gdshader::Shader::-1::1718000700::0::1::::<><>::
+::res://Inventory/ProtoItems/::1729234101
+dropped_item.gd::GDScript::-1::1724957820::0::1::::<>Node2D<>::
+dropped_item.tscn::PackedScene::4117972487133093843::1729233972::0::1::::<><>::res://Inventory/ProtoItems/dropped_item.gd<>res://addons/gloot/core/inventory_grid.gd<>uid://csaafh2f5oyxx::::res://Inventory/ProtoItems/Inventory_base.tres<>uid://cywcwqpqetqqb::::res://Игровые асеты/Без имени-1.png<>uid://dopync14ovds2::::res://Игровые асеты/Шрифты/NotoSansHans-DemiLight.otf<>res://Inventory/ProtoItems/selected_dropped_item.gdshader<>uid://dttdpnqnb4kiu::::res://icon.png
+Inventory_base.tres::Resource/Resource::6036249891481325749::1728312346::0::1::::<><>::res://addons/gloot/core/item_protoset.gd
+selected_dropped_item.gdshader::Shader::-1::1729234101::0::1::::<><>::
+::res://lang/::1729192445
+languages.csv::Translation::3534689007380251997::1729192434::1729192445::1::::<><>::
+languages.en.translation::OptimizedTranslation::4883736233843563875::1729192445::0::1::::<><>::
+languages.ru.translation::OptimizedTranslation::9217323913044592710::1729192445::0::1::::<><>::
+ru_ru.ini::TextFile::-1::1728301628::0::1::::<><>::
 ::res://Quests/::1713590817
 QuestTest.gd::GDScript::-1::1712862737::0::1::::<>Panel<>::
 QuestTest.tscn::PackedScene::8451418560516556194::1713590817::0::1::::<><>::res://Quests/QuestTest.gd
-::res://Scripts/::1714416778
+::res://Scripts/::1729234101
+Attack_effect.gdshader::Shader::-1::1729234101::0::1::::<><>::
 loading_screen.gd::GDScript::-1::1713721128::0::1::::<>Control<>::
 PersonalChest.gd::GDScript::-1::1714416778::0::1::::<>Area2D<>::
 RandomChest.gd::GDScript::-1::1714114772::0::1::::<>Area2D<>::
-RandomChest_start.gd::GDScript::-1::1714114913::0::1::::<>Node2D<>::
+RandomChest_start.gd::GDScript::-1::1721655092::0::1::::<>Node2D<>::
 Save1.gd::GDScript::-1::1714064749::0::1::::<>Panel<>::
 Save2.gd::GDScript::-1::1714057780::0::1::::<>Panel<>::
 Save3.gd::GDScript::-1::1714057780::0::1::::<>Panel<>::
-ShopTest.gd::GDScript::-1::1714114791::0::1::::<>CharacterBody2D<>::
-::res://Tests/::1717998931
-1.gd::GDScript::-1::1715271974::0::1::::<>Node2D<>::
+ShopTest.gd::GDScript::-1::1724957821::0::1::::<>CharacterBody2D<>::
+Trail2D.gd::GDScript::-1::1721720760::0::1::::<>Line2D<>::
+::res://Shaders/::1729234101
+dissolve.gdshader::Shader::-1::1729234101::0::1::::<><>::
+::res://Tests/::1729233971
+1.gd::GDScript::-1::1721652737::0::1::::<>Node2D<>::
 Action.gd::GDScript::-1::1714115333::0::1::::<>Area2D<>::
 DugneonExit1.gd::GDScript::-1::1714115374::0::1::::<>Area2D<>::
 DungeonTest.gd::GDScript::-1::1713590448::0::1::::<>Sprite2D<>::
-generateTest.gd::GDScript::-1::1713969592::0::1::::<>Node2D<>::
-generateTest.tres::TileSet::8834431962143155543::1717998922::0::1::::<><>::uid://ocsllnon3iol::::res://Игровые асеты/Поверхность/isometric_block (12).png<>uid://1aasjbctvn84::::res://Игровые асеты/Поверхность/isometric_block (13).png<>uid://dd2kd4tjajpuk::::res://Игровые асеты/Поверхность/isometric_block (14).png<>uid://bmly6r6vxqsp5::::res://Игровые асеты/Поверхность/isometric_block (15).png<>uid://cj64db8sjsnks::::res://Игровые асеты/Поверхность/isometric_block (16).png<>uid://qblwxlwv6bhl::::res://Игровые асеты/Поверхность/isometric_block (17).png<>uid://dgpkyktwmvgk4::::res://Игровые асеты/Поверхность/isometric_block (18).png<>uid://bg21fx36gnuhj::::res://Игровые асеты/Поверхность/isometric_block (19).png<>uid://co3o3leyken3y::::res://Игровые асеты/Поверхность/isometric_block (20).png<>uid://dcbt3k7icwuih::::res://Игровые асеты/Поверхность/isometric_block (20фф).png<>uid://bi7o8jq3i1r8r::::res://Игровые асеты/Поверхность/isometric_block (20)_height.png
-generateTest.tscn::PackedScene::6225338332024435296::1717998931::0::1::::<><>::res://Tests/generateTest.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/DugneonExit1.gd
-::res://Игровые асеты/::1716620994
+generateTest.gd::GDScript::-1::1721654169::0::1::::<>Node2D<>::
+generateTest.tres::TileSet::8834431962143155543::1729233793::0::1::::<><>::uid://djnldv48udblx::::res://Игровые асеты/Поверхность/test_block_yellowLines.png<>uid://cd8ewh7lopggl::::res://Игровые асеты/Поверхность/test_dungeon_block.png<>uid://tcu6t50vhxuv::::res://Игровые асеты/Поверхность/test_dungeon_wall.png<>uid://bduubctod6g2w::::res://Игровые асеты/Поверхность/test_block.png<>uid://dqodtteh0lins::::res://Игровые асеты/Поверхность/test_block_wall.png
+generateTest.tscn::PackedScene::6225338332024435296::1729233971::0::1::::<><>::res://Tests/generateTest.gd<>uid://dx4p2lchwnwvn::::res://Tests/generateTest.tres<>uid://jomdcvc005co::::res://Игровые асеты/Способности/skill_icon_skchr_ccheal_1.png<>res://Tests/DungeonTest.gd<>res://Tests/DugneonExit1.gd<>res://addons/gaea/generators/2D/walker_generator/walker_generator.gd<>res://addons/gaea/generators/2D/walker_generator/walker_generator_settings.gd<>res://addons/gaea/tile_info/tilemap_tile_info.gd<>res://addons/gaea/renderers/2D/tilemap_gaea_renderer.gd
+::res://Игровые асеты/::1729536035
 24_g1_snowyforest.png::CompressedTexture2D::1822518901530457584::1713523385::1713590027::1::::<><>::
 123.png::CompressedTexture2D::1458790855617071694::1716403712::1716620994::1::::<><>::
 aaa1.png::CompressedTexture2D::6737028473767537957::1713601281::1713601282::1::::<><>::
 aaa.png::CompressedTexture2D::5807670624126429166::1713717010::1713717031::1::::<><>::
 bg_barracks1.png::CompressedTexture2D::1448334760869794631::1704695739::1714037883::1::::<><>::
 bg_barracks.png::CompressedTexture2D::1279486724076004871::1714037126::1714037883::1::::<><>::
-Character_Base.png::CompressedTexture2D::5899922706978913217::1714415185::1714415744::1::::<><>::
+Character_Base.png::CompressedTexture2D::5899922706978913217::1721843753::1721843760::1::::<><>::
+Character_Base_01.png::CompressedTexture2D::1949988646328089405::1714415185::1721841973::1::::<><>::
 char_129_bluep1.png::CompressedTexture2D::657570066027694083::1663005366::1692099189::1::::<><>::
 enemy_1107_uoffcr.png::CompressedTexture2D::1004415825717774276::1663079008::1692099189::1::::<><>::
 enemy_1109_uabone.png::CompressedTexture2D::2483260752159615673::1663168217::1692099189::1::::<><>::
 enemy_1111_ucommd.png::CompressedTexture2D::2744847899433797139::1663168224::1692099189::1::::<><>::
+enemy_test.png::CompressedTexture2D::6220576111393649426::1729536035::1729536037::1::::<><>::
 Logo.png::CompressedTexture2D::7422878213298288433::1713381492::1713381518::1::::<><>::
 none.png::CompressedTexture2D::8011806603577534263::1713767848::1713767857::1::::<><>::
 Normals60DegreesCropped.png::CompressedTexture2D::2750929451695165143::1713716120::1713940835::1::::<><>::
 run_effect.png::CompressedTexture2D::4646301379523240431::1704531971::1704531983::1::::<><>::
-shopper.png::CompressedTexture2D::3839678340035754600::1713888745::1713888805::1::::<><>::
+shopper.png::CompressedTexture2D::3839678340035754600::1721747040::1721747045::1::::<><>::
 shopper_old.png::CompressedTexture2D::6479462250050823330::1713774085::1713888805::1::::<><>::
 ui.png::CompressedTexture2D::6696448651551322689::1713897836::1713897840::1::::<><>::
 unknown.png::CompressedTexture2D::5316743067811124477::1663267881::1692099190::1::::<><>::
@@ -337,12 +354,12 @@ unknown.png::CompressedTexture2D::5316743067811124477::1663267881::1692099190::1
 Миша(Форма, Спрайт).png::CompressedTexture2D::5594630601807884449::1663165049::1692099189::1::::<><>::
 Саша чибик(броня1).png::CompressedTexture2D::1781335608809867985::1664118831::1692099189::1::::<><>::
 ::res://Игровые асеты/arm_left/::1714046253
-::res://Игровые асеты/Audio/::1717998839
+::res://Игровые асеты/Audio/::1729233793
 1.mp3::AudioStreamMP3::8210756882930744937::1713852943::1715255589::1::::<><>::
 2.mp3::AudioStreamMP3::7579108208026474800::1713853236::1715255589::1::::<><>::
 attack1.wav::AudioStreamWAV::2818979036759952082::1715258192::1715258192::1::::<><>::
 attack2.wav::AudioStreamWAV::6645247519682338704::1715258192::1715258192::1::::<><>::
-audio_randomizer_attack1.tres::AudioStreamRandomizer::1689408045677588630::1717998839::0::1::::<><>::uid://bgfsf431mab3w::::res://Игровые асеты/Audio/attack1.wav<>uid://c1xaixwv11q7a::::res://Игровые асеты/Audio/attack2.wav
+audio_randomizer_attack1.tres::AudioStreamRandomizer::1689408045677588630::1729233793::0::1::::<><>::uid://bgfsf431mab3w::::res://Игровые асеты/Audio/attack1.wav<>uid://c1xaixwv11q7a::::res://Игровые асеты/Audio/attack2.wav
 audio_randomizer_walk.tres::AudioStreamRandomizer::9149105792707387648::1715258366::0::1::::<><>::uid://b3smmkeixxtmj::::res://Игровые асеты/Audio/walk1.wav<>uid://c1tp7f20ipthj::::res://Игровые асеты/Audio/walk2.wav<>uid://dafkeao0t73vn::::res://Игровые асеты/Audio/walk3.wav<>uid://c80um3uglkq48::::res://Игровые асеты/Audio/walk4.wav
 background1.mp3::AudioStreamMP3::3622985698787794346::1715282831::1715283061::1::::<><>::
 click.wav::AudioStreamWAV::4504119441038054806::1715268762::1715268818::1::::<><>::
@@ -351,6 +368,7 @@ damage2.wav::AudioStreamWAV::1150017763698518657::1715272542::1715272542::1::::<
 damage3.wav::AudioStreamWAV::6005179422177410842::1715272542::1715272542::1::::<><>::
 damage4.wav::AudioStreamWAV::942487861342633367::1715272542::1715272542::1::::<><>::
 equip1.wav::AudioStreamWAV::3782784458702716578::1715281451::1715281462::1::::<><>::
+lvl_up.mp3::AudioStreamMP3::7700399698745950885::1721581359::1721581385::1::::<><>::
 mixkit-footsteps-in-woods-loop-533.wav::AudioStreamWAV::575847516794940249::1715255534::1715255589::1::::<><>::
 select.wav::AudioStreamWAV::4821020464372386205::1715268709::1715268818::1::::<><>::
 typing.wav::AudioStreamWAV::6506178191096934786::1715270562::1715270572::1::::<><>::
@@ -375,8 +393,8 @@ armor2_selected.png::CompressedTexture2D::8762580582657054401::1705148193::17051
 armor3.png::CompressedTexture2D::1666377672830572120::1705060202::1705060211::1::::<><>::
 armor3_selected.png::CompressedTexture2D::2998361274629552552::1705148212::1705148354::1::::<><>::
 armor4.png::CompressedTexture2D::4497085420567731046::1714204834::1714204847::1::::<><>::
-::res://Игровые асеты/Dialogs/::1713782886
-Shop1.dialogue::Resource::1664114913292065880::1713782886::1713782886::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://Игровые асеты/Dialogs/::1728314206
+Shop1.dialogue::Resource::1664114913292065880::1728314206::1728314206::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 Test.dialogue::Resource::5614872291369114302::1705236530::1705236530::1::::<><>::
 ::res://Игровые асеты/helmet/::1714118713
 helmet1.png::CompressedTexture2D::6716919621326854703::1705070920::1705070921::1::::<><>::
@@ -452,7 +470,7 @@ bar_orig.png::CompressedTexture2D::8634273718260789580::1704551343::1704551378::
 bar_tiredness.png::CompressedTexture2D::9218629226434005097::1704551343::1704551378::1::::<><>::
 round1.png::CompressedTexture2D::9185017232638951234::1713637509::1713637513::1::::<><>::
 round2.png::CompressedTexture2D::8235864481087997612::1713897868::1713897871::1::::<><>::
-::res://Игровые асеты/Поверхность/::1713896327
+::res://Игровые асеты/Поверхность/::1721658514
 ddgfg.png::CompressedTexture2D::1345407778730635390::1713715243::1713715363::1::::<><>::
 isometric_block 1(20).png::CompressedTexture2D::8718112525021372193::1713633914::1713715450::1::::<><>::
 isometric_block (1).png::CompressedTexture2D::8520284064521308121::1616369867::1692099191::1::::<><>::
@@ -484,12 +502,18 @@ isometric_block (24).png::CompressedTexture2D::7712707964090866123::1616369992::
 isometric_block (25).png::CompressedTexture2D::708441767610041982::1616369996::1692099190::1::::<><>::
 isometric_block (201).png::CompressedTexture2D::7602753153272236716::1713720219::1713720221::1::::<><>::
 isometric_blocks_spritesheet00.png::CompressedTexture2D::5756069468405492760::1616370672::1692099192::1::::<><>::
+middle.png::CompressedTexture2D::2218391185289197687::1721658513::1721658514::1::::<><>::
+test_block.png::CompressedTexture2D::2639491030376943340::1721651578::1721651598::1::::<><>::
+test_block_wall.png::CompressedTexture2D::8311401923381919412::1721653187::1721653190::1::::<><>::
+test_block_yellowLines.png::CompressedTexture2D::7818472948242413769::1721652918::1721652920::1::::<><>::
+test_dungeon_block.png::CompressedTexture2D::5051814937237532839::1721653474::1721653532::1::::<><>::
+test_dungeon_wall.png::CompressedTexture2D::1338987529549152193::1721653530::1721653532::1::::<><>::
 ::res://Игровые асеты/Противники/::1692099190
 enemy_1064_snsbr.png::CompressedTexture2D::1847324480272766210::1662963579::1692099190::1::::<><>::
 enemy_1066_snbow.png::CompressedTexture2D::3081697954225587292::1662963579::1692099190::1::::<><>::
 enemy_1068_snmage.png::CompressedTexture2D::4380685918337395279::1662963579::1692099190::1::::<><>::
 enemy_1069_icebrk.png::CompressedTexture2D::4303915465314990035::1662963579::1692099190::1::::<><>::
-::res://Игровые асеты/Способности/::1718003002
+::res://Игровые асеты/Способности/::1721553666
 Blocked.png::CompressedTexture2D::5924474000360127243::1713639309::1713639314::1::::<><>::
 icon_ability.png::CompressedTexture2D::783636087214732246::1713687072::1713687093::1::::<><>::
 icon_ability_pressed.png::CompressedTexture2D::6351810502970333323::1713687092::1713687093::1::::<><>::
@@ -814,6 +838,6 @@ Novecentowide-Normal #556964.otf::FontFile::4678099687679436820::1597123055::169
 Novecentowide-Normal.otf::FontFile::2779776388028060696::1597122591::1692099188::1::::<><>::
 OpenSans-Regular.ttf::FontFile::6311572865675252505::1597123118::1692099188::1::::<><>::
 OpenSans-Semibold.ttf::FontFile::8842334141527726351::1597123118::1692099188::1::::<><>::
-::res://ПолезныеСкрипты/::1716628157
-Events.gd::GDScript::-1::1716628157::0::1::::<>Node<>::
+::res://ПолезныеСкрипты/::1728305282
+Events.gd::GDScript::-1::1728305282::0::1::::<>Node<>::
 SceneLoader.gd::GDScript::-1::1713593962::0::1::::<>Node<>::

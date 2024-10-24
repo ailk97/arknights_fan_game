@@ -2700,7 +2700,6 @@ texture = ExtResource("7")
 [node name="Body" type="Node2D" parent="."]
 
 [node name="Плечо2" type="Polygon2D" parent="Body"]
-visible = false
 show_behind_parent = true
 position = Vector2(2.37356, -20.4444)
 rotation = -1.20871
@@ -2710,7 +2709,6 @@ polygon = PackedVector2Array(108.28, 21.3217, 115.257, 7.36821, 131.148, 0.00387
 uv = PackedVector2Array(108.28, 21.3217, 115.257, 7.36821, 131.148, 0.00387573, 138.9, 6.59302, 134.249, 26.7481, 121.846, 36.0504, 108.28, 34.1124)
 
 [node name="Локоть2" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(15.5402, -2.38846)
 rotation = 0.22742
 offset = Vector2(-48.4142, -47.1274)
@@ -2719,7 +2717,6 @@ polygon = PackedVector2Array(43.1636, 58.1434, 38.1248, 47.2907, 45.4892, 36.825
 uv = PackedVector2Array(43.1636, 58.1434, 38.1248, 47.2907, 45.4892, 36.8256, 62.931, 39.9264, 77.2721, 49.2287, 59.8302, 73.2597)
 
 [node name="Кисть2(1)" type="Polygon2D" parent="Body"]
-visible = false
 show_behind_parent = true
 position = Vector2(28.0579, 9.83386)
 rotation = 1.07478
@@ -2736,7 +2733,6 @@ polygon = PackedVector2Array(168.357, 27.5233, 167.195, 5.43023, 193.164, 2.7170
 uv = PackedVector2Array(168.357, 27.5233, 167.195, 5.43023, 193.164, 2.71705, 192.776, 32.1744, 178.047, 33.3372)
 
 [node name="Правая нога2" type="Polygon2D" parent="Body"]
-visible = false
 show_behind_parent = true
 position = Vector2(18.1291, 38.8465)
 rotation = 0.06332
@@ -2746,7 +2742,6 @@ polygon = PackedVector2Array(46.4676, 134.498, 45.0739, 120.909, 47.1645, 113.94
 uv = PackedVector2Array(46.4676, 134.498, 45.0739, 120.909, 47.1645, 113.941, 53.7847, 113.941, 64.2376, 116.38, 68.4188, 125.091, 77.4781, 136.937, 82.3561, 151.223, 81.3108, 161.328, 71.5547, 165.857, 55.8753, 161.676, 48.9066, 148.784)
 
 [node name="Правая нога1" type="Polygon2D" parent="Body"]
-visible = false
 show_behind_parent = true
 position = Vector2(6, 19)
 rotation = -0.104156
@@ -2788,7 +2783,6 @@ polygon = PackedVector2Array(113.715, 81.5366, 114.76, 68.993, 122.426, 70.3868,
 uv = PackedVector2Array(113.715, 81.5366, 114.76, 68.993, 122.426, 70.3868, 131.833, 70.0383, 140.544, 67.2509, 147.513, 73.5227, 152.739, 85.0209, 153.436, 94.4286, 142.286, 96.1707, 127.304, 98.6098, 117.548, 96.1707, 111.973, 90.5958)
 
 [node name="Тело" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-1, -15)
 offset = Vector2(-20, -23)
 texture = ExtResource("4_1msod")
@@ -2824,7 +2818,6 @@ polygon = PackedVector2Array(70.2953, 43.0271, 64.4814, 35.2752, 71.4581, 19.383
 uv = PackedVector2Array(70.2953, 43.0271, 64.4814, 35.2752, 71.4581, 19.3837, 94.3264, 16.6705, 102.466, 27.5233, 99.3651, 43.8023, 81.9233, 53.1047)
 
 [node name="Локоть1" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-21.1248, -5.58871)
 rotation = 1.44764
 offset = Vector2(-47.3664, -47.0165)
@@ -2833,7 +2826,6 @@ polygon = PackedVector2Array(45.4892, 62.7946, 40.4504, 54.655, 37.3496, 41.4767
 uv = PackedVector2Array(45.4892, 62.7946, 40.4504, 54.655, 37.3496, 41.4767, 44.714, 35.6628, 60.2178, 37.6008, 74.1713, 51.1667, 62.931, 72.0969)
 
 [node name="Плечо1" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-12, -19)
 rotation = 0.0993221
 offset = Vector2(-59, -12)
@@ -2842,7 +2834,6 @@ polygon = PackedVector2Array(38.7135, 39.0036, 34.7038, 35.723, 36.0403, 28.9186
 uv = PackedVector2Array(38.7135, 39.0036, 34.7038, 35.723, 36.0403, 28.9186, 42.1157, 13.2442, 58.5191, 0.972053, 66.5385, 7.16889, 72.1278, 20.8991, 64.2299, 32.1993, 51.1072, 39.4897)
 
 [node name="Голова" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-4, -33)
 offset = Vector2(-44, -228)
 texture = ExtResource("4_1msod")
@@ -2850,7 +2841,6 @@ polygon = PackedVector2Array(12.5434, 218.996, 10.993, 200.004, 16.4194, 183.725
 uv = PackedVector2Array(12.5434, 218.996, 10.993, 200.004, 16.4194, 183.725, 29.5977, 176.36, 45.4892, 172.484, 71.4581, 175.973, 76.1093, 185.663, 81.1481, 205.818, 78.4349, 216.671, 77.6597, 234.888, 65.2566, 239.926, 41.2256, 240.702, 21.0705, 231.012)
 
 [node name="Волосы3" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(20, -76)
 offset = Vector2(-225.35, -127.205)
 texture = ExtResource("4_1msod")
@@ -2866,7 +2856,6 @@ polygon = PackedVector2Array(161.381, 195.353, 167.195, 190.702, 173.784, 200.39
 uv = PackedVector2Array(161.381, 195.353, 167.195, 190.702, 173.784, 200.391, 165.257, 210.081, 158.667, 205.043)
 
 [node name="Волосы2" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-30, -64)
 offset = Vector2(-97.3496, -132.205)
 texture = ExtResource("4_1msod")
@@ -2874,7 +2863,6 @@ polygon = PackedVector2Array(93, 162, 88.9, 142.64, 87.3496, 124.035, 94.3264, 1
 uv = PackedVector2Array(96.6519, 160.857, 88.9, 142.64, 87.3496, 124.035, 94.3264, 121.709, 103.629, 134.5, 109.443, 149.616, 116.032, 167.446, 119.908, 183.725, 108.28, 182.174)
 
 [node name="Волосы1" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(-7, -83)
 offset = Vector2(-130.699, -110.209)
 texture = ExtResource("4_1msod")
@@ -2896,7 +2884,6 @@ polygon = PackedVector2Array(99.7527, 207.368, 93.1636, 199.616, 99.7527, 193.02
 uv = PackedVector2Array(101.303, 205.818, 93.1636, 199.616, 99.7527, 193.027, 110.605, 191.089, 116.419, 201.554, 106.342, 209.306)
 
 [node name="Волосы4" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(9, -82)
 offset = Vector2(-161.35, -111.205)
 texture = ExtResource("4_1msod")
@@ -2904,7 +2891,6 @@ polygon = PackedVector2Array(148.202, 127.523, 152.466, 116.283, 155.179, 103.88
 uv = PackedVector2Array(148.202, 127.523, 152.466, 116.283, 155.179, 103.88, 169.133, 104.267, 171.846, 111.632, 165.644, 125.973, 153.629, 139.539)
 
 [node name="Лицо" type="Polygon2D" parent="Body"]
-visible = false
 position = Vector2(9, -43)
 offset = Vector2(-212.35, -167.205)
 texture = ExtResource("4_1msod")

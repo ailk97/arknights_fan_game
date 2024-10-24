@@ -28,9 +28,13 @@ func _ready():
 	randomize()
 	startPoint += [Vector2i(x1, y1)]
 	if Events.dungeon1_generated == false:
-		buildPath()
-		check_dungeon()
+		$base.generate()
+		$DungeonExit.position = Vector2i($Ground.map_to_local($Ground.get_used_cells(0)[1]).x * 0.2, $Ground.map_to_local($Ground.get_used_cells(0)[1]).y * 0.2)
+		buildWalls()
+		#buildPath()
+		#check_dungeon()
 		SpawnEnemy()
+		SpawnChest()
 		Events.dungeon1_generated = true
 	
 	Events.PlayerLoad()
@@ -70,7 +74,8 @@ func _ready():
 		#player1.get_node("ui/InventoryPanel/Panel/Equipment/BodyArmor2").create_and_add_item(equip["BodyArmor"])
 		#player1._on_body_armor_item_set(player1.get_node("ui/InventoryPanel/Panel/Equipment/BodyArmor2").get_item_by_id(equip["BodyArmor"]))
 	#
-	Events.player1.position = Vector2(0,0)
+	print($DungeonExit.position)
+	Events.player1.position = Vector2($DungeonExit.position)
 	add_child(Events.player1)
 	Events.player1.set_owner(self)
 	
@@ -86,12 +91,12 @@ func check_dungeon():
 	room_count1 = room_count
 	build_dungeon_startRoom()
 	build_dungeon_endRoom()
-	while count > 0:
-		build_dungeon()
-		count -= 1
-	while countExpanded > 0:
-		floorExpanded()
-		countExpanded -= 1
+	#while count > 0:
+	#	build_dungeon()
+	#	count -= 1
+	#while countExpanded > 0:
+	#	floorExpanded()
+	#	countExpanded -= 1
 	buildWalls()
 func build_dungeon():
 	startPosition = Vector2i(startPoint[randi_range(0, (startPoint.size())-1)])
@@ -192,29 +197,30 @@ func floorExpanded():
 	array2.append_array(array3)
 
 func buildWalls():
+	array2 = $Ground.get_used_cells(0)
 	var tileCount = int(array2.size())
 	var tileNow = array2[0]
 	var _abobus = 0
 	while tileCount > 1:
 		# Горизонатльные/Вертикальные стены #
 		if array2.has(Vector2i(tileNow.x+1, tileNow.y)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x+1, tileNow.y), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x+1, tileNow.y), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x-1, tileNow.y)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x-1, tileNow.y), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x-1, tileNow.y), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x, tileNow.y+1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x, tileNow.y+1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x, tileNow.y+1), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x, tileNow.y-1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x, tileNow.y-1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x, tileNow.y-1), 13, Vector2i(0,0), 0)
 		
 		# Диагональные стены #
 		if array2.has(Vector2i(tileNow.x+1, tileNow.y+1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x+1, tileNow.y+1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x+1, tileNow.y+1), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x-1, tileNow.y-1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x-1, tileNow.y-1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x-1, tileNow.y-1), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x-1, tileNow.y+1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x-1, tileNow.y+1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x-1, tileNow.y+1), 13, Vector2i(0,0), 0)
 		if array2.has(Vector2i(tileNow.x+1, tileNow.y-1)) == false:
-			$Walls.set_cell(1, Vector2i(tileNow.x+1, tileNow.y-1), 8, Vector2i(0,0), 0)
+			$Ground.set_cell(1, Vector2i(tileNow.x+1, tileNow.y-1), 13, Vector2i(0,0), 0)
 			
 		_abobus += 1
 		tileCount -= 1
@@ -278,18 +284,32 @@ func buildPath():
 
 func SpawnEnemy():
 	randomize()
-	var Enemy_count = 20
+	var Enemy_count = 10
 	#var Enemy_Spawn = startPoint
 	while Enemy_count > 0:
 		var Enemy = load("res://EnemyTest.tscn").instantiate()
-		var EnemySpawn = randi_range(10, startPoint.size()-1)
-		Enemy.position = Vector2i($Ground.map_to_local(startPoint[EnemySpawn]).x * 0.2, $Ground.map_to_local(startPoint[EnemySpawn]).y * 0.2)
+		var EnemySpawn = randi_range(10, $Ground.get_used_cells(0).size()-1)
+		Enemy.position = Vector2i($Ground.map_to_local($Ground.get_used_cells(0)[EnemySpawn]).x * 0.2, $Ground.map_to_local($Ground.get_used_cells(0)[EnemySpawn]).y * 0.2)
 		#print(startPoint[10])
 		#print(Enemy.position)
 		add_child(Enemy)
 		Enemy.set_owner(self)
-		array2.erase(Enemy.position)
+		#array2.erase(Enemy.position)
 		Enemy_count -= 1
+func SpawnChest():
+	randomize()
+	var ChestCounn = 10
+	#var Enemy_Spawn = startPoint
+	while ChestCounn > 0:
+		var Chest = load("res://random_chest.tscn").instantiate()
+		var ChestSpawn = randi_range(10, $Ground.get_used_cells(0).size()-1)
+		Chest.position = Vector2i($Ground.map_to_local($Ground.get_used_cells(0)[ChestSpawn]).x * 0.2, $Ground.map_to_local($Ground.get_used_cells(0)[ChestSpawn]).y * 0.2)
+		#print(startPoint[10])
+		#print(Enemy.position)
+		add_child(Chest)
+		Chest.set_owner(self)
+		#array2.erase(Enemy.position)
+		ChestCounn -= 1
 	
 
 func Direction():

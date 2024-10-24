@@ -1,21 +1,10 @@
 res://default_env.tres
-res://Маша.tscn
+res://EnemyTest.tscn
 res://Body.gd
 res://DialogTest_Events.gd
-res://Inventory/ProtoItems/selected_dropped_item.gdshader
 res://Tests/generateTest.tres
+res://Inventory/ProtoItems/selected_dropped_item.gdshader
+res://Shaders/dissolve.gdshader
 res://take_damage.gdshader
 res://Игровые асеты/Audio/audio_randomizer_attack1.tres
-res://1.tscn
-res://EnemyTest.tscn
-res://MainMenu.tscn
-res://settings.tscn
-res://ShopTest.tscn
-res://Tests/generateTest.tscn
-res://loading_screen.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
-res://DialogTest.tscn
-res://personal_chest.tscn
-res://random_chest.tscn
-res://Inventory/ProtoItems/dropped_item.tscn
-res://Маша(броня).tscn
+res://Scripts/Attack_effect.gdshader

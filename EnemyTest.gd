@@ -49,26 +49,26 @@ func _physics_process(_delta):
 			await attack()
 		elif chassing == true and is_attacking == false:
 			if velocity.x > 0:
-				for turn_right2 in 10:
-					if $Body.scale.x < 0.9:
+				for turn_right2 in 12:
+					if $Body.scale.x < 1.1:
 						$Body.scale.x = $Body.scale.x + 0.2
 						await get_tree().create_timer(0.001).timeout
 						continue
-					if $Body.scale.x == 1.0:
+					if $Body.scale.x == 1.2:
 						break
 			if velocity.x < 0:
-				for turn_left2 in 10:
-					if $Body.scale.x > -0.9:
+				for turn_left2 in 12:
+					if $Body.scale.x > -1.1:
 						$Body.scale.x = $Body.scale.x + -0.2
 						await get_tree().create_timer(0.001).timeout
 						continue
-					if $Body.scale.x == -1.0:
+					if $Body.scale.x == -1.2:
 						break
 			velocity = (player.position - position).normalized()
 			velocity.y = velocity.y*0.8
 			set_velocity(velocity * speed)
 			move_and_slide()
-			$AnimationPlayer.current_animation = "idle"
+			$AnimationPlayer.current_animation = "run"
 			$AnimationPlayer.speed_scale = 2.0
 			await get_tree().create_timer(0.5).timeout
 		elif is_attacking == false:
@@ -100,22 +100,39 @@ func _ready():
 		$InventoryGrid123.create_and_add_item(item_)
 		item_generated = true
 
+func set_percent(percentage: float) -> void:
+	$Body.material.set_shader_parameter('percentage', percentage)
+
+func tween_percent():
+	var tween = get_tree().create_tween()
+	tween.tween_method(set_percent, 1.0, 0.0, 1.0)
+
 func can_be_damaged():
 	if $Hitbox.is_in_group("can_be_damaged"):
 		Events.connect("make_damage_player", health_update)
 	else:
 		Events.disconnect("make_damage_player", health_update)
 func health_update(damage):
-	health -= damage
 	if health <= 0:
-		$AnimationPlayer.current_animation = "idle"
-		$AnimationPlayer.speed_scale = 0
+		$Hitbox/CollisionShape2D.disabled = true
+		$AnimationPlayer.current_animation = "death"
+		$AnimationPlayer.speed_scale = 0.6
 		var player_who_kill = player
 		dying = true
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(1.0).timeout
+		tween_percent()
+		await get_tree().create_timer(1.0).timeout
 		drop_item()
 		Events.EnemyDeath("Enemy", player_who_kill)
 		queue_free()
+	else:
+		$Body/GPUParticles2D.restart()
+		health -= damage
+		$Body/Body.use_parent_material = false
+		$Body/GPUParticles2D.emitting = true
+		await get_tree().create_timer(0.01).timeout
+		$Body/Body.use_parent_material = true
+		$Body/GPUParticles2D.emitting = false
 
 func _on_attack_area_body_entered(body):
 	if body.is_in_group("player"):

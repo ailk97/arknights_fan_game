@@ -37,17 +37,43 @@ var chest_inv = null
 var chest_items = {}
 var openning_chest = false
 
+var lang = "ru"
+
 func _ready():
+	if FileAccess.file_exists("user://settings.ini"):
+		print("Загрузка настроек...")
+		var langsave = ConfigFile.new()
+		langsave.load("user://settings.ini")
+		lang = langsave.get_value("lang", "lang")
+		print(lang)
+	#else:
+	#	var new_settings = ConfigFile.new()
+	#	new_settings.set_value("lang", "lang", "ru")
+	#	new_settings.save("user://settings.ini")
+	
 	if FileAccess.file_exists("user://audioSettings.json"):
+		print("Загрузка настроек музыки...")
 		var audioDB = load("user://audioSettings.json")
 		AudioServer.set_bus_volume_db(0, audioDB.data[0])
 		AudioServer.set_bus_volume_db(2, audioDB.data[1])
 		AudioServer.set_bus_volume_db(3, audioDB.data[2])
 		AudioServer.set_bus_volume_db(1, audioDB.data[3])
-	else:
-		print("Звук не настроен!")
+	
+	TranslationServer.set_locale(lang)
+	update()
+
+func lang_update(id):
+	match id:
+		0:
+			lang = "ru"
+		1:
+			lang = "en"
+	update()
 
 func update():
+	TranslationServer.set_locale(lang)
+	print("Активный язык: ", lang)
+	print(" ")
 	#get_tree().get_first_node_in_group("scene")
 	#get_tree().reload_current_scene()
 	print("	✔Загрузка завершена✔")
@@ -197,6 +223,8 @@ func openShop():
 	get_tree().get_first_node_in_group("player").ShopFunc()
 func openChest():
 	get_tree().get_first_node_in_group("player").ChestFunc()
+func dialogOver():
+	get_tree().get_first_node_in_group("player").dialogOver()
 
 func QuestAccept(quest):
 	var quest1 = load(quest).instantiate()

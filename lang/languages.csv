@@ -1,0 +1,70 @@
+keys,ru,en
+START_MENU,Начать игру,Start
+LOADING_MENU,Загрузиться,Loading
+SETTINGS_MENU,Настройки,Settings
+EXIT_MENU,Выйти из игры,Exit
+COUNTINUE_MENU,Продолжить,Continue
+,,
+COUNTINUE_GAME,Продолжить,Continue
+SAVE_GAME,Сохранить,Save
+LOAD_GAME,Загрузить,Load
+EXIT_GAME,Выйти,Exit
+,,
+TEST_THE_END1,Помер,YOU DIED
+TEST_THE_END2,Выйти с позором,Exit in disgrace
+,,
+CURRENT_LANG,Русский,English
+VOLUME_MASTER,Общая громкость:,Master volume
+VOLUME_UI,Громкость UI:,Ui volume
+VOLUME_MUSIC,Громкость музыки:,Music volume
+VOLUME_SFX,Громкость SFX,Sfx volume
+SETTINGS_SAVE,Сохранить,Save
+SETTINGS_RESET,Сбросить,Reset
+,,
+NAME_SELECTOR1,Как тебя будут звать?,What will your name be?
+NAME_SELECTOR2,Имя,Name
+NAME_SELECTOR3,Продолжить,Continue
+,,
+ATTRIBUTE_CHARACTER,"Сила:
+Ловкость:
+Интелект:
+
+
+Здоровье:
+Урон:
+Физ.Защита:
+Маг.защита:
+Мана:","Strength:
+Agility:
+Intelligence:
+
+
+Health:
+Damage:
+Physical Defense:
+Magical Defense:
+Mana:"
+,,
+ATTRIBUTE_DAMAGE,Урон: ,Damage: 
+ATTRIBUTE_PDEF,Физ.Защита: ,Phys.Defence: 
+ATTRIBUTE_MDEF,Маг.Защита: ,Mag.Defence: 
+ATTRIBUTE_STR,Сила: ,Strength: 
+ATTRIBUTE_AGI,Ловкость: ,Agility: 
+ATTRIBUTE_INT,Интеллект: ,Intelligence: 
+,,
+PLAYER_ANSWER1,Да,Yes
+PLAYER_ANSWER2,Нет,No
+PLAYER_ANSWER3,Дай задание!,Give me a quest!
+,,
+PLAYER_MONEY,:Деньги,:Money
+PLAYER_SELL,:Продажа,:Sell
+,,
+SHOP_SELL,:Покупка,:Buy
+,,
+NPC_NAME_1,Торговка,Tradeswoman
+NPC_001,Интересует мой асортимент?,Interesting in my assortment?
+NPC_002,"Задание? Ну смотри, мне нужно, чтобы ты убил 5 противников. Справишся?","A quest? Look, i need you to kill 5 enemies. Can handle this?"
+NPC_003,Ну смотри.,As you want.
+NPC_004,"Сначала прошлое выполни, потом новое дам.","First complete pervious quest, then I'll give you a new one."
+,,
+SWORD1,Меч,Sword

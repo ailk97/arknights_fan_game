@@ -16,7 +16,6 @@ radius = 20.025
 
 [node name="DroppedItem" type="Node2D"]
 z_index = 1
-y_sort_enabled = true
 script = ExtResource("1_07r6q")
 
 [node name="InventoryGrid" type="Node" parent="."]
@@ -25,6 +24,7 @@ item_protoset = ExtResource("2_1j75v")
 
 [node name="БезИмени-1" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.27451)
+z_index = -1
 position = Vector2(0, 3.8147e-06)
 rotation = 0.00864272
 scale = Vector2(0.498, 0.099)

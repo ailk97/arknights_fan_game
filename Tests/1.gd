@@ -9,7 +9,7 @@ func _ready():
 		var player1 = player.instantiate()
 		player1.get_node("ui/blackScreen").modulate.a = 1
 		player1.get_node("Outside").enabled = true
-		player1.position = Vector2(0,0)
+		player1.position = Vector2(500,200)
 		player1.PlayerName = Events.playerName
 		player1.get_node("ui/InventoryPanel/Panel/Equipment/MainWeapon2").create_and_add_item("Weapon1")
 		#player1._on_main_weapon_item_set(player1.get_node("ui/InventoryPanel/Panel/Equipment/MainWeapon2").get_item_by_id("Weapon1"))
@@ -28,7 +28,7 @@ func _ready():
 		Events.PlayerLoad()
 		Events.player1.get_node("ui/blackScreen").modulate.a = 1
 		Events.player1.get_node("Outside").enabled = true
-		Events.player1.position = Vector2(0,0)
+		Events.player1.position = Vector2($DungeonTest.position)
 		add_child(Events.player1)
 		Events.player1.set_owner(self)
 		var _blackScren = Events.player1.get_node("ui/blackScreen")

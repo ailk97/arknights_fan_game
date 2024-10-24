@@ -2,13 +2,13 @@ class_name GaeaGrid
 extends Resource
 ## The grid which all [GaeaGenerator]s fill, and the base
 ## of the Gaea plugin.
-
+## @tutorial(Gaea's Resources): https://benjatk.github.io/Gaea/#/resources
 
 ## Holds the layers as subdictionaries containing values for each position.
 var _grid: Dictionary
 
-
 ### Values ###
+
 
 ## Sets the value at the given position to [param value].
 ## [br]
@@ -42,6 +42,9 @@ func get_value(pos, layer: int) -> Variant:
 
 ## Returns an [Array] of all values in the grid.
 func get_values(layer: int) -> Array[Variant]:
+	if not has_layer(layer):
+		push_error("Index layer = %s is out of bounds (get_layer_count() = %s)" % [layer, get_layer_count()])
+		return []
 	return _grid[layer].values()
 
 
@@ -60,15 +63,21 @@ func get_grid() -> Dictionary:
 
 ## Returns an [Array] of all cells in the grid.
 func get_cells(layer: int) -> Array:
+	if not has_layer(layer):
+		push_error("Index layer = %s is out of bounds (get_layer_count() = %s)" % [layer, get_layer_count()])
+		return []
 	return _grid[layer].keys()
 
 
 ## Returns [code]true[/code] if the grid has a cell at the given position.
 func has_cell(pos, layer: int) -> bool:
+	if not has_layer(layer):
+		return false
 	return _grid[layer].has(pos)
 
 
 ### Erasing ###
+
 
 ## Removes the cell at the given position from the grid.
 func erase(pos, layer: int) -> void:
@@ -90,7 +99,6 @@ func erase_invalid() -> void:
 
 
 ### Utilities ###
-
 
 ### Layers ###
 

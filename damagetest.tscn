@@ -71,6 +71,7 @@ _data = {
 script = ExtResource("1_uttnm")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = 1
 position = Vector2(3.33333, -11.6667)
 scale = Vector2(0.56, 0.440001)
 offset = Vector2(-25, -495)

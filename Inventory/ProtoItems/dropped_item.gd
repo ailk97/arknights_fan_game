@@ -23,6 +23,7 @@ func can_pickup():
 		if player_inventory1.find_free_place(item).success == true:
 			print("	✔ Удалось подобрать предмет! ✔
 			")
+			player_inventory.get_node("Equip").play()
 			#print(player_inventory.find_free_place(item))
 			inventory.transfer_to(item, player_inventory1, player_inventory1.find_free_place(item).position)
 			queue_free()
@@ -58,4 +59,3 @@ func _on_item_shit_mouse_exited():
 	$Panel.visible = false
 	$item_shit/item.use_parent_material = true
 	MouseOver = false
-

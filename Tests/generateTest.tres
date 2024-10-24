@@ -1,154 +1,76 @@
-[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://dx4p2lchwnwvn"]
+[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://dx4p2lchwnwvn"]
 
-[ext_resource type="Texture2D" uid="uid://ocsllnon3iol" path="res://Игровые асеты/Поверхность/isometric_block (12).png" id="1_edq2w"]
-[ext_resource type="Texture2D" uid="uid://1aasjbctvn84" path="res://Игровые асеты/Поверхность/isometric_block (13).png" id="2_oarsh"]
-[ext_resource type="Texture2D" uid="uid://dd2kd4tjajpuk" path="res://Игровые асеты/Поверхность/isometric_block (14).png" id="3_cjdb8"]
-[ext_resource type="Texture2D" uid="uid://bmly6r6vxqsp5" path="res://Игровые асеты/Поверхность/isometric_block (15).png" id="4_c84h1"]
-[ext_resource type="Texture2D" uid="uid://cj64db8sjsnks" path="res://Игровые асеты/Поверхность/isometric_block (16).png" id="5_vn3p1"]
-[ext_resource type="Texture2D" uid="uid://qblwxlwv6bhl" path="res://Игровые асеты/Поверхность/isometric_block (17).png" id="6_17arr"]
-[ext_resource type="Texture2D" uid="uid://dgpkyktwmvgk4" path="res://Игровые асеты/Поверхность/isometric_block (18).png" id="7_pylvd"]
-[ext_resource type="Texture2D" uid="uid://bg21fx36gnuhj" path="res://Игровые асеты/Поверхность/isometric_block (19).png" id="8_e8w3l"]
-[ext_resource type="Texture2D" uid="uid://co3o3leyken3y" path="res://Игровые асеты/Поверхность/isometric_block (20).png" id="9_ewq5w"]
-[ext_resource type="Texture2D" uid="uid://dcbt3k7icwuih" path="res://Игровые асеты/Поверхность/isometric_block (20фф).png" id="10_x7qqp"]
-[ext_resource type="Texture2D" uid="uid://bi7o8jq3i1r8r" path="res://Игровые асеты/Поверхность/isometric_block (20)_height.png" id="11_ps7oj"]
+[ext_resource type="Texture2D" uid="uid://djnldv48udblx" path="res://Игровые асеты/Поверхность/test_block_yellowLines.png" id="4_2ev1c"]
+[ext_resource type="Texture2D" uid="uid://cd8ewh7lopggl" path="res://Игровые асеты/Поверхность/test_dungeon_block.png" id="5_ik1bw"]
+[ext_resource type="Texture2D" uid="uid://tcu6t50vhxuv" path="res://Игровые асеты/Поверхность/test_dungeon_wall.png" id="6_c8w13"]
+[ext_resource type="Texture2D" uid="uid://bduubctod6g2w" path="res://Игровые асеты/Поверхность/test_block.png" id="12_eftgs"]
+[ext_resource type="Texture2D" uid="uid://dqodtteh0lins" path="res://Игровые асеты/Поверхность/test_block_wall.png" id="14_r0g6r"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t1f72"]
-light_mode = 2
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u53tb"]
-polygon = PackedVector2Array(0, 151, -244.581, -8.13057, -247, -238, 1, -386, 251, -234, 239.237, -11.2526)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p3ikn"]
-polygon = PackedVector2Array(-258.5, 0, 0, -151, 258.5, 0, 0, 151)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljdvp"]
-texture = ExtResource("1_edq2w")
-texture_region_size = Vector2i(513, 542)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omani"]
+resource_name = "test_ground"
+texture = ExtResource("12_eftgs")
+texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -116)
-0:0/0/material = SubResource("CanvasItemMaterial_t1f72")
+0:0/0/texture_origin = Vector2i(0, -105)
 0:0/0/y_sort_origin = 1
-0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_u53tb")
-0:0/0/occlusion_layer_1/polygon = SubResource("OccluderPolygon2D_p3ikn")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7s77u"]
-light_mode = 2
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_e01be"]
-polygon = PackedVector2Array(-258.5, 0, 0, -151, 258.5, 0, 0, 151)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0r1m"]
-texture = ExtResource("2_oarsh")
-texture_region_size = Vector2i(513, 542)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvrdd"]
+resource_name = "test_ground_caution"
+texture = ExtResource("4_2ev1c")
+texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -116)
-0:0/0/material = SubResource("CanvasItemMaterial_7s77u")
-0:0/0/occlusion_layer_1/polygon = SubResource("OccluderPolygon2D_e01be")
+0:0/0/texture_origin = Vector2i(0, -105)
+0:0/0/y_sort_origin = 1
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_donkr"]
-light_mode = 2
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_58q6h"]
-polygon = PackedVector2Array(-258.5, 0, 0, -151, 258.5, 0, 0, 151)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k54fm"]
-texture = ExtResource("3_cjdb8")
-margins = Vector2i(36, 0)
-texture_region_size = Vector2i(513, 542)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2ck6"]
+resource_name = "dungeon_ground"
+texture = ExtResource("5_ik1bw")
+texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -116)
-0:0/0/material = SubResource("CanvasItemMaterial_donkr")
-0:0/0/occlusion_layer_1/polygon = SubResource("OccluderPolygon2D_58q6h")
+0:0/0/texture_origin = Vector2i(0, -105)
+0:0/0/y_sort_origin = 1
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bies"]
-texture = ExtResource("4_c84h1")
-texture_region_size = Vector2i(513, 542)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gaxjf"]
+resource_name = "dungeon_wall"
+texture = ExtResource("6_c8w13")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 110)
+0:0/0/y_sort_origin = 2
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, 0, 0, 148, 256, 0, 0, -148)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enf0g"]
-texture = ExtResource("5_vn3p1")
-texture_region_size = Vector2i(517, 302)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kghp4"]
-light_mode = 2
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8pkmq"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_boxgi"]
 polygon = PackedVector2Array(-258.5, 0, 0, 151, 258.5, 0, 0, -151)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kn2ay"]
-texture = ExtResource("6_17arr")
-texture_region_size = Vector2i(499, 538)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8p0u1"]
+resource_name = "test_wall"
+texture = ExtResource("14_r0g6r")
+texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, 120)
-0:0/0/material = SubResource("CanvasItemMaterial_kghp4")
+0:0/0/texture_origin = Vector2i(0, 110)
 0:0/0/y_sort_origin = 2
-0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8pkmq")
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_boxgi")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjwv3"]
-texture = ExtResource("7_pylvd")
-texture_region_size = Vector2i(517, 302)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_awbom"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cbhcc"]
-polygon = PackedVector2Array(-258.5, 0, 0, 151, 258.5, 0, 0, -151)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61gp"]
-texture = ExtResource("8_e8w3l")
-margins = Vector2i(0, 9)
-texture_region_size = Vector2i(504, 539)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, 117)
-0:0/0/material = SubResource("CanvasItemMaterial_awbom")
-0:0/0/y_sort_origin = 2
-0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cbhcc")
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -151, -258.5, 0, 0, 151, 258.5, 0)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p6534"]
-light_mode = 2
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_766e1"]
-polygon = PackedVector2Array(-256, 230, 0, 394, 262, 228, 0, 65.0538)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_agcof"]
-diffuse_texture = ExtResource("9_ewq5w")
-normal_texture = ExtResource("10_x7qqp")
-specular_texture = ExtResource("11_ps7oj")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vmsqw"]
-texture = SubResource("CanvasTexture_agcof")
-texture_region_size = Vector2i(504, 539)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -118)
-0:0/0/material = SubResource("CanvasItemMaterial_p6534")
-0:0/0/y_sort_origin = 2
-0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_766e1")
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 61.5, -258.5, 226.5, 0, 388.286, 258.5, 226.5)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, 0, 0, 148, 256, 0, 0, -148)
 
 [resource]
 tile_shape = 1
 tile_layout = 4
-tile_size = Vector2i(517, 302)
+tile_size = Vector2i(512, 296)
 occlusion_layer_0/light_mask = 1
 occlusion_layer_1/light_mask = 2
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ljdvp")
-sources/1 = SubResource("TileSetAtlasSource_f0r1m")
-sources/2 = SubResource("TileSetAtlasSource_k54fm")
-sources/3 = SubResource("TileSetAtlasSource_8bies")
-sources/4 = SubResource("TileSetAtlasSource_enf0g")
-sources/5 = SubResource("TileSetAtlasSource_kn2ay")
-sources/6 = SubResource("TileSetAtlasSource_yjwv3")
-sources/7 = SubResource("TileSetAtlasSource_o61gp")
-sources/8 = SubResource("TileSetAtlasSource_vmsqw")
+sources/9 = SubResource("TileSetAtlasSource_8p0u1")
+sources/10 = SubResource("TileSetAtlasSource_omani")
+sources/11 = SubResource("TileSetAtlasSource_qvrdd")
+sources/12 = SubResource("TileSetAtlasSource_s2ck6")
+sources/13 = SubResource("TileSetAtlasSource_gaxjf")

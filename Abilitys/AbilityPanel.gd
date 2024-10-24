@@ -77,4 +77,3 @@ func _on_active_2_pressed():
 		$Panel/Active2.texture_normal = null
 		$Panel/Active2.disabled = true
 		AbilityActive2 = null
-

@@ -32,4 +32,3 @@ func _on_see_area_body_entered(body):
 func _on_see_area_body_exited(body):
 	if body.is_in_group("player"):
 		player = null
-

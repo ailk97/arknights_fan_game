@@ -28,7 +28,7 @@ json_data = "[
         \"id\": \"Weapon1\",
         \"image\": \"res://Игровые асеты/sword/Icon/weapon1.png\",
         \"lvl\": \"1\",
-        \"name\": \"Меч\",
+        \"name\": \"SWORD1\",
         \"sell\": \"15\",
         \"texture\": \"res://Игровые асеты/sword/weapon1.png\",
         \"type\": \"weapon\",

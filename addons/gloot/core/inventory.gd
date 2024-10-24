@@ -285,4 +285,3 @@ func deserialize(source: Dictionary) -> bool:
 			assert(add_item(item), "Failed to add item '%s'. Inventory full?" % item.prototype_id)
 
 	return true
-

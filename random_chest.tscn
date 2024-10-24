@@ -12,16 +12,17 @@ height = 124.0
 
 [node name="RandomChest" type="Node2D"]
 z_index = 1
-y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_lduya")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.7, 0.7, 1)
+position = Vector2(0, -105)
 texture = ExtResource("1_8prur")
 offset = Vector2(0, 42)
 
 [node name="Action" type="Area2D" parent="."]
-position = Vector2(0, 42)
+position = Vector2(0, -63)
 collision_layer = 8
 collision_mask = 0
 monitoring = false

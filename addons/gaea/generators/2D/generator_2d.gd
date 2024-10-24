@@ -2,7 +2,6 @@
 class_name GaeaGenerator2D
 extends GaeaGenerator
 
-
 ## Used to transform a world position into a map position,
 ## mainly used by the [ChunkLoader]. May also be used by
 ## a [GaeaRenderer]. Otherwise doesn't affect generation.
@@ -25,3 +24,13 @@ func get_grid() -> GaeaGrid2D:
 	if not is_instance_valid(grid):
 		grid = GaeaGrid2D.new()
 	return grid
+
+
+## Returns the map coordinates of the cell containing the given [param global_position].
+func global_to_map(pos: Vector2) -> Vector2i:
+	return (pos / Vector2(tile_size)).floor()
+
+
+## Returns the global position of the cell at the given [param map_position].
+func map_to_global(map_position: Vector2i) -> Vector2:
+	return Vector2(map_position * tile_size)

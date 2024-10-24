@@ -63,4 +63,3 @@ func _on_item_selected(item_index: int) -> void:
 	if item_slot.equipped_item != new_equipped_item:
 		GlootUndoRedo.set_item_slot_equipped_item(item_slot, new_equipped_item)
 	updating = false
-

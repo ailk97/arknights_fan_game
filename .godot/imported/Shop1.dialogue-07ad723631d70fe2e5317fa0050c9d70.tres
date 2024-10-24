@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_k82sy"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_s8sla"]
 
 [resource]
-script = ExtResource("1_k82sy")
+script = ExtResource("1_s8sla")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
 }
-character_names = PackedStringArray("Торговка")
+character_names = PackedStringArray("NPC_NAME_1")
 first_title = "3"
 lines = {
 "1": {
@@ -22,13 +22,13 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
 "next_id": "11",
-"next_id_after": "21",
+"next_id_after": "22",
 "parent_id": "8",
 "responses": PackedStringArray("10", "13"),
 "tags": PackedStringArray(),
-"text": "Да",
+"text": "PLAYER_ANSWER1",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Да",
+"translation_key": "PLAYER_ANSWER1",
 "type": "response"
 },
 "11": {
@@ -71,7 +71,7 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "21",
+"next_id": "22",
 "parent_id": "10",
 "type": "mutation"
 },
@@ -80,24 +80,24 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "13",
 "next_id": "14",
-"next_id_after": "21",
+"next_id_after": "22",
 "parent_id": "8",
 "tags": PackedStringArray(),
-"text": "Нет",
+"text": "PLAYER_ANSWER2",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Нет",
+"translation_key": "PLAYER_ANSWER2",
 "type": "response"
 },
 "14": {
-"character": "Торговка",
+"character": "NPC_NAME_1",
 "character_replacements": Array[Dictionary]([]),
 "id": "14",
 "next_id": "15",
 "parent_id": "13",
 "tags": PackedStringArray(),
-"text": "Ну смотри.",
+"text": "NPC_003",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ну смотри.",
+"translation_key": "NPC_003",
 "type": "dialogue"
 },
 "15": {
@@ -109,22 +109,22 @@ lines = {
 },
 "16": {
 "id": "16",
-"next_conditional_id": "21",
+"next_conditional_id": "22",
 "next_id": "17",
-"next_id_after": "21",
+"next_id_after": "22",
 "parent_id": "7",
 "type": "condition"
 },
 "17": {
-"character": "Торговка",
+"character": "NPC_NAME_1",
 "character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
 "parent_id": "16",
 "tags": PackedStringArray(),
-"text": "Сначала прошлое выполни, потом новое дам.",
+"text": "NPC_004",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Сначала прошлое выполни, потом новое дам.",
+"translation_key": "NPC_004",
 "type": "dialogue"
 },
 "18": {
@@ -138,16 +138,34 @@ lines = {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "19",
-"next_id": "end!",
-"next_id_after": "21",
+"next_id": "20",
+"next_id_after": "22",
 "tags": PackedStringArray(),
-"text": "Нет",
+"text": "PLAYER_ANSWER2",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Нет",
+"translation_key": "PLAYER_ANSWER2",
 "type": "response"
 },
-"21": {
-"id": "21",
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "dialogOver",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "22",
+"parent_id": "19",
+"type": "mutation"
+},
+"22": {
+"id": "22",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
@@ -175,14 +193,14 @@ lines = {
 "type": "mutation"
 },
 "4": {
-"character": "Торговка",
+"character": "NPC_NAME_1",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
 "tags": PackedStringArray(),
-"text": "Интересует мой асортимент?.",
+"text": "NPC_001",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Интересует мой асортимент?.",
+"translation_key": "NPC_001",
 "type": "dialogue"
 },
 "5": {
@@ -190,12 +208,12 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"next_id_after": "21",
+"next_id_after": "22",
 "responses": PackedStringArray("5", "7", "19"),
 "tags": PackedStringArray(),
-"text": "Да",
+"text": "PLAYER_ANSWER1",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Да",
+"translation_key": "PLAYER_ANSWER1",
 "type": "response"
 },
 "6": {
@@ -212,7 +230,7 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "21",
+"next_id": "22",
 "parent_id": "5",
 "type": "mutation"
 },
@@ -221,11 +239,11 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
-"next_id_after": "21",
+"next_id_after": "22",
 "tags": PackedStringArray(),
-"text": "Дай задание!",
+"text": "PLAYER_ANSWER3",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Дай задание!",
+"translation_key": "PLAYER_ANSWER3",
 "type": "response"
 },
 "8": {
@@ -251,20 +269,20 @@ lines = {
 "id": "8",
 "next_conditional_id": "16",
 "next_id": "9",
-"next_id_after": "21",
+"next_id_after": "22",
 "parent_id": "7",
 "type": "condition"
 },
 "9": {
-"character": "Торговка",
+"character": "NPC_NAME_1",
 "character_replacements": Array[Dictionary]([]),
 "id": "9",
 "next_id": "10",
 "parent_id": "8",
 "tags": PackedStringArray(),
-"text": "Задание? Ну смотри, мне нужно, чтобы ты убил 5 противников. Справишся?",
+"text": "NPC_002",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Задание? Ну смотри, мне нужно, чтобы ты убил 5 противников. Справишся?",
+"translation_key": "NPC_002",
 "type": "dialogue"
 }
 }

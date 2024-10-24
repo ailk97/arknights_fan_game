@@ -36,6 +36,11 @@ func _on_save_pressed():
 	var audio = JSON.new()
 	audio.set_data(audioDB)
 	ResourceSaver.save(audio, "user://audioSettings.json")
+	
+	var new_settings = ConfigFile.new()
+	new_settings.set_value("lang", "lang", Events.lang)
+	new_settings.save("user://settings.ini")
+	
 	$SaveGood.visible = true
 
 
@@ -50,3 +55,9 @@ func _on_reset_pressed():
 		$Panel/UI.value = AudioServer.get_bus_volume_db(2)
 		$Panel/Music.value = AudioServer.get_bus_volume_db(3)
 		$Panel/SFX.value = AudioServer.get_bus_volume_db(1)
+
+
+func _on_current_lang_id_pressed(id):
+	print(id)
+	Events.lang_update(id)
+	#$Panel/lang/current_lang.name = Events.lang

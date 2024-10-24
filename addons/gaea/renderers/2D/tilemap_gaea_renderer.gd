@@ -16,6 +16,14 @@ extends GaeaRenderer2D
 @export var erase_empty_tiles: bool = true
 
 
+func _ready() -> void:
+	super()
+	if Vector2i(Vector2(tile_map.tile_set.tile_size) * tile_map.scale) != generator.tile_size:
+		push_warning("TileMap's tile size doesn't match with generator's tile size, can cause generation issues.
+					The generator's tile size has been set to the TileMap's tile size.")
+		generator.tile_size = Vector2(tile_map.tile_set.tile_size) * tile_map.scale
+
+
 func _draw_area(area: Rect2i) -> void:
 	var terrains: Dictionary
 
@@ -29,7 +37,7 @@ func _draw_area(area: Rect2i) -> void:
 
 			if erase_empty_tiles and not has_cell_in_position:
 				for l in range(tile_map.get_layers_count()):
-					tile_map.erase_cell(l, Vector2i(x, y))
+					tile_map.call_thread_safe("erase_cell", l, Vector2i(x, y)) # thread_safe paces these calls out when threaded.
 				continue
 
 			for layer in range(generator.grid.get_layer_count()):
@@ -41,7 +49,7 @@ func _draw_area(area: Rect2i) -> void:
 
 				match tile_info.type:
 					TilemapTileInfo.Type.SINGLE_CELL:
-						tile_map.set_cell(
+						tile_map.call_thread_safe("set_cell", # thread_safe paces these calls out when threaded.
 							tile_info.tilemap_layer, tile, tile_info.source_id,
 							tile_info.atlas_coord, tile_info.alternative_tile
 						)
@@ -52,12 +60,12 @@ func _draw_area(area: Rect2i) -> void:
 							terrains[tile_info].append(tile)
 
 	for tile_info in terrains:
-		tile_map.set_cells_terrain_connect(
+		tile_map.set_cells_terrain_connect.call_deferred(
 			tile_info.tilemap_layer, terrains[tile_info],
 			tile_info.terrain_set, tile_info.terrain
 		)
 
-	area_rendered.emit()
+	(func(): area_rendered.emit()).call_deferred()
 
 
 func _draw() -> void:
